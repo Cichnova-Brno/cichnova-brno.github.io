@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+
+:root {
+    font-family: "Crimson Text", serif;
+    font-weight: 400;
+    font-style: normal;
+    --complementary: #d9d9d9;
+}
+
+.hamburger {
+    position: absolute;
+    top: 1em;
+    right: 10em;
+    background-color: var(--complementary);
+    margin: 1em;
+    padding: 1.3em;
+    border: none;
+    border-radius: 15px;
+    font-size: large;
+
+}
+
+.map {
+    width: calc(50vw - 5em);
+    position: absolute;
+    top: 1em;
+    left: 10em;
+}
+
+.text-besides-the-map {
+    font-size: 200%;
+    position: absolute;
+    top: 5em;
+    right: 10em;
+    text-align: justify;
+    width: calc(50vw - 13em);
+}
+
+.text-besides-the-map > h1 {
+    font-weight: 700;
+    font-style: bold;
+    font-size: 222.5%;
+}
+
+.text-besides-the-map > a {
+    position: relative;
+    left: 12em;
+    background-color: var(--complementary);
+    border: none;
+    border-radius: 15px;
+    padding: 0.5em;
+    padding-right: 3em;
+    text-decoration: none;
+    color: black;
+
+}
