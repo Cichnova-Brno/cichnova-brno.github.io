@@ -14,23 +14,26 @@
 
 .hamburger {
     position: absolute;
+    top: 1em;
+    right: 4em;
+    padding: 0.1em 0.33em;
     background-color: var(--complementary);
     border: none;
     border-radius: 15px;
-    font-size: large;
+    font-size: 250%;
 
 }
 
 main {
     display: flex;
     flex-direction: column;
-    font-size: 200%;
 }
 
 .landing {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    display: grid;
+    grid-template-areas: "map"
+                         "text";
+    align-items: center;
     padding: 0 1em 0 1em;
 }
 
@@ -39,18 +42,30 @@ main {
         font-size: 3vw;
     }
     map {
-        min-width: 100%;
+        max-width: 100vw;
     }
     .text-besides-the-map > h1 {
         text-align: center;
     }
+    h1 {
+        text-align: center;
+    }
+    .hamburger {
+        font-size: 5vw;
+        max-width: max-content;
+        right: 1em;
+    }
 }
 
 @media screen and (min-width: 800px) {
+    .main {
+        font-size: 200%;
+    }
     .landing {
         font-size: 0.8vw;
-        flex-direction: row;
         padding: 0 10vw 0 10vw;
+        gap: 5em;
+        grid-template-areas: "map text";
     }
     .village-list {
         justify-content: center;
@@ -58,7 +73,9 @@ main {
 }
 
 .map {
-    flex-grow: 1;
+    min-width: 38vw;
+    grid-area: map;
+    aspect-ratio: 1/1;
 }
 
 .map > img{
@@ -68,6 +85,7 @@ main {
 
 
 .text-besides-the-map {
+    grid-area: text;
     font-size: 200%;
     text-align: justify;
     display: flex;
@@ -79,6 +97,7 @@ h1 {
     font-weight: 700;
     font-style: bold;
     font-size: 222.5%;
+    margin-bottom: 0.1em;
 }
 
 .text-besides-the-map > a {
