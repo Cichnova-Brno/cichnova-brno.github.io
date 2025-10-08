@@ -25,12 +25,11 @@
     position: absolute;
     top: 4rem;
     right: 10rem;
-    padding: 0.1em 0.33em;
+    padding: 0.5rem 1rem;
     background-color: var(--complementary);
     border: none;
     border-radius: 15px;
     font-size: 250%;
-
     z-index: 1000;
 }
 
@@ -81,9 +80,11 @@ footer {
     grid-area: text;
     font-size: 200%;
     text-align: justify;
-    display: flex;
-    flex-direction: column;
     justify-items: center;
+}
+
+.text-besides-the-map > a {
+    position: relative;
 }
 
 h1 {
@@ -154,6 +155,7 @@ hr {
     }
     .text-besides-the-map > h1 {
         text-align: center;
+        font-size: 100%;
     }
     h1 {
         text-align: center;
@@ -166,6 +168,11 @@ hr {
     }
     .sponsors {
         flex-direction: column;
+    }
+    nav {
+        font-size: 150%;
+        right: 2rem;
+        top: 1rem;
     }
 }
 
