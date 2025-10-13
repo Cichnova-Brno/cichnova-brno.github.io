@@ -24,6 +24,7 @@
 body {
     font-size: 200%;
 }
+
 main,
 footer,
 header {
@@ -32,18 +33,33 @@ header {
     padding: 0 1em 0 1em;
 }
 
-section > div {
-    display: flex;
-    flex-direction: row;
+/* COMMON TYPO */
+a {
+    position: relative;
+    background-color: var(--complementary);
+    border: none;
+    padding: 0.1em 1em;
+    border-radius: 15px;
+    text-decoration: none;
+    color: black;
+
 }
 
-h5 {
-    color: var(--complementary);
-    filter: brightness(70%);
+h1 {
+    font-weight: 700;
+    font-style: bold;
+    font-size: 222.5%;
+    margin-bottom: 0.1em;
 }
 
-header > a {
+hr {
+    margin: 3rem 10rem;
+}
+
+/* HEADER */
+header a {
     color: var(--eth);
+    background-color: transparent;
 }
 
 header {
@@ -52,14 +68,12 @@ header {
     justify-items: center;
 }
 
-h1 {
-    font-weight: 700;
-    font-style: bold;
-    font-size: 222.5%;
-    margin: 0.1em;
+header h5 {
+    color: var(--complementary);
+    filter: brightness(70%);
 }
 
-/* navigation stuff */
+/* NAVIGATION */
 .hamburger {
     position: absolute;
     top: 4rem;
@@ -75,6 +89,7 @@ h1 {
 .back {
     right: auto;
     left: 10rem;
+    border-radius: 50%;
 }
 
 nav {
@@ -90,22 +105,11 @@ nav {
     z-index: 999;
 }
 
-nav > a {
-    position: relative;
-    background-color: var(--complementary);
-    border: none;
-    padding: 0.1em 1em;
-    border-radius: 15px;
-    text-decoration: none;
-    color: black;
-
-}
-
-/* footer stuff */
+/* FOOTER */
 .copy {
     background-color: #676767;
     color: white;
-    padding: 1em 10em;
+    padding: 1rem 10rem;
     font-size: 80%;
 }
 
@@ -114,13 +118,13 @@ nav > a {
     width: 100%;
     flex-direction: row;
     justify-content: space-around;
-    gap: 5em;
+    gap: 5rem;
     padding: 0 10vw;
     
 }
 
 footer > hr {
-    margin: 3em 10em;
+    margin: 3rem 10rem;
 }
 
 .sponsors > img {
@@ -152,13 +156,16 @@ footer > hr {
         font-size: 5vw;
         max-width: max-content;
         right: 2rem;
-        top: 1rem
+        top: 2rem
     }
     .back {
         right: auto;
         left: 2rem;
     }
 
+    h1 {
+        text-align: center;
+    }
 
     .sponsors {
         flex-direction: column;
@@ -166,11 +173,14 @@ footer > hr {
     nav {
         font-size: 150%;
         right: 2rem;
-        top: 1rem;
+        top: 2rem;
     }
     section > div {
         display: flex;
         flex-direction: column;
+    }
+    .copy {
+        padding: 1rem 1rem;
     }
 }
 

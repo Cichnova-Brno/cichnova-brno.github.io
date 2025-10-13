@@ -1,0 +1,83 @@
+#zoom_div_container {
+    z-index: 1000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: color-mix(in srgb, var(--complementary), transparent 20%);
+    margin: 3rem 9rem;
+    border-radius: 15px;
+    backdrop-filter: blur(6px);
+    /* display: none; */
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+
+#zoom_div_container  h2 {
+    font-size: 250%;
+    padding: 0.5rem;
+    margin: 1rem 10rem;
+    border-radius: 5rem;
+    text-align: center;
+    max-height: 100%;
+
+    background-color: var(--IA);
+    flex: 0;
+
+
+}
+
+#zoom {
+    max-height: calc(100% - 4em); /* please if you are seeing this fix it... I don't have the brains needed */
+    display: flex;
+    flex-direction: row;
+    background-color: var(--complementary);
+    border-radius: 15px;
+    margin: 2rem
+}
+
+#zoom_svg {
+    margin: 1em;
+    justify-self: baseline;
+    aspect-ratio: 1/1;
+    width: 50%;
+    flex: none;
+}
+
+#zoom_names {
+    flex: 1;
+    padding-left: 1rem;
+    overflow-y: auto;
+    font-size: 150%;
+}
+
+#zoom_div_container .hamburger {
+    right: 1rem;
+    top: 1rem;
+}
+
+@media screen and (max-width: 1000px) {
+    #zoom_div_container {
+        margin: 1rem;
+        font-size: 5vw;
+    }
+    
+    #zoom_div_container h2 {
+        font-size: 5vw;
+    }
+
+    #zoom_svg {
+        height: 50%;
+        width: auto;
+    }
+    
+    #zoom {
+        flex-direction: column;
+    }
+    
+    #zoom_names {
+        font-size: 3vw;
+    }
+}

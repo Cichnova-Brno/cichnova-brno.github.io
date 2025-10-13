@@ -1,0 +1,52 @@
+.landing {
+    display: grid;
+    grid-template-areas: "map"
+                         "text";
+    align-items: center;
+}
+
+@media screen and (min-width: 1000px) {
+    .landing {
+        font-size: 0.8vw;
+        gap: 5em;
+        grid-template-areas: "map text";
+        grid-template-columns: 5fr 3fr;
+    }
+    .text-besides-the-map {
+        max-width: 18em;
+    }
+}
+
+.map {
+    grid-area: map;
+    aspect-ratio: 1/1;
+    margin-top:1rem
+}
+
+.map > svg{
+    width: 100%;
+    height: 100%;
+}
+
+.text-besides-the-map {
+    grid-area: text;
+    font-size: 200%;
+    text-align: justify;
+    justify-items: center;
+}
+
+.text-besides-the-map > a {
+    position: relative;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .map {
+        max-width: 100vw;
+    }
+    .text-besides-the-map > h1 {
+        text-align: center;
+        font-size: 100%;
+    }
+
+}
