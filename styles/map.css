@@ -4,12 +4,11 @@
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
+    max-height: calc(100% - 6rem);
     background-color: color-mix(in srgb, var(--complementary), transparent 20%);
     margin: 3rem 9rem;
     border-radius: 15px;
     backdrop-filter: blur(6px);
-    /* display: none; */
     display: flex;
     flex-direction: column;
     display: none;
@@ -30,16 +29,17 @@
 }
 
 #zoom {
-    max-height: calc(100% - 4em); /* please if you are seeing this fix it... I don't have the brains needed */
     display: flex;
     flex-direction: row;
     background-color: var(--complementary);
     border-radius: 15px;
-    margin: 2rem
+    margin: 1rem;
+    max-height: 100%;
+    min-height: 0;
 }
 
 #zoom_svg {
-    margin: 1em;
+    margin: 1rem;
     justify-self: baseline;
     aspect-ratio: 1/1;
     width: 50%;
@@ -51,7 +51,15 @@
     padding-left: 1rem;
     overflow-y: auto;
     font-size: 150%;
+    line-height: 2rem;
 }
+
+/* #zoom_names > a::after {
+    position: relative;
+
+    content: "→";
+    margin-left: 8px;
+} */
 
 #zoom_div_container .hamburger {
     right: 1rem;
@@ -60,12 +68,14 @@
 
 @media screen and (max-width: 1000px) {
     #zoom_div_container {
+        max-height: calc(100% - 2rem);
         margin: 1rem;
         font-size: 5vw;
     }
     
     #zoom_div_container h2 {
         font-size: 5vw;
+        margin: 1rem 2rem;
     }
 
     #zoom_svg {
@@ -78,6 +88,7 @@
     }
     
     #zoom_names {
-        font-size: 3vw;
+        font-size: 4vw;
+        line-height: 1.2em;
     }
 }
