@@ -11,7 +11,7 @@
     <title>Rychtářov</title>
     <style> :root {--eth: var(--IA) }</style>
 </head>
-<body onload="check('.')">
+<body onload="check('/pub/vesnice/rychtarov/1-před-vystěhováním')">
     <div onclick="goBack()" class="hamburger back"><i class="fa fa-arrow-left"></i></div>
     <div onclick="menu()" class="hamburger" id="hamb"><i class="fa fa-bars"></i></div>
     <nav id="nav">
@@ -26,6 +26,11 @@
     <h5>Richtersdorf, okres Vyškov</h5>
     <a href="">Etapa IA</a>
     </header>
+
+
+    <div id="zoom_image">
+        <button id="zoom_close" onclick="close_popup()">X</button>
+    </div>
 
     <main>
         <section>
@@ -54,7 +59,13 @@
         <section>    
             <h2>Galerie</h2>
 
-            <div id="zoom_image"></div>
+            <div id="gallery_nav_bar">
+                <button class="gallery_active_button gallery_nav_button" onclick="check('/pub/vesnice/rychtarov/1-před-vystěhováním')">před vystěhováním</button>
+                <button class="gallery_nav_button" onclick="check('/pub/vesnice/rychtarov/3-po-vystěhování-návratu')">po vystěhování/návratu</button>
+                <button class="gallery_nav_button" onclick="check('/pub/vesnice/rychtarov/4-současnost')">součsnost</button>
+                <button class="gallery_nav_button" onclick="check('/pub/vesnice/rychtarov/6-dokumenty')">dokumenty</button>
+                <button class="gallery_nav_button" onclick="check('/pub/vesnice/rychtarov/5-příběh-básně')">lidová slovesnost</button>
+            </div>
             <div id="gallery">
 
             </div>

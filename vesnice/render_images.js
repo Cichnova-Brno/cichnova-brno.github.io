@@ -1,6 +1,8 @@
 let gallery = null
 let small_images = null
 let zoom_image = null
+let nav_buttons = null
+let active_button = null
 
 // na body se da onload a zavola se tahle funkce. Do path se ulozi cesta k obrazkum
 // tahle cesta se preda funkci fill_gallery.
@@ -11,6 +13,11 @@ async function check(path){
     gallery = document.getElementById('gallery')
     // fill_gallery je asynchrini funkce takze se pocka az se ukonci
     if(gallery) await fill_galery(path)
+
+    // hledani aktivniho tlacitka
+    nav_buttons = document.querySelectorAll('.gallery_nav_button')
+    active_button = document.querySelector('.gallery_active_button')
+    if(nav_buttons) find_active_button()
 
     // nacti DOM obrazku v galerii a div ve kterem se zvetsi
     small_images = document.querySelectorAll('.small_image')
@@ -24,6 +31,8 @@ async function fill_galery(path){
 
     let count = 1
     let exist = true
+
+    gallery.textContent = ''
 
     while (exist) {
         const image = new Image()
@@ -50,7 +59,21 @@ function find_active_image(){
     images_array.forEach((event) => {
         event.addEventListener('click', () => {
             zoom_image.classList.add('zoom_active')
-            zoom_image.appendChild(event)
+            let new_image = document.createElement('img')
+            new_image.src = event.src
+            zoom_image.appendChild(new_image)
+        })
+    })
+}
+
+// najdi tlacitko na ktere se kliklo a nastav mu tridu gallery_active_button
+// aby se poznalo z jakeho obdobi jsou obrazky v galerii
+function find_active_button(){
+    let buttons_array = Array.from(nav_buttons)
+    buttons_array.forEach((event) => {
+        event.addEventListener('click', () => {
+            active_button.classList.remove('gallery_active_button')
+            event.classList.add('gallery_active_button')
         })
     })
 }
