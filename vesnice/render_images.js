@@ -22,6 +22,7 @@ async function check(path){
     // nacti DOM obrazku v galerii a div ve kterem se zvetsi
     small_images = document.querySelectorAll('.small_image')
     zoom_image = document.getElementById('zoom_image')
+    zoom_curtain = document.getElementById('zoom_curtain')
     if(small_images && zoom_image) find_active_image()
     
 }
@@ -58,7 +59,7 @@ function find_active_image(){
 
     images_array.forEach((event) => {
         event.addEventListener('click', () => {
-            zoom_image.classList.add('zoom_active')
+            zoom_curtain.classList.add('zoom_active')
             let new_image = document.createElement('img')
             new_image.src = event.src
             zoom_image.appendChild(new_image)
@@ -76,4 +77,9 @@ function find_active_button(){
             event.classList.add('gallery_active_button')
         })
     })
+}
+
+function close_popup(){
+    zoom_image.innerHTML = ''
+    zoom_curtain.classList.remove('zoom_active')
 }

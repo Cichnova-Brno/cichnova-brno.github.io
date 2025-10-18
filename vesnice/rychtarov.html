@@ -27,9 +27,11 @@
     <a href="">Etapa IA</a>
     </header>
 
-
-    <div id="zoom_image">
-        <button id="zoom_close" onclick="close_popup()">X</button>
+    <div id="zoom_curtain">
+        <div id="zoom_container">
+            <div id="zoom_close"><button onclick="close_popup()">X</button></div>
+            <div id="zoom_image"></div>
+        </div>
     </div>
 
     <main>
@@ -61,6 +63,7 @@
 
             <div id="gallery_nav_bar">
                 <button class="gallery_active_button gallery_nav_button" onclick="check('/pub/vesnice/rychtarov/1-před-vystěhováním')">před vystěhováním</button>
+                <button class="gallery_nav_button" onclick="check('/pub/vesnice/rychtarov/2-stěhování')">stěhování</button>
                 <button class="gallery_nav_button" onclick="check('/pub/vesnice/rychtarov/3-po-vystěhování-návratu')">po vystěhování/návratu</button>
                 <button class="gallery_nav_button" onclick="check('/pub/vesnice/rychtarov/4-současnost')">součsnost</button>
                 <button class="gallery_nav_button" onclick="check('/pub/vesnice/rychtarov/6-dokumenty')">dokumenty</button>
