@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/villages.css">
+    <link rel="stylesheet" href="/styles/common.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="/script.js"></script>
+    <script src="./render_images.js"></script>
+    <title>Hamiltony</title>
+    <style> :root {--eth: var(--IA) }</style>
+</head>
+<body onload="check('/pub/vesnice/hamiltony/1-před-vystěhováním')">
+    <div onclick="goBack()" class="hamburger back"><i class="fa fa-arrow-left"></i></div>
+    <div onclick="menu()" class="hamburger" id="hamb"><i class="fa fa-bars"></i></div>
+    <nav id="nav">
+        <a href="">O projektu</a>
+        <a href="">Pro školy</a>
+        <a href="">Akce</a>
+        <a href="">Film</a>
+    </nav> 
+
+    <header>    
+    <h1>Hamiltony</h1>
+    <h5>Okres Vyškov</h5>
+    <a href="">Etapa IA</a>
+    </header>
+
+    <div id="zoom_curtain">
+        <div id="zoom_container">
+            <div id="zoom_close"><button onclick="close_popup()">X</button></div>
+            <div id="zoom_image"></div>
+        </div>
+    </div>
+
+    <main>
+        <section>
+            <h2>Charakteristika obce</h2>
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum dolorem laboriosam dolor ducimus unde obcaecati sequi iste, quam distinctio, enim, quaerat tempora labore earum molestias quas voluptates nostrum necessitatibus totam fuga ex natus? Mollitia exercitationem adipisci temporibus culpa quidem debitis molestiae optio praesentium accusantium placeat ipsum laborum porro ullam quibusdam, alias illo nihil. Nam provident dolor quidem eius eligendi molestiae aut, maxime necessitatibus itaque optio. Ullam, inventore porro omnis facilis nihil quidem eos repellat! Labore quas vero rerum. Atque illo, cum non tempore earum, ipsum quasi nulla veritatis voluptatibus ab voluptate, voluptatum quaerat beatae omnis sed quia labore sequi rem?</p>
+                <img src="img1.png" alt="the first picture">
+            </div>
+        </section>
+
+        <section>
+            <h2>Charakteristika obce</h2>
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, nam voluptatibus in quibusdam consequuntur reprehenderit voluptate voluptas iusto dignissimos. Necessitatibus esse tempore et accusamus repellat eligendi iure optio aperiam, velit asperiores odit earum quam nemo similique maiores ipsam ratione commodi. Totam dolorum vel ipsam voluptatum labore corrupti laudantium cumque voluptas tenetur quis, dicta perferendis adipisci est repellat, alias facilis officia iusto deleniti laboriosam ex temporibus, amet dolor! Rerum, sequi? Architecto deleniti, aperiam asperiores perspiciatis magni numquam aspernatur consectetur quisquam nemo beatae porro ducimus unde ea at provident aut ab earum, commodi repellat. Quas, dicta ullam? Iure nemo natus quod dicta?</p>
+                <img src="img2.png" alt="the second picture">
+            </div>
+        </section>
+
+        <section>    
+            <h2>Pocet obyvatel</h2>
+            <canvas id="data">
+
+            </canvas>
+        </section>
+
+        <section>    
+            <h2>Galerie</h2>
+
+            <div id="gallery_nav_bar">
+                <button class="gallery_active_button gallery_nav_button" onclick="check('/pub/vesnice/hamiltony/1-před-vystěhováním')">před vystěhováním</button>
+                <button class="gallery_nav_button" onclick="check('/pub/vesnice/hamiltony/2-stěhování')">stěhování</button>
+                <button class="gallery_nav_button" onclick="check('/pub/vesnice/hamiltony/3-po-vystěhování-návratu')">po vystěhování/návratu</button>
+                <button class="gallery_nav_button" onclick="check('/pub/vesnice/hamiltony/4-současnost')">současnost</button>
+                <button class="gallery_nav_button" onclick="check('/pub/vesnice/hamiltony/6-dokumenty')">dokumenty</button>
+                <button class="gallery_nav_button" onclick="check('/pub/vesnice/hamiltony/5-příběh-básně')">lidová slovesnost</button>
+            </div>
+            <div id="gallery">
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <hr>
+        <div class="sponsors">
+            <img src="/pub/mzm.jpg" alt="moravske zemske muzeum">
+            <img src="/pub/vys.png" alt="muzeum vyskova">
+            <img src="/pub/barv.png" alt="barvinek">
+            <img src="/pub/jmk.jpg" alt="jihomoravsky kraj">
+            <img src="/pub/cich.png" alt="cichnova brno">
+        </div>
+        <img src="/pub/backdrop.png" alt="tyden ve filmu" class="wof-bg">
+        <div class="copy">
+            <p>&copy; 2025 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, suscipit!
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
