@@ -48,6 +48,12 @@ async function fill_galery(path){
             image.classList.add('small_image')
             gallery.appendChild(image)
             count++
+        }else{
+            if(count === 1){
+                let error_message = document.createElement('h3')
+                error_message.textContent = 'Je nám líto, ale nepodařilo se načíst obrázky nebo nebyly vytvořeny.'
+                gallery.appendChild(error_message)
+            }
         }
     }
 }
