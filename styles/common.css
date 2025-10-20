@@ -198,9 +198,9 @@ footer {
 
 .gallery_nav_button {
     margin-right: 1rem;
-    height: 2rem;
+    height: fit-content;
     width: fit-content;
-    padding: 5px 10px 5px 10px;
+    padding: 0.7rem;
     border-radius: 15px;
     background-color: var(--complementary);
     border: none;
@@ -214,6 +214,8 @@ footer {
 .gallery_active_button {
     background-color: black;
     color: white;
+    height: fit-content;
+    padding: 0.7rem;
 }
 
 #gallery {
@@ -232,45 +234,6 @@ footer {
     margin-right: 0.5rem;
     cursor: pointer;
 }
-
-/*.zoom_active {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-    z-index: 1000;
-    top: 0;
-    left: 0;
-    position: fixed;
-    justify-content: center;
-    align-items: center;
-}
-
-#zoom_container {
-    height: 70%;
-    width: 80%;
-    background-color: var(--complementary);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#zoom_close {
-    height: 3rem;
-    width: 100%;
-    background-color: var(--complementary);
-}
-
-#zoom_image {
-    padding: 2rem 0 2rem 0;
-}
-
-#zoom_image img {
-    height: 100%;
-    width: 100%;
-    align-self: center;
-}*/
 
 #zoom_curtain {
   position: fixed;
@@ -346,3 +309,9 @@ footer {
   border-radius: 6px;
 }
 
+/* overflow u tlacitek se projevuje pri rozliseni 850px na sirku a mensi */
+@media screen and (max-width: 850px) {
+    .gallery_nav_button {
+        height: 3.5rem;
+    }
+}
