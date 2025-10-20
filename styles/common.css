@@ -309,6 +309,13 @@ footer {
   border-radius: 6px;
 }
 
+/* pokud bude sirka mensi nez 950 px tak se gallery vytvori overflow na x osu */
+@media  screen and (max-width: 1000px) {
+    #gallery {
+        gap: 0.5rem;
+    }
+}
+
 /* overflow u tlacitek se projevuje pri rozliseni 850px na sirku a mensi */
 @media screen and (max-width: 850px) {
     .gallery_nav_button {
