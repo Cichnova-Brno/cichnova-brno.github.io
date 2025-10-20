@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/villages.css">
     <link rel="stylesheet" href="/styles/common.css">
+    <link rel="stylesheet" href="/styles/gallery.css">
+    <link rel="stylesheet" href="/styles/map.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="/script.js"></script>
     <script src="./render_images.js"></script>
@@ -28,16 +30,14 @@
     </header>
 
     <div id="zoom_curtain">
-        <div id="zoom_container">
-          <div id="zoom_close">
-            <button onclick="close_popup()">✕</button>
-          </div>
+        <div id="zoom_div_container" class="top_padding">
+            <div onclick="close_popup()" class="hamburger"><i class="fa fa-times"></i></div>
       
-          <div id="zoom_image_area">
-            <div class="arrow left" onclick="prev_image()">&#10094;</div>
-            <div id="zoom_image"></div>
-            <div class="arrow right" onclick="next_image()">&#10095;</div>
-          </div>
+            <div id="zoom" >
+                <div class="arrow left" onclick="prev_image()">&#10094;</div>
+                <div id="zoom_image"></div>
+                <div class="arrow right" onclick="next_image()">&#10095;</div>
+            </div>
         </div>
     </div>
 
@@ -46,24 +46,31 @@
             <h2>Charakteristika obce</h2>
             <div>
                 <p>Rychtářov (německy Richtersdorf) je bývalá samostatná obec, v současnosti místní část města Vyškov. Nachází se na jižním svahu Drahanské vrchoviny při silnici spojující Vyškov se Sloupem, přibližně 10 km severně od Vyškova, v nadmořské výšce 401 m n. m. První písemná zmínka o obci pochází z roku 1381, kdy je uváděna jako Rechtářov. Během druhé světové války byli obyvatelé vystěhováni kvůli rozšíření vojenského prostoru a po jejím skončení se v roce 1945 mohli vrátit. Rychtářov je rodištěm orientalisty, cestovatele a teologa Aloise Musila (1868–1944). Mezi místní pamětihodnosti patří farní kostel Nanebevzetí Panny Marie z roku 1783 a lovecký zámeček Troyerstein z 18. století. Oblast je známá pořádáním krojovaných hodů a zachovává si venkovský charakter.</p>
+                <div class="image">
                 <img src="/pub/vesnice//rychtarov/4-současnost/5.jpg" alt="the first picture">
-            </div>
+                <h5>Obec Rychtářov v současnosti.</h5>
+                </div>
+            </div>    
+        </section>
+
+        <section>    
+            <h2>Počet obyvatel</h2>
+            <canvas id="data">
+
+            </canvas>
         </section>
 
         <section>
             <h2>Průběh vystěhováni</h2>
             <div>
                 <p>Rychtářov (německy Richtersdorf) je bývalá samostatná obec, v současnosti místní část města Vyškov. Nachází se na jižním svahu Drahanské vrchoviny při silnici spojující Vyškov se Sloupem, přibližně 10 km severně od Vyškova, v nadmořské výšce 401 m n. m. První písemná zmínka o obci pochází z roku 1381, kdy je uváděna jako Rechtářov. Během druhé světové války byli obyvatelé vystěhováni kvůli rozšíření vojenského prostoru a po jejím skončení se v roce 1945 mohli vrátit. Rychtářov je rodištěm orientalisty, cestovatele a teologa Aloise Musila (1868–1944). </p>
+                <div class="image">
                 <img src="/pub/vesnice/rychtarov/2-stěhování/7.jpg" alt="the second picture">
+                <h5>Stařenky Špičákovy odjíždějí se svým majetkem na voze.</h5>
+                </div>
             </div>
         </section>
 
-        <section>    
-            <h2>Pocet obyvatel</h2>
-            <canvas id="data">
-
-            </canvas>
-        </section>
 
         <section>    
             <h2>Galerie</h2>
@@ -85,11 +92,11 @@
     <footer>
         <hr>
         <div class="sponsors">
-            <img src="/pub/mzm.jpg" alt="moravske zemske muzeum">
-            <img src="/pub/vys.png" alt="muzeum vyskova">
-            <img src="/pub/barv.png" alt="barvinek">
-            <img src="/pub/jmk.jpg" alt="jihomoravsky kraj">
-            <img src="/pub/cich.png" alt="cichnova brno">
+            <a href="https://www.mzm.cz"><img src="/pub/mzm.jpg" alt="moravske zemske muzeum"></a>
+            <a href="https://muzeum-vyskovska.cz"><img src="/pub/vys.png" alt="muzeum vyskova"></a>
+            <a href="https://barvinek.net"><img src="/pub/barv.png" alt="barvinek"></a>
+            <a href="https://jmk.cz"><img src="/pub/jmk.jpg" alt="jihomoravsky kraj"></a>
+            <a href="https://cichnovabrno.cz"><img src="/pub/cich.png" alt="cichnova brno"></a>
         </div>
         <img src="/pub/backdrop.png" alt="tyden ve filmu" class="wof-bg">
         <div class="copy">

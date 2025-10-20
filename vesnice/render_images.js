@@ -71,6 +71,7 @@ function find_active_image(){
             let new_image = document.createElement('img')
             new_image.src = event.src
             zoom_image.appendChild(new_image)
+            zoom_div.style.display = 'flex'
         })
     })
 }

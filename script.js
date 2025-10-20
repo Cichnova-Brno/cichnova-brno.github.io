@@ -53,7 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
         ======================*/
 
         region.addEventListener('click', (event) => {
-            console.log(event)
             const regionGroup = event.target.closest('g')
             const bbox = regionGroup.getBBox()
             const clone = regionGroup.cloneNode(true)

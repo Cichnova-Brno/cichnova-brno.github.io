@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/villages.css">
     <link rel="stylesheet" href="/styles/common.css">
+    <link rel="stylesheet" href="/styles/gallery.css">
+    <link rel="stylesheet" href="/styles/map.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="/script.js"></script>
     <script src="./render_images.js"></script>
@@ -28,16 +30,14 @@
     </header>
 
     <div id="zoom_curtain">
-        <div id="zoom_container">
-          <div id="zoom_close">
-            <button onclick="close_popup()">✕</button>
-          </div>
+        <div id="zoom_div_container" class="top_padding">
+            <div onclick="close_popup()" class="hamburger"><i class="fa fa-times"></i></div>
       
-          <div id="zoom_image_area">
-            <div class="arrow left" onclick="prev_image()">&#10094;</div>
-            <div id="zoom_image"></div>
-            <div class="arrow right" onclick="next_image()">&#10095;</div>
-          </div>
+            <div id="zoom" >
+                <div class="arrow left" onclick="prev_image()">&#10094;</div>
+                <div id="zoom_image"></div>
+                <div class="arrow right" onclick="next_image()">&#10095;</div>
+            </div>
         </div>
     </div>
 
@@ -49,8 +49,18 @@
                 Osada leží v úzkém údolí Velké Hané, severním směrem od Vyškova. Na území osady se nachází zřícenina hrádku Dědice, (lokalizovaná naproti kaple Strachotínka na vysokém valu) a pseudogotická kaple sv. Cyrila a Metoděje z roku 1871 (základní kámen položen 5. července), nazývaná lidově Strachotínka (podle staročeské verze Metodějova jména Strachota). Stojí nad pramenem, z kterého údajně křtili věrozvěsti Cyril a Metoděj.
                 Název osady je odvozen od jména olomouckého biskupa a hraběte Maxmiliána z Hamiltonu (1761-1776), za něhož byla ves založena. Na mapě 1. vojenského mapování prováděného v 80. letech 18. století je vidět nepojmenovaný zárodek vsi. V polovině 19. století bylo místo označováno jako Hamilton, které se dále změnilo na Hamiltony.
                 </p>
+                <div class="image">
                 <img src="/pub/vesnice/hamiltony/4-současnost/1.jpg" alt="the first picture">
+                <h5>Hamiltony dnes, hlavní ulice, 2017.</h5>
+                </div>
             </div>
+        </section>
+
+        <section>    
+            <h2>Pocet obyvatel</h2>
+            <canvas id="data">
+
+            </canvas>
         </section>
 
         <section>
@@ -60,15 +70,11 @@
                 Osada leží v úzkém údolí Velké Hané, severním směrem od Vyškova. Na území osady se nachází zřícenina hrádku Dědice, (lokalizovaná naproti kaple Strachotínka na vysokém valu) a pseudogotická kaple sv. Cyrila a Metoděje z roku 1871 (základní kámen položen 5. července), nazývaná lidově Strachotínka (podle staročeské verze Metodějova jména Strachota). Stojí nad pramenem, z kterého údajně křtili věrozvěsti Cyril a Metoděj.
                 Název osady je odvozen od jména olomouckého biskupa a hraběte Maxmiliána z Hamiltonu (1761-1776), za něhož byla ves založena. Na mapě 1. vojenského mapování prováděného v 80. letech 18. století je vidět nepojmenovaný zárodek vsi. V polovině 19. století bylo místo označováno jako Hamilton, které se dále změnilo na Hamiltony.
                 </p>
+                <div class="image">
                 <img src="/pub/vesnice/hamiltony/1-před-vystěhováním/1.jpg" alt="the second picture">
+                <h5>Hamiltony, kaple Strachotínka, 30. léta 20. století.</h5>
+                </div>
             </div>
-        </section>
-
-        <section>    
-            <h2>Pocet obyvatel</h2>
-            <canvas id="data">
-
-            </canvas>
         </section>
 
         <section>    
@@ -91,11 +97,11 @@
     <footer>
         <hr>
         <div class="sponsors">
-            <img src="/pub/mzm.jpg" alt="moravske zemske muzeum">
-            <img src="/pub/vys.png" alt="muzeum vyskova">
-            <img src="/pub/barv.png" alt="barvinek">
-            <img src="/pub/jmk.jpg" alt="jihomoravsky kraj">
-            <img src="/pub/cich.png" alt="cichnova brno">
+            <a href="https://www.mzm.cz"><img src="/pub/mzm.jpg" alt="moravske zemske muzeum"></a>
+            <a href="https://muzeum-vyskovska.cz"><img src="/pub/vys.png" alt="muzeum vyskova"></a>
+            <a href="https://barvinek.net"><img src="/pub/barv.png" alt="barvinek"></a>
+            <a href="https://jmk.cz"><img src="/pub/jmk.jpg" alt="jihomoravsky kraj"></a>
+            <a href="https://cichnovabrno.cz"><img src="/pub/cich.png" alt="cichnova brno"></a>
         </div>
         <img src="/pub/backdrop.png" alt="tyden ve filmu" class="wof-bg">
         <div class="copy">

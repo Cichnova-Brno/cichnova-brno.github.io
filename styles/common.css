@@ -34,7 +34,7 @@ header {
 }
 
 /* COMMON TYPO */
-a {
+a:not(footer a) {
     position: relative;
     background-color: var(--complementary);
     border: none;
@@ -58,8 +58,8 @@ hr {
 
 /* HEADER */
 header a {
-    color: var(--eth);
-    background-color: transparent;
+    color: var(--eth) !important;
+    background-color: transparent !important;
 }
 
 header {
@@ -68,7 +68,7 @@ header {
     justify-items: center;
 }
 
-header h5 {
+h5 {
     color: var(--complementary);
     filter: brightness(70%);
 }
@@ -124,11 +124,15 @@ nav {
     
 }
 
+footer a img {
+   width: 100%;
+}
+
 footer > hr {
     margin: 3rem 10rem;
 }
 
-.sponsors > img {
+.sponsors a {
     display: block;
     margin: auto;
     width: 100%;
@@ -148,7 +152,7 @@ footer > hr {
         padding: 0 10vw 0 10vw;
     }
     body {
-        font-size: 90%;
+        font-size: 80%;
     }
 }
 
@@ -189,165 +193,3 @@ footer {
     padding: 0 0 0 0;
 }
 
-/* gallery */
-#gallery_nav_bar {
-    display: flex;
-    flex-direction: row;
-    margin: 3rem 0 2rem 0;
-}
-
-.gallery_nav_button {
-    margin-right: 1rem;
-    height: fit-content;
-    width: fit-content;
-    padding: 0.7rem;
-    border-radius: 15px;
-    background-color: var(--complementary);
-    border: none;
-}
-
-.gallery_nav_button:hover {
-    background-color: black;
-    color: white;
-}
-
-.gallery_active_button {
-    background-color: black;
-    color: white;
-    height: fit-content;
-    padding: 0.7rem;
-}
-
-#gallery {
-    display: flex;
-    flex-wrap: wrap;
-    height: 20rem;
-    overflow-y: auto;
-    background-color: var(--complementary);
-    border: 1px solid black;
-    padding: 0.5rem;
-}
-
-.small_image {
-    width: 150px;
-    height: 150px;
-    margin-right: 0.5rem;
-    cursor: pointer;
-}
-
-#zoom_curtain {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: none;
-    z-index: 1000;
-}
-  
-#zoom_curtain.zoom_active {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-  
-#zoom_container {
-    position: relative;
-    width: 80%;
-    height: auto;
-    background-color: var(--complementary, #2b2b2b);
-    border-radius: 10px;
-    overflow: visible;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-  
-#zoom_close {
-    width: 100%;
-    height: 3rem;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding-right: 1rem;
-    background-color: rgba(255, 255, 255, 0.1);
-}
-  
-#zoom_close button {
-    width: 2.5rem;
-    height: 2.5rem;
-    border: none;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.3);
-    color: black;
-    font-size: 1.4rem;
-    cursor: pointer;
-    transition: background-color 0.2s, transform 0.1s;
-}
-
-#zoom_close button:hover {
-    background-color: rgba(255, 255, 255, 0.5);
-    transform: scale(1.05);
-}
-
-#zoom_image_area {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem 0;
-}
-  
-#zoom_image img {
-    max-width: 100%;
-    max-height: 80vh;
-    object-fit: contain;
-    display: block;
-    border-radius: 6px;
-    z-index: 2;
-}
-
-.arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 2.5rem;
-    color: white;
-    padding: 0.4rem 0.9rem;
-    cursor: pointer;
-    user-select: none;
-    transition: background-color 0.2s, transform 0.1s;
-    z-index: 3;
-}
-  
-.arrow.left {
-    left: -3rem;
-    color: black;
-}
-  
-.arrow.right {
-    right: -3rem;
-    color: black;
-}
-  
-.arrow:hover {
-    transform: translateY(-50%) scale(1.1);
-}
-  
-
-
-
-/* pokud bude sirka mensi nez 950 px tak se gallery vytvori overflow na x osu */
-@media  screen and (max-width: 1000px) {
-    #gallery {
-        gap: 0.5rem;
-    }
-}
-
-/* overflow u tlacitek se projevuje pri rozliseni 850px na sirku a mensi */
-@media screen and (max-width: 850px) {
-    .gallery_nav_button {
-        height: 3.5rem;
-    }
-}
