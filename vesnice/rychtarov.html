@@ -29,8 +29,15 @@
 
     <div id="zoom_curtain">
         <div id="zoom_container">
-            <div id="zoom_close"><button onclick="close_popup()">X</button></div>
+          <div id="zoom_close">
+            <button onclick="close_popup()">✕</button>
+          </div>
+      
+          <div id="zoom_image_area">
+            <div class="arrow left" onclick="prev_image()">&#10094;</div>
             <div id="zoom_image"></div>
+            <div class="arrow right" onclick="next_image()">&#10095;</div>
+          </div>
         </div>
     </div>
 

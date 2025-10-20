@@ -4,6 +4,8 @@ let zoom_image = null
 let nav_buttons = null
 let active_button = null
 
+let current_index = 0
+
 // na body se da onload a zavola se tahle funkce. Do path se ulozi cesta k obrazkum
 // tahle cesta se preda funkci fill_gallery.
 // poznamka (pokud se nacita z aktualniho adresare jako argument se musi nastvit tecka)
@@ -88,4 +90,26 @@ function find_active_button(){
 function close_popup(){
     zoom_image.innerHTML = ''
     zoom_curtain.classList.remove('zoom_active')
+}
+
+// funkce pro vykresleni dalsich obrazku v popupu
+function show_image(index) {
+    if (index < 0) index = small_images.length - 1
+    if (index >= small_images.length) index = 0
+    current_index = index
+    const img_src = small_images[current_index].src
+    zoom_image.innerHTML = ''
+    const new_img = document.createElement('img')
+    new_img.src = img_src
+    zoom_image.appendChild(new_img)
+}
+
+// zobrazi dalsi obrazek
+function next_image() {
+    show_image(current_index + 1)
+}
+
+// nacti predchozi obrazek
+function prev_image() {
+    show_image(current_index - 1)
 }
