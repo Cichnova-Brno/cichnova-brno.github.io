@@ -9,8 +9,11 @@
     <link rel="stylesheet" href="/styles/map.css">
     <link rel="stylesheet" href="/styles/table.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/styles/graph.css">
     <script src="/script.js"></script>
     <script src="./render_images.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="./graph.js"></script>
     <title>Rychtářov</title>
     <style> :root {--eth: var(--IA) }</style>
 </head>
@@ -57,8 +60,10 @@
         <section>    
             <h2>Počet obyvatel</h2>
             <canvas id="data">
-
             </canvas>
+            <script>
+                print_graph(["1869", "1900", "1921", "1930", "1950", "1961", "1991", "2021"], [630, 650, 630, 670, 420, 590, 580, 580], 800, 200)
+            </script>
         </section>
 
         <section>

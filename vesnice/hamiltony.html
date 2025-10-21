@@ -8,8 +8,11 @@
     <link rel="stylesheet" href="/styles/gallery.css">
     <link rel="stylesheet" href="/styles/map.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/styles/graph.css">
     <script src="/script.js"></script>
     <script src="./render_images.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="./graph.js"></script>
     <title>Hamiltony</title>
     <style> :root {--eth: var(--IA) }</style>
 </head>
@@ -59,16 +62,18 @@
         <section>    
             <h2>Pocet obyvatel</h2>
             <canvas id="data">
-
             </canvas>
+            <script>
+                print_graph(["1910", "1921", "1930", "1950", "1961", "2011"], [450, 470, 470, 410, 430, 370], 500, 100)
+            </script>
         </section>
 
         <section>
             <h2>Průběh vystěhování</h2>
             <div>
                 <p>Hamiltony jsou dnes součástí města Vyškova. Původně náležely k panství vyškovskému, nejstarší zdejší pozemkové knihy pochází z roku 1764. 
-                Osada leží v úzkém údolí Velké Hané, severním směrem od Vyškova. Na území osady se nachází zřícenina hrádku Dědice, (lokalizovaná naproti kaple Strachotínka na vysokém valu) a pseudogotická kaple sv. Cyrila a Metoděje z roku 1871 (základní kámen položen 5. července), nazývaná lidově Strachotínka (podle staročeské verze Metodějova jména Strachota). Stojí nad pramenem, z kterého údajně křtili věrozvěsti Cyril a Metoděj.
-                Název osady je odvozen od jména olomouckého biskupa a hraběte Maxmiliána z Hamiltonu (1761-1776), za něhož byla ves založena. Na mapě 1. vojenského mapování prováděného v 80. letech 18. století je vidět nepojmenovaný zárodek vsi. V polovině 19. století bylo místo označováno jako Hamilton, které se dále změnilo na Hamiltony.
+                    Osada leží v úzkém údolí Velké Hané, severním směrem od Vyškova. Na území osady se nachází zřícenina hrádku Dědice, (lokalizovaná naproti kaple Strachotínka na vysokém valu) a pseudogotická kaple sv. Cyrila a Metoděje z roku 1871 (základní kámen položen 5. července), nazývaná lidově Strachotínka (podle staročeské verze Metodějova jména Strachota). Stojí nad pramenem, z kterého údajně křtili věrozvěsti Cyril a Metoděj.
+                    Název osady je odvozen od jména olomouckého biskupa a hraběte Maxmiliána z Hamiltonu (1761-1776), za něhož byla ves založena. Na mapě 1. vojenského mapování prováděného v 80. letech 18. století je vidět nepojmenovaný zárodek vsi. V polovině 19. století bylo místo označováno jako Hamilton, které se dále změnilo na Hamiltony.
                 </p>
                 <div class="image">
                 <img src="/pub/vesnice/hamiltony/1-před-vystěhováním/1.jpg" alt="the second picture">
