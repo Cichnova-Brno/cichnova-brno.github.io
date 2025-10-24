@@ -77,7 +77,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
             names_of_villages = document.getElementsByClassName(get_class_name_of_region(region.className.baseVal))
             let divide_names = Array.from(names_of_villages).slice(Math.ceil(names_of_villages.length / 2))
-            console.log(divide_names)
+
+            for(let i = 0; i < divide_names.length; i++){
+                for(let k = 0; k < divide_names.length; k++){
+                    let prev = divide_names[i].textContent
+                    if(prev < divide_names[k].textContent){
+                        let temp = divide_names[i].textContent
+                        divide_names[i].textContent = divide_names[k].textContent
+                        divide_names[k].textContent = temp
+                    } 
+                }
+            }
+
             divide_names.forEach(name => {
                 let link = document.createElement('a')
                 let h3 = document.createElement('h3')
