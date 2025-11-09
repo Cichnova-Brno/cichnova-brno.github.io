@@ -35,8 +35,8 @@
     justify-items: center;
 }
 
-.text-besides-the-map > a {
-    position: relative;
+.text-besides-the-map > p {
+    margin: 1em 0;
 }
 
 
