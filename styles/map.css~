@@ -5,7 +5,7 @@
     left: 0;
     right: 0;
     bottom: 0;
- /*   max-height: calc(100% - 10rem); */
+    max-height: calc(100% - 6rem);
     background-color: color-mix(in srgb, var(--complementary), transparent 20%);
     margin: 3rem 9rem;
     border-radius: 15px;
@@ -30,17 +30,13 @@
 }
 
 #zoom {
-    max-height: 100%;
+    position: relative;
     margin: auto 1rem;
     display: flex;
     flex-direction: row;
     background-color: var(--complementary);
     border-radius: 15px;
     padding: 1rem;
-}
-
-#zoom_clear {
-    clear: both;
 }
 
 #zoom_svg {
@@ -56,11 +52,7 @@
     padding-left: 1rem;
     overflow-y: auto;
     font-size: 150%;
-    line-height: 1.3rem;
-}
-
-#zoom_names > a > h3 {
-    text-align: center;
+    line-height: 2rem;
 }
 
 /* #zoom_names > a::after {
