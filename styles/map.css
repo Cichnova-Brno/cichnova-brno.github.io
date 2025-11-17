@@ -5,7 +5,7 @@
     left: 0;
     right: 0;
     bottom: 0;
- /*   max-height: calc(100% - 10rem); */
+    /* max-height: calc(100% - 15rem); */
     background-color: color-mix(in srgb, var(--complementary), transparent 20%);
     margin: 3rem 9rem;
     border-radius: 15px;
@@ -28,7 +28,8 @@
 }
 
 #zoom {
-    max-height: 100%;
+    /* max-height: 100%; */
+    max-height: calc(100% - 10rem);
     margin: 1rem;
     display: flex;
     flex-direction: row;
@@ -96,6 +97,7 @@
     }
     
     #zoom {
+        max-height: 100%;
         flex-direction: column;
         overflow: hidden;                /* safety net */
         height: 100%;                    /* important – let it take the remaining space */

@@ -57,6 +57,10 @@
     z-index: 1000;
 }
   
+#zoom {
+    max-height: 100%;
+}
+
 #zoom_curtain.zoom_active {
     display: flex;
     align-items: center;
