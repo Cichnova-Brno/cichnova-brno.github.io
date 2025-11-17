@@ -25,13 +25,11 @@
 
     background-color: var(--IA);
     flex: 0;
-
-
 }
 
 #zoom {
     max-height: 100%;
-    margin: auto 1rem;
+    margin: 1rem;
     display: flex;
     flex-direction: row;
     background-color: var(--complementary);
@@ -47,7 +45,7 @@
     margin: 1rem;
     justify-self: baseline;
     aspect-ratio: 1/1;
-    width: 50%;
+    max-width: 50%;
     flex: none;
 }
 
@@ -77,7 +75,6 @@
 
 @media screen and (max-width: 1000px) {
     #zoom_div_container {
-        max-height: calc(100% - 2rem);
         margin: 1rem;
         font-size: 5vw;
     }
@@ -88,16 +85,28 @@
     }
 
     #zoom_svg {
-        height: 50%;
-        width: auto;
+        width: 100% !important;          /* full width on mobile */
+        height: auto !important;         /* respect aspect ratio */
+        max-height: 45vh;                /* limit how tall it can get – adjust to taste */
+        flex: 0 0 auto;                  /* don’t grow/shrink */
+        margin: 0 auto;                  /* center it */
+        aspect-ratio: unset !important;  /* kill the forced 1/1 square */
+        object-fit: contain;
+        display: block;
     }
     
     #zoom {
         flex-direction: column;
+        overflow: hidden;                /* safety net */
+        height: 100%;                    /* important – let it take the remaining space */
+        gap: 1rem;
     }
     
     #zoom_names {
-        font-size: 4vw;
-        line-height: 1.2em;
+        flex: 1;                         /* list takes whatever space is left */
+        overflow-y: auto;
+        font-size: 4.5vw;
+        line-height: 1.4;
+        padding: 0 1rem;
     }
 }

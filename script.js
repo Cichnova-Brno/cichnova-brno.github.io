@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const clone = regionGroup.cloneNode(true)
 
             document.querySelector(".phase_name").textContent = region.getAttribute("name")
-            document.querySelector(".phase_name").style = "background-color: var(--" + region.getAttribute("name").split(" ")[1] + ");"
+            document.querySelector(".phase_name").style = "background-color: var(--" + region.getAttribute("name").split(" ")[1].toUpperCase() + ");"
             region.style.pointerEvent = 'none'
             
             clone.setAttribute("transform", `translate(${-bbox.x}, ${-bbox.y})`)
@@ -67,8 +67,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             zoom_svg.setAttribute("viewBox", `0 0 ${bbox.width} ${bbox.height}`)
             zoom_svg.setAttribute("preserveAspectRatio", "xMidYMid meet")
-            zoom_svg.setAttribute("width", '45%')
-            zoom_svg.setAttribute("height", 'auto')
+            // zoom_svg.setAttribute("width", 'auto')
+            // zoom_svg.setAttribute("height", '100%')
 
             close_btn.classList.remove('hidden')
             zoom_div.style.display = 'flex'
