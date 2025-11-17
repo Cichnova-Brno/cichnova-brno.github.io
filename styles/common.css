@@ -139,10 +139,13 @@ h5 {
 }
 
 .back {
-    right: auto;
     padding: auto;
+    text-align: center;
+    display: inline;
+    border-radius: 50%;
+    line-height: 50px;  /** for vertical center - if needed **/
+    right: auto;
     left: 13vw;
-    border-radius: 100%;
     z-index: 980;
 }
 
