@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/villages.css">
+    <link rel="stylesheet" href="/styles/common.css">
+    <link rel="stylesheet" href="/styles/gallery.css">
+    <link rel="stylesheet" href="/styles/map.css">
+    <link rel="stylesheet" href="/styles/table.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/styles/graph.css">
+    <script src="/script.js"></script>
+    <script src="./render_images.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="./Chart.min.js"></script>
+    <script src="./graph.js"></script>
+    <title>Hartmanice_Niva</title>
+    <style> :root {--eth: var(--IA) }</style>
+</head>
+<body onload="check('/pub/vesnice/rychtarov/1-před-vystěhováním')">
+    <div onclick="goBack()" class="hamburger back"><i class="fa fa-arrow-left"></i></div>
+    <div onclick="menu()" class="hamburger" id="hamb"><i class="fa fa-bars"></i></div>
+    <nav id="nav">
+        <a href="">O projektu</a>
+        <a href="">Pro školy</a>
+        <a href="">Akce</a>
+        <a href="">Film</a>
+    </nav> 
+
+    <header>    
+    <h1>Hartmanice_Niva</h1>
+    <h5></h5>
+    <a href="">307</a>
+    </header>
+
+    <div id="zoom_curtain">
+        <div id="zoom_div_container" class="top_padding">
+            <div onclick="close_popup()" class="hamburger"><i class="fa fa-times"></i></div>
+      
+            <div id="zoom" >
+                <div class="arrow left" onclick="prev_image()">&#10094;</div>
+                <div id="zoom_image"></div>
+                <div class="arrow right" onclick="next_image()">&#10095;</div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <section>
+            <h2>Charakteristika obce</h2>
+            <div>
+                <p>Obec Hartmanice se nachází v severní části Drahanské vrchoviny západním směrem od Prostějova. Až do zrušení vrchnostenské správy v roce 1848 byly součástí plumlovského panství. Centrální poloha Hartmanic umožnila zřídit zde panský dvůr, k němuž byly připoutány robotou i okolní vesnice Drahany, Otinoves, Bousín a Rozstání. Největšího rozmachu dosáhla obec v první polovině 20. století.</p>
+                <div class="image">
+                <img src="../podklady/Hartmanice_Niva/znak.jpg" alt="the first picture">
+                <h5>Obec Hartmanice_Niva v současnosti.</h5>
+                </div>
+            </div>    
+        </section>
+
+        <section>    
+            <h2>Počet obyvatel</h2>
+            <canvas id="data">
+            </canvas>
+            <script>
+                print_graph(["1869", "1900", "1921", "1930", "1950", "1961", "1991", "2021"], [672, 723, 691, 757, 457, 582, 561, 538], 800, 200)
+            </script>
+        </section>
+
+        <section>
+            <h2>Průběh vystěhováni</h2>
+            <div>
+                <div>
+                    <p>Zařazeny do II. „spěšné“ etapy. Oblast se stala cílovou plochou střelnice na Ferdinandsku. Po válce patřily k nejhůře poškozeným obcím v prostoru. Obyvatelé z Hartmanic a dalších obcí prostějovského okresu se živili převážně jako domácí krejčí. Po likvidaci obcí se směli stěhovat blíže k okresnímu městu, kde byli zaměstnáni do prostějovských oděvních závodů. Po druhé světové válce dochází k přejmenování vsi na Nivu, aby se německy znějící název nahradil názvem českým.</p>
+                    <table id="table">
+                        <tr><th>Etapa</th><th>Domů</th><th>Rodin</th><th>Osob</th></tr>
+                        <tr><td>307</td><td></td><td></td><td></td></tr>
+                    </table>
+                </div>
+                <div class="image">
+                <img src="../podklady/Hartmanice_Niva/1.jpg" alt="the second picture">
+                </div>
+            </div>
+        </section>
+
+
+        <section>    
+            <h2>Galerie</h2>
+
+            <div id="gallery_nav_bar">
+                <button class="gallery_active_button gallery_nav_button" onclick="check('../podklady/Hartmanice_Niva/galerie/1-pred-vystehovanim')">před vystěhováním</button>
+                <button class="gallery_nav_button" onclick="check('../podklady/Hartmanice_Niva/galerie/2-stehovani')">stěhování</button>
+                <button class="gallery_nav_button" onclick="check('../podklady/Hartmanice_Niva/galerie/3-po-vystehovani-navratu')">po vystěhování/návratu</button>
+                <button class="gallery_nav_button" onclick="check('../podklady/Hartmanice_Niva/galerie/4-soucasnost')">současnost</button>
+                <button class="gallery_nav_button" onclick="check('../podklady/Hartmanice_Niva/galerie/6-dokumenty')">dokumenty</button>
+                <button class="gallery_nav_button" onclick="check('../podklady/Hartmanice_Niva/galerie/5-pribeh-basne')">lidová slovesnost</button>
+            </div>
+            <div id="gallery">
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <hr>
+        <div class="sponsors">
+            <a href="https://www.mzm.cz"><img src="/pub/mzm.jpg" alt="moravske zemske muzeum"></a>
+            <a href="https://muzeum-vyskovska.cz"><img src="/pub/vys.png" alt="muzeum vyskova"></a>
+            <a href="https://barvinek.net"><img src="/pub/barv.png" alt="barvinek"></a>
+            <a href="https://jmk.cz"><img src="/pub/jmk.jpg" alt="jihomoravsky kraj"></a>
+            <a href="https://cichnovabrno.cz"><img src="/pub/cich.png" alt="cichnova brno"></a>
+        </div>
+        <img src="/pub/backdrop.png" alt="tyden ve filmu" class="wof-bg">
+        <div class="copy">
+            <p>&copy; 2025 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, suscipit!
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

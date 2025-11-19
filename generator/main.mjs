@@ -1,47 +1,64 @@
 import mammoth from 'mammoth'
 import fs from 'node:fs'
+import exit from 'node:process'
+
+////////////////////////////
+////// global variables ///
+//////////////////////////
 
 let text = null
 let messages = null
 let names = new Array()
+let temp_text = new Array()
 
-let temp_text = []
+////////// path where all files are stored ///////
 
 const path = '../podklady'
 
-if(!fs.existsSync(path)) console.log('Folder podklady does not exist\n')
-else{
-    names = fs.readdirSync(path)
+/////////// check if filder podklady exists ///////
+// if not print error message and exit program
+if(!fs.existsSync(path)){
+    console.log('Folder podklady does not exist\n')
+    exit()
 }
+// else read all directories
+else names = fs.readdirSync(path)
+
+
+//////////////////////////////////////////////////////////////////
+/////// open directories one by one and look for docx files /////
+////////////////////////////////////////////////////////////////
 
 for(let i = 0; i < names.length; i++){
-    
-    if(!fs.existsSync(`${path}/${names[i]}/${names[i]}.docx`)) console.log(`File or folder ${names[i]} does not exist\n`)
+    if(!fs.existsSync(`${path}/${names[i]}/${names[i]}.docx`)){
+        console.log(`File or folder ${names[i]} does not exist\n`)
+        exit()
+    }
+    // if file exists call read_docx function
     else read_docx(`${path}/${names[i]}/${names[i]}.docx`, names[i])
-
 }
+
+///////////////////////////////////////////////////////////////////////
+//// read_docx function read data from file and fulfill html code ////
+/////////////////////////////////////////////////////////////////////
 
 async function read_docx(path_to_docx, name){
     await mammoth.extractRawText({path: path_to_docx})
     .then(function(result){
+        // read text from docx
         text = result.value
         messages = result.messages
 
-       fs.writeFileSync('temp.txt', text, (err) => {if(err) console.log(err)})
+        temp_text = text.split('\n')
 
-        fs.readFileSync(`temp.txt`, 'utf8', (err, data) => {
+        // remove empty strings from array
+        for(let i = 0; i < temp_text.length; i++){
+            if(temp_text[i] === '') temp_text.splice(i, 1)
+        }
 
-            if(err) console.log(`Something went wrong ${err}\n`)
-            else{
-                temp_text = data.split('@')
-                console.log(temp_text)
-            }
-
-        })
-
-
-        let lower = name.toLowerCase()
-       if(!fs.existsSync(`../vesnice/${lower}.html`)) fs.writeFileSync(`../vesnice/${lower}.html`, `<!DOCTYPE html>
+        // convert name of village to lower case 
+        let clear_text = slugify(name)
+       if(!fs.existsSync(`../vesnice/${clear_text}.html`)) fs.writeFileSync(`../vesnice/${clear_text}.html`, `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -74,7 +91,7 @@ async function read_docx(path_to_docx, name){
     <header>    
     <h1>${name}</h1>
     <h5></h5>
-    <a href="">${temp_text[9]}</a>
+    <a href="">${temp_text[10]}</a>
     </header>
 
     <div id="zoom_curtain">
@@ -117,7 +134,7 @@ async function read_docx(path_to_docx, name){
                     <p>${temp_text[1]}</p>
                     <table id="table">
                         <tr><th>Etapa</th><th>Domů</th><th>Rodin</th><th>Osob</th></tr>
-                        <tr><td>${temp_text[9]}</td><td></td><td></td><td></td></tr>
+                        <tr><td>${temp_text[10]}</td><td></td><td></td><td></td></tr>
                     </table>
                 </div>
                 <div class="image">
@@ -161,12 +178,23 @@ async function read_docx(path_to_docx, name){
     </footer>
 </body>
 </html>
-`, (err) => { if(err) console.log(err)})
+`, (err) => {
+        // print error messsage and exit program when something is wrong
+        if(err) console.log(err)
+            exit()
+        })
         else console.log(`File ${name} already exists \n`)
-
-
     })
     .catch(function(error) {
         console.error(error)
     })
+}
+
+function slugify(text) {
+    return text
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .toLowerCase()
+        .replace(/\s+/g, "_")
+        .replace(/[^a-z0-9\.\-]/g, "")
 }
