@@ -5,7 +5,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    max-height: calc(100% - 6rem);
+    /* max-height: calc(100% - 15rem); */
     background-color: color-mix(in srgb, var(--complementary), transparent 20%);
     margin: 3rem 9rem;
     border-radius: 15px;
@@ -25,28 +25,28 @@
 
     background-color: var(--IA);
     flex: 0;
-
-
 }
 
 #zoom {
-    position: relative;
-    margin: 1rem 1rem 1rem 1rem;
-    margin-bottom: max(auto, 1rem);
+    /* max-height: 100%; */
+    max-height: calc(100% - 10rem);
+    margin: 1rem;
     display: flex;
     flex-direction: row;
     background-color: var(--complementary);
     border-radius: 15px;
-    max-height: 100%;
-    min-height: 0;
     padding: 1rem;
+}
+
+#zoom_clear {
+    clear: both;
 }
 
 #zoom_svg {
     margin: 1rem;
     justify-self: baseline;
     aspect-ratio: 1/1;
-    width: 50%;
+    max-width: 50%;
     flex: none;
 }
 
@@ -55,7 +55,11 @@
     padding-left: 1rem;
     overflow-y: auto;
     font-size: 150%;
-    line-height: 2rem;
+    line-height: 1.3rem;
+}
+
+#zoom_names > a > h3 {
+    text-align: center;
 }
 
 /* #zoom_names > a::after {
@@ -72,7 +76,6 @@
 
 @media screen and (max-width: 1000px) {
     #zoom_div_container {
-        max-height: calc(100% - 2rem);
         margin: 1rem;
         font-size: 5vw;
     }
@@ -83,16 +86,29 @@
     }
 
     #zoom_svg {
-        height: 50%;
-        width: auto;
+        width: 100% !important;          /* full width on mobile */
+        height: auto !important;         /* respect aspect ratio */
+        max-height: 45vh;                /* limit how tall it can get – adjust to taste */
+        flex: 0 0 auto;                  /* don’t grow/shrink */
+        margin: 0 auto;                  /* center it */
+        aspect-ratio: unset !important;  /* kill the forced 1/1 square */
+        object-fit: contain;
+        display: block;
     }
     
     #zoom {
+        max-height: 100%;
         flex-direction: column;
+        overflow: hidden;                /* safety net */
+        height: 100%;                    /* important – let it take the remaining space */
+        gap: 1rem;
     }
     
     #zoom_names {
-        font-size: 4vw;
-        line-height: 1.2em;
+        flex: 1;                         /* list takes whatever space is left */
+        overflow-y: auto;
+        font-size: 4.5vw;
+        line-height: 1.4;
+        padding: 0 1rem;
     }
 }
