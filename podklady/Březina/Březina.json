@@ -1,0 +1,14 @@
+{
+  "name": "tady je jmeno obsce",
+  "paragraph_one": "prvni odstavec",
+  "paragraph_two": "druhy odstavec",
+  "phase": "etapa",
+  "speakers": [do pole jmena mluvcich pametniku],
+  "residents": sem pujde pocet obyvatel, ktery je v tabulce (v te male tabulce),
+  "houses": pocet domu z tabulky,
+  "families": pocet rodin z tabulku,
+  "l_years": [do pole pujdou roky z te velke tabulky],
+  "l_families": [do pole pujdou rodiny z te velke tabulky],
+  "l_houses": [do pole pujdou domy z te velke tabulky],
+  "titles": [sem pujdou do pole nazvy k obrazkum z excelu]
+}

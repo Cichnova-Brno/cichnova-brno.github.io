@@ -1,4 +1,46 @@
-<!DOCTYPE html>
+//import mammoth from 'mammoth'
+import fs from 'node:fs'
+import exit from 'node:process'
+
+export class other{
+    // read data from docx file
+    /*async read_docx(path_to_docx){
+        try {
+            const result = await mammoth.extractRawText({ path: path_to_docx })
+            
+            return {
+                text: result.value,
+                messages: result.messages
+            }
+
+        } catch (error) {
+            console.error(error)
+            return null
+        }
+    }*/
+
+    read_json_file(name){
+        let data = fs.readFileSync(name, 'utf8')
+        return JSON.parse(data)
+    }
+
+    // looking for files in certain path
+    check_path(path_to_file){
+        if(!fs.existsSync(path_to_file)){
+            console.log(`Folder or file ${path_to_file} does not exist \n`)
+            exit()
+        }
+    }
+
+    // read names of all directories
+    get_names(dir_name){
+        let villages_names = fs.readdirSync(dir_name)
+        return villages_names
+    }
+
+
+    write_into_html(name, json_obj){
+        let html_code = `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -15,7 +57,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <script src="./Chart.min.js"></script>
     <script src="./graph.js"></script>
-    <title>Jedovnice</title>
+    <title>${json_obj.name}</title>
     <style> :root {--eth: var(--IA) }</style>
 </head>
 <body onload="check('/pub/vesnice/rychtarov/1-před-vystěhováním')">
@@ -29,9 +71,9 @@
     </nav> 
 
     <header>    
-    <h1>Jedovnice</h1>
+    <h1>${json_obj.name}</h1>
     <h5></h5>
-    <a href="">IIIb</a>
+    <a href="">${json_obj.phase}</a>
     </header>
 
     <div id="zoom_curtain">
@@ -50,10 +92,10 @@
         <section>
             <h2>Charakteristika obce</h2>
             <div>
-                <p>Městys Jedovnice (od roku 2007) leží na východním okraji Moravského krasu v okrese Blansko a tvoří přirozené centrum rekreační oblasti kolem rybníka Olšovce. Poprvé se v pramenech objevuje roku 1251 (též jako Gedwicz); městečko s kostelem sv. Petra a Pavla, povýšeným roku 1786 na děkanský, patřilo k významným sídlům oblasti a ve 14. století získalo od markraběte Karla lesní majetky, posléze stvrzené Karlem IV. Za Salm-Reifferscheidtů (po polovině 18. století do roku 1848) zde fungovaly velké rybníky, huť, dvůr i zámeček; později byly potvrzeny výroční a dobytčí trhy a rozvinul se spolkový život. Dnes Jedovnice stojí na spojení tradice a moderny: interiér farního kostela proslul unikátním poválečným vybavením – oltářním obrazem Mikuláše Medka a liturgickými prvky Jana Koblasy (doplněnými pracemi Karla Nepraše, Josefa Istlera a Ludvíka Kolka) z let kolem roku 1963, které patří k ikonám českého sakrálního umění 20. století. Soustava jedovnických rybníků v čele s Olšovcem (cca 42 ha, využití k rekreaci, sportovnímu rybolovu i vodním sportům) dává obci výrazný rekreační ráz a dělá z ní vstupní bránu do severní části Moravského krasu. Za druhé světové války hrozilo části Jedovnic vystěhování, k němuž však nedošlo.</p>
+                <p>${json_obj.paragraph_one}</p>
                 <div class="image">
-                <img src="../podklady/Jedovnice/znak.jpg" alt="the first picture">
-                <h5>Obec Jedovnice v současnosti.</h5>
+                <img src="../podklady/${json_obj.name}/znak.jpg" alt="the first picture">
+                <h5>Obec ${json_obj.name} v současnosti.</h5>
                 </div>
             </div>    
         </section>
@@ -71,14 +113,14 @@
             <h2>Průběh vystěhováni</h2>
             <div>
                 <div>
-                    <p>V plánech bylo jen částečné vystěhování této malebné obce s dominantním rybníkem Olšovec. Nakonec se z Jedovnic nestěhoval nikdo (k 3. 3. 1944 uvádí zpráva přesídlovací kanceláře, že se „takřka nikdo nestěhuje“) V paměti místních obyvatel kolují historky, jak tehdejší starosta oddaloval stěhování tím, že vodil okupanty do sklepů a snažil se je všemožnými způsoby přesvědčovat o odkladu termínů stěhování. </p>
+                    <p>${json_obj.paragraph_two}</p>
                     <table id="table">
                         <tr><th>Etapa</th><th>Domů</th><th>Rodin</th><th>Osob</th></tr>
-                        <tr><td>IIIb</td><td></td><td></td><td></td></tr>
+                        <tr><td>${json_obj.phase}</td><td>${json_obj.houses}</td><td>${json_obj.families}</td><td>${json_obj.residents}</td></tr>
                     </table>
                 </div>
                 <div class="image">
-                <img src="../podklady/Jedovnice/1.jpg" alt="the second picture">
+                <img src="../podklady/${json_obj.name}/1.jpg" alt="the second picture">
                 </div>
             </div>
         </section>
@@ -88,12 +130,12 @@
             <h2>Galerie</h2>
 
             <div id="gallery_nav_bar">
-                <button class="gallery_active_button gallery_nav_button" onclick="check('../podklady/Jedovnice/galerie/1-pred-vystehovanim')">před vystěhováním</button>
-                <button class="gallery_nav_button" onclick="check('../podklady/Jedovnice/galerie/2-stehovani')">stěhování</button>
-                <button class="gallery_nav_button" onclick="check('../podklady/Jedovnice/galerie/3-po-vystehovani-navratu')">po vystěhování/návratu</button>
-                <button class="gallery_nav_button" onclick="check('../podklady/Jedovnice/galerie/4-soucasnost')">současnost</button>
-                <button class="gallery_nav_button" onclick="check('../podklady/Jedovnice/galerie/6-dokumenty')">dokumenty</button>
-                <button class="gallery_nav_button" onclick="check('../podklady/Jedovnice/galerie/5-pribeh-basne')">lidová slovesnost</button>
+                <button class="gallery_active_button gallery_nav_button" onclick="check('../podklady/${json_obj.name}/galerie/1-pred-vystehovanim')">před vystěhováním</button>
+                <button class="gallery_nav_button" onclick="check('../podklady/${json_obj.name}/galerie/2-stehovani')">stěhování</button>
+                <button class="gallery_nav_button" onclick="check('../podklady/${json_obj.name}/galerie/3-po-vystehovani-navratu')">po vystěhování/návratu</button>
+                <button class="gallery_nav_button" onclick="check('../podklady/${json_obj.name}/galerie/4-soucasnost')">současnost</button>
+                <button class="gallery_nav_button" onclick="check('../podklady/${json_obj.name}/galerie/6-dokumenty')">dokumenty</button>
+                <button class="gallery_nav_button" onclick="check('../podklady/${json_obj.name}/galerie/5-pribeh-basne')">lidová slovesnost</button>
             </div>
             <div id="gallery">
 
@@ -117,4 +159,17 @@
         </div>
     </footer>
 </body>
-</html>
+</html>`
+
+    function slugify(text) {
+        return text
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .toLowerCase()
+            .replace(/\s+/g, "_")
+            .replace(/[^a-z0-9\.\-]/g, "")
+    }
+
+        fs.writeFileSync(`../vesnice/${slugify(json_obj.name)}.html`, html_code)
+    }
+}
