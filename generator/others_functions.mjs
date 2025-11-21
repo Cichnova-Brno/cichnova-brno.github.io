@@ -39,7 +39,8 @@ export class other{
     }
 
 
-    write_into_html(name, json_obj){
+    write_into_html(json_obj){
+
         let html_code = `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -95,7 +96,7 @@ export class other{
                 <p>${json_obj.paragraph_one}</p>
                 <div class="image">
                 <img src="../podklady/${json_obj.name}/znak.jpg" alt="the first picture">
-                <h5>Obec ${json_obj.name} v současnosti.</h5>
+                <h5>${json_obj.name}</h5>
                 </div>
             </div>    
         </section>
@@ -105,7 +106,7 @@ export class other{
             <canvas id="data">
             </canvas>
             <script>
-                print_graph(["1869", "1900", "1921", "1930", "1950", "1961", "1991", "2021"], [672, 723, 691, 757, 457, 582, 561, 538], 800, 200)
+                print_graph([${json_obj.l_year}], [${json_obj.l_residents}], 800, 200)
             </script>
         </section>
 
@@ -121,6 +122,7 @@ export class other{
                 </div>
                 <div class="image">
                 <img src="../podklady/${json_obj.name}/1.jpg" alt="the second picture">
+                <h5>${json_obj.titles}</h5>
                 </div>
             </div>
         </section>
@@ -161,14 +163,14 @@ export class other{
 </body>
 </html>`
 
-    function slugify(text) {
-        return text
-            .normalize("NFD")
-            .replace(/[\u0300-\u036f]/g, "")
-            .toLowerCase()
-            .replace(/\s+/g, "_")
-            .replace(/[^a-z0-9\.\-]/g, "")
-    }
+        function slugify(text) {
+            return text
+                .normalize("NFD")
+                .replace(/[\u0300-\u036f]/g, "")
+                .toLowerCase()
+                .replace(/\s+/g, "_")
+                .replace(/[^a-z0-9\.\-]/g, "")
+        }
 
         fs.writeFileSync(`../vesnice/${slugify(json_obj.name)}.html`, html_code)
     }

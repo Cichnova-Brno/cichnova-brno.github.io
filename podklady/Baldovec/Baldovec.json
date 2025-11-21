@@ -1,9 +1,19 @@
 {
-  "name": "Baldovec",
-  "paragraph_one": "Osada Baldovec (místní část obce Rozstání) s katastrem z velké části pokrytým lesy leží v západní části prostějovského okresu, v zalesněném údolí Bílé vody na okraji Moravského krasu. Název nese po někdejším Baldově mlýně, kolem něhož se osídlení vytvořilo. Současně představuje vyhledávané rekreační zázemí Drahanské vrchoviny. Protéká tudy Bílá voda. První písemná zmínka o Baldovci pochází z roku 1722; po správních změnách 20. století je od roku 1961 opět součástí Rozstání. Dnešní ráz místa podtrhuje rekreační areál a kemp Baldovec, oblíbený díky blízkosti krasových jevů v čele s propastí Macocha.",
-  "paragraph_two": "Osada sice patřila administrativně k obci Rozstání, které bylo vystěhováno v etapě IIIa, Baldovec se však stěhoval až v rámci etapy IIIb. Dočasně se zde sem přestěhovala agenda z Rozstání, včetně administrativy obecního zastupitelstva. Baldovec spadal mezi obce „u směru střelby“. Nacházel se zde mlýn, kterému hrozil zánik, tak jako u jiných objektů. V dokumentech Přesídlovací kanceláře MV se dochovala záležitost ohledně jeho přemístění do jiné obce, která nepodléhala vystěhování… Tím se krásně rámuje problematika zemědělských budov nutných pro chod hospodářství. Během vystěhování totiž takhle zaniklo mnoho větrných mlýnů, které byly pro oblast typické. ",
-  "phase": "Ib",
-  "years": [],
-  "houses": [],
-  "families": []
+    "name": "Baldovec",
+    "paragraph_one": "Osada Baldovec (místní část obce Rozstání) s katastrem z velké části pokrytým lesy leží v západní části prostějovského okresu, v zalesněném údolí Bílé vody na okraji Moravského krasu. Název nese po někdejším Baldově mlýně, kolem něhož se osídlení vytvořilo. Současně představuje vyhledávané rekreační zázemí Drahanské vrchoviny. Protéká tudy Bílá voda. První písemná zmínka o Baldovci pochází z roku 1722; po správních změnách 20. století je od roku 1961 opět součástí Rozstání. Dnešní ráz místa podtrhuje rekreační areál a kemp Baldovec, oblíbený díky blízkosti krasových jevů v čele s propastí Macocha.",
+    "paragraph_two": "Osada sice patřila administrativně k obci Rozstání, které bylo vystěhováno v etapě IIIa, Baldovec se však stěhoval až v rámci etapy IIIb. Dočasně se zde sem přestěhovala agenda z Rozstání, včetně administrativy obecního zastupitelstva. Baldovec spadal mezi obce „u směru střelby“. Nacházel se zde mlýn, kterému hrozil zánik, tak jako u jiných objektů. V dokumentech Přesídlovací kanceláře MV se dochovala záležitost ohledně jeho přemístění do jiné obce, která nepodléhala vystěhování… Tím se krásně rámuje problematika zemědělských budov nutných pro chod hospodářství. Během vystěhování totiž takhle zaniklo mnoho větrných mlýnů, které byly pro oblast typické. ",
+    "phase": "IIIb",
+    "speaker": [],
+    "residents": "317",
+    "houses": "91",
+    "families": "98",
+    "l_year": [1869, 1880, 1890, 1900, 1910, 1921, 1930, 1950, 1961, 1970, 1980, 1991, 2001, 2011],
+    "l_residents": [0, 140, 194, 210, 249, 0, 234, 0, 250, 217, 160, 128, 120, 102],
+    "l_houses": [0, 23, 26, 30, 35, 40, 49, 0, 0, 54, 42, 58, 62, 61],
+    "titles": ["Pohlednice z roku 1935. Muzeum Vyškovska"],
+    "before_move": ["Pohlednice z roku 1928. Muzeum Vyškovska", "Náves v roce 1930. Muzeum Vyškovska", "Náves v roce 1934. Muzeum Vyškovska", "Pohlednice z roku 1935. Muzeum Vyškovska"],
+    "moving": ["Situační plánek sestavený četníky pro potřeby vystěhování"],
+    "after_moving_return":["Škola v roce 1946. SOkA Vyškov, kronika Nové Sady - Březina", "Jaro 1946 – 1.-5. ročník před školním bytem, kde se učilo"]
+
+    
 }

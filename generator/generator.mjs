@@ -19,7 +19,7 @@ function main(){
 
     for(let i = 0; i < villages_names.length; i++){
         village_text = others_fnc.read_json_file(`${path}/${villages_names[i]}/${villages_names[i]}.json`)
-        others_fnc.write_into_html(`${path}/${villages_names[i]}/${villages_names[i]}.json`, village_text)
+        others_fnc.write_into_html(village_text)
     }
 
 }
