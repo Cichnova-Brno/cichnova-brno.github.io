@@ -3,6 +3,7 @@ let small_images = null
 let zoom_image = null
 let nav_buttons = null
 let active_button = null
+let image_desc = null
 
 let current_index = 0
 
@@ -25,6 +26,7 @@ async function check(path){
     small_images = document.querySelectorAll('.small_image')
     zoom_image = document.getElementById('zoom_image')
     zoom_curtain = document.getElementById('zoom_curtain')
+    image_desc = document.getElementById('image_desc')
     if(small_images && zoom_image) find_active_image()
     
 }
@@ -72,6 +74,7 @@ function find_active_image(){
             new_image.src = event.src
             zoom_image.appendChild(new_image)
             zoom_div.style.display = 'flex'
+            image_desc.innerHTML = '';
         })
     })
 }

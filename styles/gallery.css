@@ -58,7 +58,12 @@
 }
   
 #zoom {
-    max-height: 100%;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
 }
 
 #zoom_curtain.zoom_active {
@@ -72,7 +77,7 @@
 }
   
 #zoom_image img {
-    min-width: 100%;
+    max-width: 100%;
     max-height: 60vh;
     z-index: 2;
 }
@@ -109,9 +114,6 @@
 @media screen and (max-width: 1000px) {
     .top_padding {
         padding-top: 15%;
-    }
-    #zoom {
-        flex-direction: row;
     }
 
     #gallery_nav_bar {
