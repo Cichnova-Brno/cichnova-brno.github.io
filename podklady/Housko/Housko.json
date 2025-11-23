@@ -1,0 +1,20 @@
+{
+    "name": "Housko",
+    "paragraph_one": "Housko, drobná osada a dnes místní část obce Vysočany, leží na Drahanské vrchovině v lesnatém zázemí Moravského krasu. Vznikla na místě, kde už koncem 14. století stávala víska náležející k holštejnskému zboží, v pramenech uváděná jako Husí, Husie či Husko. Dlouho si uchovávala ráz rozptýleného osídlení s převahou zemědělství a lesních prací; dnes má převážně klidový, rekreační charakter se smíšenou trvalou i sezónní zástavbou. Zázemí tvoří okolní lesy a louky s napojením na pěší a cyklotrasy Moravského krasu, základní obslužnost zajišťují Vysočany, s nimiž Housko správně i funkčně tvoří jeden celek.",
+    "paragraph_two": "Obec se po válce sloučila s Molenburkem a přejmenovala na Vysočany. Evakuace obce probíhala ještě v roce 1944 a obec byla předána až koncem října 1944. Za III. etapu je zde evidováno 328 vystěhovaných. Jako v Molenburku bylo i zde sídlo komandatury. Obec byla díky poloze na okraji cvičiště určená k zajištění jeho hospodářského chodu, nebyla tedy tolik zničená jako jiné.",
+    "phase": "IIIb",
+    "speaker": [],
+    "residents": "328",
+    "houses": "56",
+    "families": "81",
+    "l_year": [1869, 1881, 1890, 1900, 1910, 1921, 1930, 1950, 1961, 1970, 1980, 1991, 2001, 2011],
+    "l_houses": [44, 46, 46, 46, 46, 47, 51, 54, 58, 63, 59, 72, 74, 78],
+    "l_residents": [336, 330, 341, 321, 270, 317, 288, 239, 253, 264, 242, 224, 246, 226],
+    "titles": ["Vodní mlýn v Housku, 20. léta 20. století"],
+    "before_move": ["Okénková pohlednice s celkovým pohledem na Molenburk - tři černobílé litografie s rostlinnýmdekorem, kolem 1910. Ze Sbírky Muzea regionu Boskovice.", "Pohled na Molenburk (dnes Vysočany) a okolní polnosti určené pro hospodářskou správu cvičiště. Ze Sbírky Muzea regionu Boskovice"],
+    "move": [],
+    "after_move_return":["Koupání v rybníce u Houska, pohlednice z r. 1978. Moravské zemské muzeum."],
+    "present":[],
+    "stories_poems":[],
+    "documents":[]    
+}

@@ -8,10 +8,13 @@
     "houses": "38",
     "families": [55],
     "l_year": [1869, 1880, 1890 ,1900, 1910, 1921, 1930, 1950, 1961, 1970, 1980, 1991, 2001, 2011],
+    "l_houses": [21, 29, 30, 32, 34, 35, 35, 37, 0, 32, 27, 33, 33, 33],
     "l_residents": [138, 190, 189, 173, 194, 176, 160, 114, 130, 120, 75, 53, 39, 32],
-    "l_houses": [21, 29, 30, 32, 34, 35, 35, 37, ".", 32, 27, 33, 33, 33],
     "titles": ["Pohlednice z roku 1935. Muzeum Vyškovska"],
     "before_move": ["Pohlednice z roku 1928. Muzeum Vyškovska", "Náves v roce 1930. Muzeum Vyškovska", "Náves v roce 1934. Muzeum Vyškovska", "Pohlednice z roku 1935. Muzeum Vyškovska"],
-    "moving": ["Situační plánek sestavený četníky pro potřeby vystěhování"],
-    "after_moving_return":["Škola v roce 1946. SOkA Vyškov, kronika Nové Sady - Březina", "Jaro 1946 – 1.-5. ročník před školním bytem, kde se učilo"]
+    "move": ["Situační plánek sestavený četníky pro potřeby vystěhování"],
+    "after_move_return":["Škola v roce 1946. SOkA Vyškov, kronika Nové Sady - Březina", "Jaro 1946 – 1.-5. ročník před školním bytem, kde se učilo"],
+    "present":[""],
+    "stories_poems":[""],
+    "documents":[""]    
 }
