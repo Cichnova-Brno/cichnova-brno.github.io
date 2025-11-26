@@ -70,7 +70,7 @@ export class other{
         <a href="">Film</a>
     </nav> 
 
-    <header>    
+    <header> 
     <h1>${json_obj.name}</h1>
     <h5></h5>
     <a href="">${json_obj.phase}</a>

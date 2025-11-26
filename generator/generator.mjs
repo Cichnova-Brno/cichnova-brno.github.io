@@ -4,7 +4,7 @@ import { other } from "./others_functions.mjs"
 let village_text = null
 let villages_names = new Array()
 const path = '../podklady'
-let skip = false
+let skip = false 
 
 ////////////// main function ///////////////
 function main(){
