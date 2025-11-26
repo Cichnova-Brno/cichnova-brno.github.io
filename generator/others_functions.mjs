@@ -1,24 +1,9 @@
-//import mammoth from 'mammoth'
 import fs from 'node:fs'
-import exit from 'node:process'
+import { json } from 'node:stream/consumers'
 
 export class other{
-    // read data from docx file
-    /*async read_docx(path_to_docx){
-        try {
-            const result = await mammoth.extractRawText({ path: path_to_docx })
-            
-            return {
-                text: result.value,
-                messages: result.messages
-            }
 
-        } catch (error) {
-            console.error(error)
-            return null
-        }
-    }*/
-
+    // read data from json file
     read_json_file(name){
         let data = fs.readFileSync(name, 'utf8')
         return JSON.parse(data)
@@ -28,7 +13,10 @@ export class other{
     check_path(path_to_file){
         if(!fs.existsSync(path_to_file)){
             console.log(`Folder or file ${path_to_file} does not exist \n`)
-            exit()
+            return false
+        }else{
+            console.log(`File ${path_to_file} exists\n`)
+            return true
         }
     }
 
@@ -40,6 +28,17 @@ export class other{
 
 
     write_into_html(json_obj){
+
+        let speakers = ''
+        if(!json_obj.speaker.length === 0){
+            let temp = ''
+            for(let i = 0; i < json_obj.speaker.length; i++){
+                temp += `${json_obj.speaker[i]}<br>`
+            }
+            speakers += `<section>${speakers}</section>`
+        }else{
+            speakers = '<></>'
+        }
 
         let html_code = `<!DOCTYPE html>
 <html lang="en">
@@ -82,9 +81,14 @@ export class other{
             <div onclick="close_popup()" class="hamburger"><i class="fa fa-times"></i></div>
       
             <div id="zoom" >
-                <div class="arrow left" onclick="prev_image()">&#10094;</div>
-                <div id="zoom_image"></div>
-                <div class="arrow right" onclick="next_image()">&#10095;</div>
+                <div class="row">
+                    <div class="arrow left" onclick="prev_image()">&#10094;</div>
+                    <div id="zoom_image"></div>
+                    <div class="arrow right" onclick="next_image()">&#10095;</div>
+                </div>
+                <div>
+                    <p id="image_desc"></p>
+                </div>
             </div>
         </div>
     </div>
@@ -109,7 +113,7 @@ export class other{
                 print_graph([${json_obj.l_year}], [${json_obj.l_residents}], 800, 200)
             </script>
         </section>
-
+        ${speakers}
         <section>
             <h2>Průběh vystěhováni</h2>
             <div>
@@ -172,6 +176,13 @@ export class other{
                 .replace(/[^a-z0-9\.\-]/g, "")
         }
 
-        fs.writeFileSync(`../vesnice/${slugify(json_obj.name)}.html`, html_code)
+        try{
+            fs.writeFileSync(`../vesnice/${slugify(json_obj.name)}.html`, html_code)
+        }catch(err){
+            console.log(err)
+            return null
+        }finally{
+            console.log(`File /vesnice/${slugify(json_obj.name)}.html was successfully created\n`)
+        }
     }
 }

@@ -95,6 +95,9 @@ function close_popup(){
 
 // funkce pro vykresleni dalsich obrazku v popupu
 function show_image(index) {
+    let decs = document.getElementById('image_desc')
+    let data = null
+    let title = document.querySelector('title').textContent
     if (index < 0) index = small_images.length - 1
     if (index >= small_images.length) index = 0
     current_index = index
@@ -103,6 +106,12 @@ function show_image(index) {
     const new_img = document.createElement('img')
     new_img.src = img_src
     zoom_image.appendChild(new_img)
+    data = fetch(`../podklady/${title}/${title}.json`)
+    .then(response => {
+        if(!response.ok) console.log(`can not find or open JSON file ${title}`)
+        data = response.json()
+        decs = data.speaker[index]
+    })
 }
 
 // zobrazi dalsi obrazek
