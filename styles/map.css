@@ -29,7 +29,8 @@
 
 #zoom {
     /* max-height: 100%; */
-    max-height: calc(100% - 10rem);
+    /* max-height: calc(100% - 10rem); */
+    height: 100%;
     margin: 1rem;
     display: flex;
     flex-direction: row;
