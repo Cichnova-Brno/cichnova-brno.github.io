@@ -6,7 +6,7 @@ let villages_names = new Array()
 const path = '../podklady'
 let skip = false 
 
-////////////// main function ///////////////
+////////////// main function //////////////
 function main(){
 
     const others_fnc = new other()
