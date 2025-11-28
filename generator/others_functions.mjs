@@ -30,15 +30,19 @@ export class other{
     write_into_html(json_obj){
 
         let speakers = ''
-        if(!json_obj.speaker.length === 0){
+        if(!(json_obj.speaker.length === 0) && !(json_obj.speaker[0] === '')){
             let temp = ''
             for(let i = 0; i < json_obj.speaker.length; i++){
                 temp += `${json_obj.speaker[i]}<br>`
             }
-            speakers += `<section>${speakers}</section>`
+            speakers += `<section>${temp}</section>`
         }else{
-            speakers = '<></>'
+            speakers = `<h5>Je nám líto, ale nejsou žádní pamětníci pro tuto vesnici.</h5>`
         }
+
+        let max = Math.max(...json_obj.l_residents)
+        let step = Math.round(max / 5)
+
 
         let html_code = `<!DOCTYPE html>
 <html lang="en">
@@ -73,7 +77,7 @@ export class other{
     <header> 
     <h1>${json_obj.name}</h1>
     <h5></h5>
-    <a href="">${json_obj.phase}</a>
+    <a href="">${json_obj.phase}, ${json_obj.district}</a>
     </header>
 
     <div id="zoom_curtain">
@@ -110,9 +114,10 @@ export class other{
             <canvas id="data">
             </canvas>
             <script>
-                print_graph([${json_obj.l_year}], [${json_obj.l_residents}], 800, 200)
+                print_graph([${json_obj.l_year}], [${json_obj.l_residents}], ${max}, ${step})
             </script>
         </section>
+        <h2>Pamětníci</h2>
         ${speakers}
         <section>
             <h2>Průběh vystěhováni</h2>
