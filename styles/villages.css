@@ -2,6 +2,11 @@ header {
     margin-top: 5rem;
 }
 
+#image_desc {
+    text-align: center;
+    font-size: x-large; 
+    margin: 1rem;
+}
 
 section > div {
     display: flex;
@@ -42,8 +47,5 @@ h2 {
     }
     section > #gallery {
         flex-direction: row;
-    }
-    #zoom {
-        flex-direction: row !important;
     }
 }
