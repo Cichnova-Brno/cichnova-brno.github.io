@@ -5,6 +5,7 @@
 let regions;
 let zoom_svg;
 let zoom_div; 
+let zoom_curtain; 
 let close_btn;
 let zoom_names; 
 
@@ -44,6 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
     zoom_div = document.getElementById('zoom_div_container')    // div ve obsahujici zoom_svg
     close_btn = document.getElementById('close')    
     zoom_names = document.getElementById('zoom_names')
+    zoom_curtain = document.getElementById('zoom_curtain')
 
 
     Array.from(regions).forEach(region => {
@@ -65,6 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
             zoom_svg.innerHTML = ''
             zoom_svg.appendChild(clone)
 
+            zoom_curtain.classList.add('zoom_active')
             zoom_svg.setAttribute("viewBox", `0 0 ${bbox.width} ${bbox.height}`)
             zoom_svg.setAttribute("preserveAspectRatio", "xMidYMid meet")
             // zoom_svg.setAttribute("width", 'auto')
@@ -100,6 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     
         close_btn.addEventListener('click', () => {
+            zoom_curtain.classList.remove('zoom_active')
             zoom_div.style.display = 'none'
             document.body.classList.remove('zoom_active')
             zoom_svg.innerHTML = ''

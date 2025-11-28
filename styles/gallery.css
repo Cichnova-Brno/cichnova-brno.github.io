@@ -46,18 +46,10 @@
     cursor: pointer;
 }
 
-#zoom_curtain {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: none;
-    z-index: 1000;
-}
+
   
 #zoom {
+    height: 100%;
     flex-direction: column;
 }
 
@@ -66,11 +58,7 @@
     flex-direction: row;
 }
 
-#zoom_curtain.zoom_active {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+
   
 .top_padding {
     padding-top: 5rem;
