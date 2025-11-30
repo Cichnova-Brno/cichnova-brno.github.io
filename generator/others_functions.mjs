@@ -125,8 +125,8 @@ export class other{
                 <div>
                     <p>${json_obj.paragraph_two}</p>
                     <table id="table">
-                        <tr><th>Etapa</th><th>Domů</th><th>Rodin</th><th>Osob</th></tr>
-                        <tr><td>${json_obj.phase}</td><td>${json_obj.houses}</td><td>${json_obj.families}</td><td>${json_obj.residents}</td></tr>
+                        <tr><th>Obec</th><th>Etapa</th><th>Domů</th><th>Rodin</th><th>Osob</th></tr>
+                        <tr><td>${json_obj.district}</td><td>${json_obj.phase}</td><td>${json_obj.houses}</td><td>${json_obj.families}</td><td>${json_obj.residents}</td></tr>
                     </table>
                 </div>
                 <div class="image">
