@@ -1,0 +1,123 @@
+/*=============================
+    pokud je sirka okna mensi
+    nebo rovna 800px
+    zmensi svg na 300px
+ ==============================*/
+@media (width <= 800px) {
+  #svg_el {
+    height: 300px;
+    width: 300px;
+  }
+}
+/*================================
+    mixiny pro nastaveni pozice
+    potomku do prostred
+    a nastaveni rozmeru
+ =================================*/
+/* !!!!!!!! nejsou videt v souboru SCC !!!!!!!! */
+/*===========================
+    globalni promene
+ ============================*/
+/*==========================
+    dale uz jen samostatne 
+    styly elementu
+ ===========================*/
+#svg_el {
+  justify-content: center;
+  align-items: center;
+}
+
+.region {
+  cursor: pointer;
+  transition: fill 0.2s;
+}
+
+.Green_region {
+  fill: #cae740;
+}
+
+.zoom_active .region:hover {
+  pointer-events: none;
+}
+
+.Village_name_text {
+  font-size: small;
+}
+
+/*============================
+ elemnty s id zoom, zoom_svg
+ a tridou hidden jsou urceny
+ pro zvetsenou cast mapy
+ =============================*/
+#zoom_div_container {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+}
+
+#zoom {
+  height: 70%;
+  width: 70%;
+  padding: 3%;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 1%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#zoom_names {
+  height: 80%;
+  width: 50%;
+  background-color: rgba(34, 33, 33, 0.6);
+  overflow-y: auto;
+  border-radius: 2%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin-left: 10px;
+}
+
+#zoom_names > a {
+  margin-top: 5px;
+  margin-left: 10px;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.hidden {
+  height: 0;
+  width: 0;
+}
+
+/*=======================
+    tlacitko pro vraceni
+    do puvodniho stavu
+ ========================*/
+#close_btn {
+  height: 50px;
+  width: 50px;
+  margin-right: 5%;
+  display: block;
+  align-self: flex-end;
+  border: 2px solid black;
+  border-radius: 50%;
+  cursor: pointer;
+}
+#close_btn:hover, #close_btn :active {
+  background-color: black;
+  color: white;
+}
+
+/*# sourceMappingURL=map_style.css.map */
