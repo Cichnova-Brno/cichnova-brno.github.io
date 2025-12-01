@@ -64,7 +64,7 @@ export class other{
     <title>${json_obj.name}</title>
     <style> :root {--eth: var(--IA) }</style>
 </head>
-<body onload="check('/pub/vesnice/rychtarov/1-před-vystěhováním')">
+<body onload="check('../podklady/${json_obj.name}/galerie/1-pred-vystehovanim')">
     <div onclick="goBack()" class="hamburger back"><i class="fa fa-arrow-left"></i></div>
     <div onclick="menu()" class="hamburger" id="hamb"><i class="fa fa-bars"></i></div>
     <nav id="nav">
