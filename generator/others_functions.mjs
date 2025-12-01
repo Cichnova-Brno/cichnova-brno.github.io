@@ -63,7 +63,7 @@ export class other{
     <title>${json_obj.name}</title>
     <style> :root {--eth: var(--IA) }</style>
 </head>
-<body onload="check('/pub/vesnice/rychtarov/1-před-vystěhováním')">
+<body onload="check('../podklady/${json_obj.name}/galerie/1-pred-vystehovanim')">
     <div onclick="goBack()" class="hamburger back"><i class="fa fa-arrow-left"></i></div>
     <div onclick="menu()" class="hamburger" id="hamb"><i class="fa fa-bars"></i></div>
     <nav id="nav">
@@ -124,8 +124,8 @@ export class other{
                 <div>
                     <p>${json_obj.paragraph_two}</p>
                     <table id="table">
-                        <tr><th>Etapa</th><th>Domů</th><th>Rodin</th><th>Osob</th></tr>
-                        <tr><td>${json_obj.phase}</td><td>${json_obj.houses}</td><td>${json_obj.families}</td><td>${json_obj.residents}</td></tr>
+                        <tr><th>Obec</th><th>Etapa</th><th>Domů</th><th>Rodin</th><th>Osob</th></tr>
+                        <tr><td>${json_obj.district}</td><td>${json_obj.phase}</td><td>${json_obj.houses}</td><td>${json_obj.families}</td><td>${json_obj.residents}</td></tr>
                     </table>
                 </div>
                 <div class="image">
