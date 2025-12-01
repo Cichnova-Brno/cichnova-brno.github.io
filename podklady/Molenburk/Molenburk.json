@@ -1,0 +1,21 @@
+{
+    "name": "Molengurk",
+    "paragraph_one": "Molenburk (též Mollenburg), dnes místní část obce Vysočany, leží na Drahanské vrchovině v nadmořské výšce okolo 580 m, v lesnatém zázemí Moravského krasu. Založen byl roku 1724 Karlem hrabětem z Roggendorfu, svobodným pánem z Molenburku, jako plánovitá osada na panských pozemcích. Ves si postupně vybudovala základní infrastrukturu a roku 1876 zde vyrostl farní kostel, který se stal přirozeným duchovním centrem. Tradiční obživu představovalo zemědělství a práce v okolních lesích, nověji i rekreační funkce spojené s krasovou krajinou. Roku 1964 byl Molenburk sloučen s nedalekým Houskem v jeden správní celek; od té doby tvoří spolu Vysočany, které jsou dnes nositelem samosprávy i služeb.",
+    "paragraph_two": "Stěhování se vleklo až do konce roku 1944. Po vysídlení se materiál ze zbouraných objektů použil na výstavbu velkého statku právě zde. Více viz Housko. ",
+    "phase": "IIIb",
+    "district": "Boskovice",
+    "speaker": [""],
+    "residents": "1095",
+    "houses": "247",
+    "families": "286",
+    "l_year": [1869, 1880, 1890, 1900, 1910, 1921, 1930, 1950, 1961, 1970, 1980, 1991, 2001, 2011],
+    "l_houses": [72, 81, 79, 81, 87, 87, 90, 111, 131, 133, 153, 185 ],
+    "l_residents": [555, 597, 575, 550, 598, 620, 529, 524, 624, 620, 620, 601 ],
+    "titles": ["Kostel a škola v Molenburku, 20. léta 20. století"],
+    "before_move": [ "Okénková pohlednice s celkovým pohledem na Molenburk, faru, kostel, školu a Mlýn. Tři černobílé litografie s rostlinným dekorem, cca 20. léta 20. století. Muzeum Regionu Boskovicka", "Panorama vesnice s kostelem, fotografie kolem r. 1890. Muzeum regionu Boskovicka." ],
+    "move": [""],
+    "after_moving_return":["Koupání v rybníce u Houska, 1978"],
+    "present":[""],
+    "stories_poems":[""],
+    "documents":[""]
+}
