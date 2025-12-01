@@ -15,10 +15,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <script src="./Chart.min.js"></script>
     <script src="./graph.js"></script>
-    <title>Hamiltony</title>
+    <title>Drahany</title>
     <style> :root {--eth: var(--IA) }</style>
 </head>
-<body onload="check('../podklady/Hamiltony/galerie/1-pred-vystehovanim')">
+<body onload="check('../podklady/Drahany/galerie/1-pred-vystehovanim')">
     <div onclick="goBack()" class="hamburger back"><i class="fa fa-arrow-left"></i></div>
     <div onclick="menu()" class="hamburger" id="hamb"><i class="fa fa-bars"></i></div>
     <nav id="nav">
@@ -29,9 +29,9 @@
     </nav> 
 
     <header> 
-    <h1>Hamiltony</h1>
+    <h1>Drahany</h1>
     <h5></h5>
-    <a href="">Ia, Vyškov</a>
+    <a href="">IIIa, Prostějov</a>
     </header>
 
     <div id="zoom_curtain">
@@ -55,10 +55,10 @@
         <section>
             <h2>Charakteristika obce</h2>
             <div>
-                <p>Hamiltony (název odvozen od olomouckého biskupa a hraběte Maxmiliána z Hamiltonu) jsou dnes součástí města Vyškova. Původně náležely k panství vyškovskému, nejstarší zmínka pochází z roku 1764. Osada leží v úzkém údolí Velké Hané, severním směrem od Vyškova. Na území osady se nachází zřícenina hrádku Dědice (lokalizovaná naproti kapli Strachotínka na vysokém valu) a pseudogotická kaple sv. Cyrila a Metoděje z roku 1871 (základní kámen položen 5. července), nazývaná lidově Strachotínka (podle staročeské verze Metodějova jména Strachota). Stojí nad pramenem, z kterého údajně křtili věrozvěsti Cyril a Metoděj.</p>
+                <p>Horská obec (od r. 2006 městys) Drahany s rozsáhlým katastrem pokrytým z velké části hustými lesy leží v západní části prostějovského okresu. Podle tohoto městečka se nazývá celá oblast. Současně je nejvýše položenou obcí východní části Drahanské vrchoviny. Pramení zde řeka Haná. Od roku 1384 byly Drahany městečkem, později se stávají vsí, aby se roku 1908 opět staly městečkem s farním kostelem sv. Jana Křtitele.</p>
                 <div class="image">
-                <img src="../podklady/Hamiltony/znak.jpg" alt="the first picture">
-                <h5>Hamiltony</h5>
+                <img src="../podklady/Drahany/znak.jpg" alt="the first picture">
+                <h5>Drahany</h5>
                 </div>
             </div>    
         </section>
@@ -68,7 +68,7 @@
             <canvas id="data">
             </canvas>
             <script>
-                print_graph([1869,1880,1890,1900,1910,1921,1930,1950,1961,1970,1980,1991,2001,2011], [250,297,351,374,451,478,476,414,432,377,322,312,326,372], 478, 96)
+                print_graph([1869,1880,1890,1900,1910,1921,1930,1950,1961,1970,1980,1991,2001,2011], [904,947,1012,1003,1001,1007,990,799,755,674,621,564,530,523], 1012, 202)
             </script>
         </section>
         <h2>Pamětníci</h2>
@@ -77,15 +77,15 @@
             <h2>Průběh vystěhováni</h2>
             <div>
                 <div>
-                    <p>Osada byla vyklizena v první vlně stěhování. Hamiltony byly určeny německou vojenskou správou k ubytování rodin zaměstnanců komandatury. Obec tedy představovala jakési širší zázemí pro vojáky i civilní pracovníky cvičiště. Taktéž se zde budovaly baráky pro vojsko, díky čemuž byla částečně ušetřena nejhorší devastace.</p>
+                    <p>Horská obec (od r. 2006 městys) Drahany s rozsáhlým katastrem pokrytým z velké části hustými lesy leží v západní části prostějovského okresu. Podle tohoto městečka se nazývá celá oblast. Současně je nejvýše položenou obcí východní části Drahanské vrchoviny. Pramení zde řeka Haná. Od roku 1384 byly Drahany městečkem, později se stávají vsí, aby se roku 1908 opět staly městečkem s farním kostelem sv. Jana Křtitele.</p>
                     <table id="table">
                         <tr><th>Obec</th><th>Etapa</th><th>Domů</th><th>Rodin</th><th>Osob</th></tr>
-                        <tr><td>Vyškov</td><td>Ia</td><td>108</td><td>108</td><td>554</td></tr>
+                        <tr><td>Prostějov</td><td>IIIa</td><td>206</td><td>338</td><td>1093</td></tr>
                     </table>
                 </div>
                 <div class="image">
-                <img src="../podklady/Hamiltony/1.jpg" alt="the second picture">
-                <h5>Kresba od Josefa Kachlíka kaple Strachotínky, pohlednice, 1930. Muzeum Vyškovska</h5>
+                <img src="../podklady/Drahany/1.jpg" alt="the second picture">
+                <h5></h5>
                 </div>
             </div>
         </section>
@@ -95,12 +95,12 @@
             <h2>Galerie</h2>
 
             <div id="gallery_nav_bar">
-                <button class="gallery_active_button gallery_nav_button" onclick="check('../podklady/Hamiltony/galerie/1-pred-vystehovanim')">před vystěhováním</button>
-                <button class="gallery_nav_button" onclick="check('../podklady/Hamiltony/galerie/2-stehovani')">stěhování</button>
-                <button class="gallery_nav_button" onclick="check('../podklady/Hamiltony/galerie/3-po-vystehovani-navratu')">po vystěhování/návratu</button>
-                <button class="gallery_nav_button" onclick="check('../podklady/Hamiltony/galerie/4-soucasnost')">současnost</button>
-                <button class="gallery_nav_button" onclick="check('../podklady/Hamiltony/galerie/6-dokumenty')">dokumenty</button>
-                <button class="gallery_nav_button" onclick="check('../podklady/Hamiltony/galerie/5-pribeh-basne')">lidová slovesnost</button>
+                <button class="gallery_active_button gallery_nav_button" onclick="check('../podklady/Drahany/galerie/1-pred-vystehovanim')">před vystěhováním</button>
+                <button class="gallery_nav_button" onclick="check('../podklady/Drahany/galerie/2-stehovani')">stěhování</button>
+                <button class="gallery_nav_button" onclick="check('../podklady/Drahany/galerie/3-po-vystehovani-navratu')">po vystěhování/návratu</button>
+                <button class="gallery_nav_button" onclick="check('../podklady/Drahany/galerie/4-soucasnost')">současnost</button>
+                <button class="gallery_nav_button" onclick="check('../podklady/Drahany/galerie/6-dokumenty')">dokumenty</button>
+                <button class="gallery_nav_button" onclick="check('../podklady/Drahany/galerie/5-pribeh-basne')">lidová slovesnost</button>
             </div>
             <div id="gallery">
 
