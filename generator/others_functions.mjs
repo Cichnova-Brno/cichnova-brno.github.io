@@ -50,8 +50,8 @@ export class other{
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/villages.css">
     <link rel="stylesheet" href="/styles/common.css">
-    <link rel="stylesheet" href="/styles/gallery.css">
     <link rel="stylesheet" href="/styles/map.css">
+    <link rel="stylesheet" href="/styles/gallery.css">
     <link rel="stylesheet" href="/styles/table.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/styles/graph.css">
@@ -61,7 +61,7 @@ export class other{
     <script src="./Chart.min.js"></script>
     <script src="./graph.js"></script>
     <title>${json_obj.name}</title>
-    <style> :root {--eth: var(--IA) }</style>
+    <style> :root {--eth: var(--${json_obj.phase}</style>
 </head>
 <body onload="check('../podklady/${json_obj.name}/galerie/1-pred-vystehovanim')">
     <div onclick="goBack()" class="hamburger back"><i class="fa fa-arrow-left"></i></div>
