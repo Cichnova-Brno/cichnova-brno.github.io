@@ -1,49 +1,4 @@
-import fs from 'node:fs'
-
-export class other{
-
-    // read data from json file
-    read_json_file(name){
-        let data = fs.readFileSync(name, 'utf8')
-        return JSON.parse(data)
-    }
-
-    // looking for files in certain path
-    check_path(path_to_file){
-        if(!fs.existsSync(path_to_file)){
-            console.log(`Folder or file ${path_to_file} does not exist \n`)
-            return false
-        }else{
-            console.log(`File ${path_to_file} exists\n`)
-            return true
-        }
-    }
-
-    // read names of all directories
-    get_names(dir_name){
-        let villages_names = fs.readdirSync(dir_name)
-        return villages_names
-    }
-
-
-    write_into_html(json_obj){
-
-        let speakers = ''
-        if(!(json_obj.speaker.length === 0) && !(json_obj.speaker[0] === '')){
-            let temp = ''
-            for(let i = 0; i < json_obj.speaker.length; i++){
-                temp += `${json_obj.speaker[i]}<br>`
-            }
-            speakers += `<section>${temp}</section>`
-        }else{
-            speakers = `<h5>Je nám líto, ale nejsou žádní pamětníci pro tuto vesnici</h5>`
-        }
-
-        let max = Math.max(...json_obj.l_residents)
-        let step = Math.round(max / 5)
-
-
-        let html_code = `<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -60,10 +15,10 @@ export class other{
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <script src="./Chart.min.js"></script>
     <script src="./graph.js"></script>
-    <title>${json_obj.name}</title>
+    <title>Lhota</title>
     <style> :root {--eth: var(--IA) }</style>
 </head>
-<body onload="check('../podklady/${json_obj.name}/galerie/1-pred-vystehovanim')">
+<body onload="check('../podklady/Lhota/galerie/1-pred-vystehovanim')">
     <div onclick="goBack()" class="hamburger back"><i class="fa fa-arrow-left"></i></div>
     <div onclick="menu()" class="hamburger" id="hamb"><i class="fa fa-bars"></i></div>
     <nav id="nav">
@@ -74,9 +29,9 @@ export class other{
     </nav> 
 
     <header> 
-    <h1>${json_obj.name}</h1>
+    <h1>Lhota</h1>
     <h5></h5>
-    <a href="">${json_obj.phase}, ${json_obj.district}</a>
+    <a href="">Ia, Vyškov</a>
     </header>
 
     <div id="zoom_curtain">
@@ -100,10 +55,10 @@ export class other{
         <section>
             <h2>Charakteristika obce</h2>
             <div>
-                <p>${json_obj.paragraph_one}</p>
+                <p>Lhota u Vyškova, ves s protáhlou návsí na severozápadním okraji města Vyškova, patří k sídlům někdejšího vyškovského panství a její název odkazuje na „lhotu“ – dočasné osvobození osadníků od povinností po založení. Tradiční obživu zajišťovalo zemědělství a práce v lese; v závěru 19. století místní rozvoj dokládá i stavba školy v roce 1888. Ke Lhotě náleží i osada Pařezovice (asi 1 km SZ); obě obce byly nejprve sloučeny spolu, roku 1964 administrativně spojeny s Rychtářovem a v polovině 80. let 20. století začleněny do města Vyškova, kde dnes fungují jako městské části se společným osadním výborem. Lhota si přesto udržuje klidný venkovský ráz a těsné vazby na zemědělskou krajinu i servis okresního centra.</p>
                 <div class="image">
-                <img src="../podklady/${json_obj.name}/znak.jpg" alt="the first picture">
-                <h5>${json_obj.name}</h5>
+                <img src="../podklady/Lhota/znak.jpg" alt="the first picture">
+                <h5>Lhota</h5>
                 </div>
             </div>    
         </section>
@@ -113,24 +68,24 @@ export class other{
             <canvas id="data">
             </canvas>
             <script>
-                print_graph([${json_obj.l_year}], [${json_obj.l_residents}], ${max}, ${step})
+                print_graph([1869,1880,1890,1900,1910,1921], [390,416,455,466,520,463], 520, 104)
             </script>
         </section>
         <h2>Pamětníci</h2>
-        ${speakers}
+        <h5>Je nám líto, ale nejsou žádní pamětníci pro tuto vesnici</h5>
         <section>
             <h2>Průběh vystěhováni</h2>
             <div>
                 <div>
-                    <p>${json_obj.paragraph_two}</p>
+                    <p>Památná kniha obce Lhoty, dnes součást Vyškova, detailně popisuje pochmurnou náladu březnových dní roku 1941. „Jarní měsíc březen, poněkud ještě chladný, byl svědkem našeho cestování, loučení. Od ranních hodin do noci – nepřetržitě vozovka je každodenně naplněna povozy. … Bylo dosti chladno, na polích místy sníh a na silnici též místy ledovice. Dny byly smutné bez slunce – a nasvědčovaly pravdivosti činu. Den se rozplakal – a my všichni též. Poslední z obce dle nařízení musel odjíždět starosta, jímž byl tehdy pan Zabloudil Bernard, čís. 100.“</p>
                     <table id="table">
                         <tr><th>Obec</th><th>Etapa</th><th>Domů</th><th>Rodin</th><th>Osob</th></tr>
-                        <tr><td>${json_obj.district}</td><td>${json_obj.phase}</td><td>${json_obj.houses}</td><td>${json_obj.families}</td><td>${json_obj.residents}</td></tr>
+                        <tr><td>Vyškov</td><td>Ia</td><td>128</td><td>153</td><td>571</td></tr>
                     </table>
                 </div>
                 <div class="image">
-                <img src="../podklady/${json_obj.name}/1.jpg" alt="the second picture">
-                <h5>${json_obj.titles}</h5>
+                <img src="../podklady/Lhota/1.jpg" alt="the second picture">
+                <h5>Pohled na Lhotu z roku XXXXX</h5>
                 </div>
             </div>
         </section>
@@ -140,12 +95,12 @@ export class other{
             <h2>Galerie</h2>
 
             <div id="gallery_nav_bar">
-                <button class="gallery_active_button gallery_nav_button" onclick="check('../podklady/${json_obj.name}/galerie/1-pred-vystehovanim')">před vystěhováním</button>
-                <button class="gallery_nav_button" onclick="check('../podklady/${json_obj.name}/galerie/2-stehovani')">stěhování</button>
-                <button class="gallery_nav_button" onclick="check('../podklady/${json_obj.name}/galerie/3-po-vystehovani-navratu')">po vystěhování/návratu</button>
-                <button class="gallery_nav_button" onclick="check('../podklady/${json_obj.name}/galerie/4-soucasnost')">současnost</button>
-                <button class="gallery_nav_button" onclick="check('../podklady/${json_obj.name}/galerie/6-dokumenty')">dokumenty</button>
-                <button class="gallery_nav_button" onclick="check('../podklady/${json_obj.name}/galerie/5-pribeh-basne')">lidová slovesnost</button>
+                <button class="gallery_active_button gallery_nav_button" onclick="check('../podklady/Lhota/galerie/1-pred-vystehovanim')">před vystěhováním</button>
+                <button class="gallery_nav_button" onclick="check('../podklady/Lhota/galerie/2-stehovani')">stěhování</button>
+                <button class="gallery_nav_button" onclick="check('../podklady/Lhota/galerie/3-po-vystehovani-navratu')">po vystěhování/návratu</button>
+                <button class="gallery_nav_button" onclick="check('../podklady/Lhota/galerie/4-soucasnost')">současnost</button>
+                <button class="gallery_nav_button" onclick="check('../podklady/Lhota/galerie/6-dokumenty')">dokumenty</button>
+                <button class="gallery_nav_button" onclick="check('../podklady/Lhota/galerie/5-pribeh-basne')">lidová slovesnost</button>
             </div>
             <div id="gallery">
 
@@ -169,24 +124,4 @@ export class other{
         </div>
     </footer>
 </body>
-</html>`
-
-        function slugify(text) {
-            return text
-                .normalize("NFD")
-                .replace(/[\u0300-\u036f]/g, "")
-                .toLowerCase()
-                .replace(/\s+/g, "_")
-                .replace(/[^a-z0-9\.\-]/g, "")
-        }
-
-        try{
-            fs.writeFileSync(`../vesnice/${slugify(json_obj.name)}.html`, html_code)
-        }catch(err){
-            console.log(err)
-            return null
-        }finally{
-            console.log(`File /vesnice/${slugify(json_obj.name)}.html was successfully created\n`)
-        }
-    }
-}
+</html>
