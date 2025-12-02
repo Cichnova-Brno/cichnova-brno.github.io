@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/villages.css">
     <link rel="stylesheet" href="/styles/common.css">
-    <link rel="stylesheet" href="/styles/gallery.css">
     <link rel="stylesheet" href="/styles/map.css">
+    <link rel="stylesheet" href="/styles/gallery.css">
     <link rel="stylesheet" href="/styles/table.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/styles/graph.css">
@@ -16,9 +16,9 @@
     <script src="./Chart.min.js"></script>
     <script src="./graph.js"></script>
     <title>Hamry</title>
-    <style> :root {--eth: var(--IA) }</style>
+    <style> :root {--eth: var(--MIMO)}</style>
 </head>
-<body onload="check('/pub/vesnice/rychtarov/1-před-vystěhováním')">
+<body onload="check('../podklady/Hamry/galerie/1-pred-vystehovanim')">
     <div onclick="goBack()" class="hamburger back"><i class="fa fa-arrow-left"></i></div>
     <div onclick="menu()" class="hamburger" id="hamb"><i class="fa fa-bars"></i></div>
     <nav id="nav">
@@ -28,10 +28,10 @@
         <a href="">Film</a>
     </nav> 
 
-    <header>    
+    <header> 
     <h1>Hamry</h1>
     <h5></h5>
-    <a href="">mimo</a>
+    <a href="">mimo, undefined</a>
     </header>
 
     <div id="zoom_curtain">
@@ -39,9 +39,14 @@
             <div onclick="close_popup()" class="hamburger"><i class="fa fa-times"></i></div>
       
             <div id="zoom" >
-                <div class="arrow left" onclick="prev_image()">&#10094;</div>
-                <div id="zoom_image"></div>
-                <div class="arrow right" onclick="next_image()">&#10095;</div>
+                <div class="row">
+                    <div class="arrow left" onclick="prev_image()">&#10094;</div>
+                    <div id="zoom_image"></div>
+                    <div class="arrow right" onclick="next_image()">&#10095;</div>
+                </div>
+                <div>
+                    <p id="image_desc"></p>
+                </div>
             </div>
         </div>
     </div>
@@ -63,18 +68,19 @@
             <canvas id="data">
             </canvas>
             <script>
-                print_graph([Data jsou nedostupná], [Data jsou nedostupná], 800, 200)
+                print_graph([Data jsou nedostupná], [Data jsou nedostupná], NaN, NaN)
             </script>
         </section>
-
+        <h2>Pamětníci</h2>
+        <h5>Je nám líto, ale nejsou žádní pamětníci pro tuto vesnici</h5>
         <section>
             <h2>Průběh vystěhováni</h2>
             <div>
                 <div>
                     <p>Hamry, dnes osada města Plumlova, leží v západní části prostějovského okresu na okraji Drahanské vrchoviny, v lesnaté krajině Plumlovska. Byly založeny krátce před rokem 1590 v místě dolování železné rudy; osídlení se rozvíjelo při hamrech a železářských pracovištích, které daly obci jméno. Svým původem patří k technickým osadám regionu, navázaným na místní rudy a lesní hospodářství. Vodní toky a rybníky v okolí poskytovaly energii i zázemí pro zpracování železa. Tradiční venkovský ráz se tu udržel i po útlumu železářství; dnes Hamry administrativně a funkčně spadají pod Plumlov.</p>
                     <table id="table">
-                        <tr><th>Etapa</th><th>Domů</th><th>Rodin</th><th>Osob</th></tr>
-                        <tr><td>mimo</td><td>91</td><td>98</td><td>317</td></tr>
+                        <tr><th>Obec</th><th>Etapa</th><th>Domů</th><th>Rodin</th><th>Osob</th></tr>
+                        <tr><td>undefined</td><td>mimo</td><td>91</td><td>98</td><td>317</td></tr>
                     </table>
                 </div>
                 <div class="image">

@@ -1,0 +1,21 @@
+{
+    "name": "Pařezovice",
+    "paragraph_one": "Pařezovice, dnes místní část města Vyškova, leží v nadmořské výšce kolem 369 m na okraji Drahanské vrchoviny. Založeny byly roku 1766 jako dominikální ves na místě vykáceného lesa; od téhož roku jsou vedeny i místní pozemkové knihy. Půdorys obce má podobu protáhlé ulicovky a katastr tvoří společně se sousední Lhotou, pod niž Pařezovice historicky spadaly. Dnes jsou plně začleněny do správní i obslužné struktury Vyškova, přičemž si uchovávají ráz klidné příměstské osady s vazbou na zemědělské a lesní zázemí okolí.",
+    "paragraph_two": "Malá jednořadá vesnice u Lhoty vyklizená v etapě Ia(do 1. 4. 1941). Zvláštností z této obce je případ Karla Lusky, doložený ve lhotské kronice, který odmítl podepsat trhovou smlouvu, a tak mu byl zabaven majetek a byl eskortován bez finanční náhrady. Takových případů bylo v první etapě evidováno několik, většina rodin (či jejich hlav) však byla nakonec v průběhu března donucena trhové kupní smlouvy podepsat. Karel Luska z Pařezovic je tak jeden z mála případů, který se veřejně odmítl podvolit a odmítl jakoukoli finanční i materiální pomoc od okupantů.",
+    "phase": "Ia",
+    "district": "Vyškov",
+    "speaker": [""],
+    "residents": "213",
+    "houses": "51",
+    "families": "48",
+    "l_year": [1869, 1880, 1890, 1900, 1910, 1921, 1930, 1950, 1961, 1970, 1980, 1991, 2001, 2011],
+    "l_houses": [ 29, 32, 36, 40, 43, 42, 45, 41, "", 27, 22, 35, 34, 34 ],
+    "l_residents": [ 213, 219, 221, 244, 241, 217, 218, 73, 92, 76, 62, 49, 35, 37 ],
+    "titles": ["Kamenná kaple sv. Terezie v současnosti"],
+    "before_move": [""],
+    "move": [""],
+    "after_moving_return":[""],
+    "present":[ "Kamenná kaple sv. Terezie, postavená v letech 1932-1933,  v současnosti", "Kamenná kaple sv. Terezie, postavená v letech 1932-1933,  v současnosti", "celkový pohled na Pařezovice, 2025.", "Pařezovice, pohled na hlavní ulici, 2025.", "Pařezovice v současnosti. 2025" ],
+    "stories_poems":[""],
+    "documents":[ "Zpráva vojenské zprávy o převzetí Lhoty a Pařezovic z roku 1941" ]
+}

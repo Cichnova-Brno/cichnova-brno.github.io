@@ -1,0 +1,21 @@
+{
+    "name": "Repechy",
+    "paragraph_one": "Malá osada na Drahanské vrchovině severozápadně od Bousína s rozptýlenou zástavbou v lesnaté pramenné krajině Repešského potoka. V pramenech se objevuje i pod původním názvem Rohrbach (též Rejpach/Regpech); roku 1566 jsou uváděny jako pustá obec, před rokem 1750 došlo k jejich obnovení (krátce zde působila i sklárna). Tradiční venkovský ráz přetrval hluboko do 20. století, hlavním zdrojem obživy bylo zemědělství, tkalcovství, včelařství a práce v lesích, jimž se věnovali zejména drobní hospodáři. Za nacistické okupace se Repech dotklo plánované vysídlení v souvislosti s rozšiřováním vojenského prostoru na Drahanské vrchovině. Do roku 1960 byly Repechy samostatnou obcí v okrese Boskovice; od roku 1960 jsou součástí obce Bousín a správně náležejí do okresu Prostějov.",
+    "paragraph_two": "Vystěhovány v etapě IIIa. Specifické pro tyto obce bylo tzv. „rekvírování“ hospodářského zvířectva, strojů a nářadí na podzim 1943, předstupeň pozdějšího drancování obcí IIIb. Repechy se nacházely v těsné blízkosti střelnice, byly proto značně poškozeny. Po vystěhování zde byly cílové plochy. Mnoho obyvatel se přes zimu živilo jako lesní dělníci (tzv. „na rubařskou“) a stěhovali se proto do nedalekých Hamer, kde byly zaměstnancům komandatury vyčleněny domy pro jejich rodiny.",
+    "phase": "IIIa",
+    "district": "Boskovice",
+    "speaker": [""],
+    "residents": "277",
+    "houses": "67",
+    "families": "59",
+    "l_year": [1869, 1880, 1890, 1900, 1910, 1921, 1930, 1950, 1961, 1970, 1980, 1991, 2001, 2011],
+    "l_houses": [ 27, 33, 36, 41, 42, 45, 50, 52, "", 29, 19, 22, 44, 46 ],
+    "l_residents": [ 199, 222, 222, 253, 283, 283, 278, 108, 127, 99, 57, 31, 19, 15 ],
+    "titles": ["škola Repechy, 1930-1931"],
+    "before_move": [ "Škola a hostinec, Repechy, dobová pohlednice", "škola Repechy, 1930-1931" ],
+    "move": [ "situační plánek vytvořený četníky pro potřeby vystěhování" ],
+    "after_moving_return":[ "oprava školy v Repechách 1960" ],
+    "present":[ "zvonice v Repechách s lípami", "Rozhledna Kopaninka" ],
+    "stories_poems":[""],
+    "documents":[""]
+}

@@ -1,5 +1,4 @@
 import fs from 'node:fs'
-import { json } from 'node:stream/consumers'
 
 export class other{
 
@@ -30,15 +29,19 @@ export class other{
     write_into_html(json_obj){
 
         let speakers = ''
-        if(!json_obj.speaker.length === 0){
+        if(!(json_obj.speaker.length === 0) && !(json_obj.speaker[0] === '')){
             let temp = ''
             for(let i = 0; i < json_obj.speaker.length; i++){
                 temp += `${json_obj.speaker[i]}<br>`
             }
-            speakers += `<section>${speakers}</section>`
+            speakers += `<section>${temp}</section>`
         }else{
-            speakers = '<></>'
+            speakers = `<h5>Je nám líto, ale nejsou žádní pamětníci pro tuto vesnici</h5>`
         }
+
+        let max = Math.max(...json_obj.l_residents)
+        let step = Math.round(max / 5)
+
 
         let html_code = `<!DOCTYPE html>
 <html lang="en">
@@ -47,8 +50,8 @@ export class other{
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/villages.css">
     <link rel="stylesheet" href="/styles/common.css">
-    <link rel="stylesheet" href="/styles/gallery.css">
     <link rel="stylesheet" href="/styles/map.css">
+    <link rel="stylesheet" href="/styles/gallery.css">
     <link rel="stylesheet" href="/styles/table.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/styles/graph.css">
@@ -58,9 +61,9 @@ export class other{
     <script src="./Chart.min.js"></script>
     <script src="./graph.js"></script>
     <title>${json_obj.name}</title>
-    <style> :root {--eth: var(--IA) }</style>
+    <style> :root {--eth: var(--${json_obj.phase.toUpperCase()})}</style>
 </head>
-<body onload="check('/pub/vesnice/rychtarov/1-před-vystěhováním')">
+<body onload="check('../podklady/${json_obj.name}/galerie/1-pred-vystehovanim')">
     <div onclick="goBack()" class="hamburger back"><i class="fa fa-arrow-left"></i></div>
     <div onclick="menu()" class="hamburger" id="hamb"><i class="fa fa-bars"></i></div>
     <nav id="nav">
@@ -73,7 +76,7 @@ export class other{
     <header> 
     <h1>${json_obj.name}</h1>
     <h5></h5>
-    <a href="">${json_obj.phase}</a>
+    <a href="">${json_obj.phase}, ${json_obj.district}</a>
     </header>
 
     <div id="zoom_curtain">
@@ -110,9 +113,10 @@ export class other{
             <canvas id="data">
             </canvas>
             <script>
-                print_graph([${json_obj.l_year}], [${json_obj.l_residents}], 800, 200)
+                print_graph([${json_obj.l_year}], [${json_obj.l_residents}], ${max}, ${step})
             </script>
         </section>
+        <h2>Pamětníci</h2>
         ${speakers}
         <section>
             <h2>Průběh vystěhováni</h2>
@@ -120,8 +124,8 @@ export class other{
                 <div>
                     <p>${json_obj.paragraph_two}</p>
                     <table id="table">
-                        <tr><th>Etapa</th><th>Domů</th><th>Rodin</th><th>Osob</th></tr>
-                        <tr><td>${json_obj.phase}</td><td>${json_obj.houses}</td><td>${json_obj.families}</td><td>${json_obj.residents}</td></tr>
+                        <tr><th>Obec</th><th>Etapa</th><th>Domů</th><th>Rodin</th><th>Osob</th></tr>
+                        <tr><td>${json_obj.district}</td><td>${json_obj.phase}</td><td>${json_obj.houses}</td><td>${json_obj.families}</td><td>${json_obj.residents}</td></tr>
                     </table>
                 </div>
                 <div class="image">

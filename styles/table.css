@@ -3,7 +3,6 @@
     font-style: normal;
     font-family: "Crimson Text", serif;
     --complementary: #d9d9d9;
-    --IA: #ffb670;
 }
 
 #table {
@@ -38,5 +37,5 @@ tr:last-child td:last-child {
 }
 
 th {
-    background-color: var(--IA);
+    background-color: var(--eth);
 }

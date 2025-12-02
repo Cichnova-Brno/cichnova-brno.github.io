@@ -1,0 +1,21 @@
+{
+    "name": "Marianín",
+    "paragraph_one": "Marianín, drobná osada v nadmořské výšce kolem 555 m, leží na okraji Moravského krasu a je od svého vzniku správní součástí obce Lipovec, která zajišťuje i základní obslužnost; jako samostatná obec nikdy nevystupovala. Počátky osídlení spadají do roku 1811, vlastní osada byla založena roku 1813. Výraznější rozkvět přišel kolem poloviny 19. století, kdy přibyly nové domy i drobná obecní infrastruktura včetně zvonice a požární nádrže. Dnes si Marianín uchovává klidný venkovský ráz s rozptýlenou zástavbou a těsným funkčním propojením s Lipovcem i okolní rekreační krajinou Moravského krasu.",
+    "paragraph_two": "Původně samota s hájenkou na pomezí bývalých okresů Vyškov a Boskovice. Požadavek velitelství na její urychlené vyklizení už k 1. 5. 1942, ve druhé spěšná etapě. Osada patřila mezi ty, které Hammerschmidt tlačil k vystěhování jako prioritní. ",
+    "phase": "IIIb",
+    "district": "Boskovice",
+    "speaker": [""],
+    "residents": "143",
+    "houses": "29",
+    "families": "30",
+    "l_year": [1869, 1880, 1890, 1900, 1910, 1921, 1930, 1950, 1961, 1970, 1980, 1991, 2001, 2011],
+    "l_houses": [27, 27, 28, 29, 29, 29, 29, 28, "",  27, 24, 27, 27, 28],
+    "l_residents": [176, 174, 176, 153, 168, 141, 132, 108, 137, 124, 85, 64, 60, 54 ],
+    "titles": ["Pohled z Marianína z 20. let 20. století"],
+    "before_move": ["Pohled z Marianína z 20. let 20. století"],
+    "move": [""],
+    "after_moving_return":[""],
+    "present":[""],
+    "stories_poems":[""],
+    "documents":[""]
+}
