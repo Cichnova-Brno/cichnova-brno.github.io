@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/villages.css">
     <link rel="stylesheet" href="/styles/common.css">
-    <link rel="stylesheet" href="/styles/gallery.css">
     <link rel="stylesheet" href="/styles/map.css">
+    <link rel="stylesheet" href="/styles/gallery.css">
     <link rel="stylesheet" href="/styles/table.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/styles/graph.css">
@@ -15,10 +15,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <script src="./Chart.min.js"></script>
     <script src="./graph.js"></script>
-    <title>Kulířov</title>
-    <style> :root {--eth: var(--IA) }</style>
+    <title>Podivice</title>
+    <style> :root {--eth: var(--IB)}</style>
 </head>
-<body onload="check('/pub/vesnice/rychtarov/1-před-vystěhováním')">
+<body onload="check('../podklady/Podivice/galerie/1-pred-vystehovanim')">
     <div onclick="goBack()" class="hamburger back"><i class="fa fa-arrow-left"></i></div>
     <div onclick="menu()" class="hamburger" id="hamb"><i class="fa fa-bars"></i></div>
     <nav id="nav">
@@ -29,9 +29,9 @@
     </nav> 
 
     <header> 
-    <h1>Kulířov</h1>
+    <h1>Podivice</h1>
     <h5></h5>
-    <a href="">IIIb, Boskovice</a>
+    <a href="">Ib, Vyškov</a>
     </header>
 
     <div id="zoom_curtain">
@@ -55,10 +55,10 @@
         <section>
             <h2>Charakteristika obce</h2>
             <div>
-                <p>Kulířov, malá obec na Drahanské vrchovině v okrese Blansko, leží v nadmořské výšce kolem 538 m na otevřených plošinách při okraji Moravského krasu a má katastr o rozloze 3,41 km². Vznikla ve 2. polovině 13. století; první písemná zmínka pochází z roku 1349 a v pramenech se uvádí jako Kylein, roku 1371 Cholerzow a roku 1511 Kuléřov. Tradiční hospodářský ráz se dlouho opíral o zemědělství a práce v lesích, k nimž se v novější době přidala rekreační funkce daná blízkostí krasové krajiny. V 90. letech 20. století byla v obci postavena kaple svaté Anny, patronky Kulířova – její vystavění si místní slíbili v době nuceného vystěhování za druhé světové války. </p>
+                <p>Horská obec Podivice s farním kostelem sv. Cyrila a Metoděje leží v kotlině lemované lesem Drahanské vrchoviny. Její název pochází od jména Podiva. Půdorysně jde o malou návesní ulicovku se shlukem usedlostí a domků na jihu a odděleným shlukem domů na severu. Podivice nejprve náležely k olomouckému biskupství, od roku 1465 pak spolu s pustou vsí Neustift k vyškovskému panství.Nedaleko Podivic je barokní lovecký zámeček Ferdinandsko z 18. století, který založil olomoucký biskup Ferdinand Julius hrabě Troyer. Dále se v katastru obce nachází myslivna Romanovice a sedlisko Kotačky. Obyvatelé pracovali většinou jako drobní zemědělci, v zimě lesní dělníci.</p>
                 <div class="image">
-                <img src="../podklady/Kulířov/znak.jpg" alt="the first picture">
-                <h5>Kulířov</h5>
+                <img src="../podklady/Podivice/znak.jpg" alt="the first picture">
+                <h5>Podivice</h5>
                 </div>
             </div>    
         </section>
@@ -68,24 +68,24 @@
             <canvas id="data">
             </canvas>
             <script>
-                print_graph([1869,1880,1890,1900,1910,1921,1930,1950,1961,1970,1980,1991,2001,2011], [546,602,662,676,680,684,602,387,454,390,325,271,234,185], 684, 137)
+                print_graph([1869,1880,1890,1900,1910,1921,1930,1950,1961,1970,1980,1991,2001,2011], [377,422,423,419,454,427,406,234,275,232,215,199,187,192], 454, 91)
             </script>
         </section>
         <h2>Pamětníci</h2>
-        <section>Tomáš Baldík<br></section>
+        <h5>Je nám líto, ale nejsou žádní pamětníci pro tuto vesnici</h5>
         <section>
             <h2>Průběh vystěhováni</h2>
             <div>
                 <div>
-                    <p>Řazen mezi obce ohrožené „po směru střelby“, proto s ním úřady v roce 1943 výslovně počítaly i přednostně. Patřil k silně poškozeným obcím. </p>
+                    <p>Obec nacházející se doslova v obklopení lesů patřící cvičišti byla vysídlená k 1. 11. 1941. Snad nejzajímavější událostí z doby vystěhování (či respektive rok předtím) byla pro Podivické „důstojnická“ svatba dcery velitele cvičiště pplk. Ludwiga Hammerschmidta - Ireny s nadpor. Karlem Josefem Endresem konané 29. 10. 1940. Obřad se konal ve zdejším kostele. Poté se svatební hosté fotografovali před kostelem a na ulici před ním, kde jsou zachyceni i místní obyvatelé. Svatební hostina a raut se odehrál na zámečku Ferdinandsko, nacházející se zhruba 1 km od Podivic. Na jaře 1945 zasáhla obec dělostřelba při bojích o Vyškov, takže část škod vznikla ještě před návratem vystěhovalců. Měla zůstat v záboru po válce, ale předseda MNV a další z místních se zasadili o to, aby byla obec obnovena.</p>
                     <table id="table">
-                        <tr><th>Etapa</th><th>Domů</th><th>Rodin</th><th>Osob</th></tr>
-                        <tr><td>IIIb</td><td>127</td><td>154</td><td>646</td></tr>
+                        <tr><th>Obec</th><th>Etapa</th><th>Domů</th><th>Rodin</th><th>Osob</th></tr>
+                        <tr><td>Vyškov</td><td>Ib</td><td>101</td><td>109</td><td>403</td></tr>
                     </table>
                 </div>
                 <div class="image">
-                <img src="../podklady/Kulířov/1.jpg" alt="the second picture">
-                <h5>Rodný dům rodiny Baldíkových</h5>
+                <img src="../podklady/Podivice/1.jpg" alt="the second picture">
+                <h5>data nejsou dostupná</h5>
                 </div>
             </div>
         </section>
@@ -95,12 +95,12 @@
             <h2>Galerie</h2>
 
             <div id="gallery_nav_bar">
-                <button class="gallery_active_button gallery_nav_button" onclick="check('../podklady/Kulířov/galerie/1-pred-vystehovanim')">před vystěhováním</button>
-                <button class="gallery_nav_button" onclick="check('../podklady/Kulířov/galerie/2-stehovani')">stěhování</button>
-                <button class="gallery_nav_button" onclick="check('../podklady/Kulířov/galerie/3-po-vystehovani-navratu')">po vystěhování/návratu</button>
-                <button class="gallery_nav_button" onclick="check('../podklady/Kulířov/galerie/4-soucasnost')">současnost</button>
-                <button class="gallery_nav_button" onclick="check('../podklady/Kulířov/galerie/6-dokumenty')">dokumenty</button>
-                <button class="gallery_nav_button" onclick="check('../podklady/Kulířov/galerie/5-pribeh-basne')">lidová slovesnost</button>
+                <button class="gallery_active_button gallery_nav_button" onclick="check('../podklady/Podivice/galerie/1-pred-vystehovanim')">před vystěhováním</button>
+                <button class="gallery_nav_button" onclick="check('../podklady/Podivice/galerie/2-stehovani')">stěhování</button>
+                <button class="gallery_nav_button" onclick="check('../podklady/Podivice/galerie/3-po-vystehovani-navratu')">po vystěhování/návratu</button>
+                <button class="gallery_nav_button" onclick="check('../podklady/Podivice/galerie/4-soucasnost')">současnost</button>
+                <button class="gallery_nav_button" onclick="check('../podklady/Podivice/galerie/6-dokumenty')">dokumenty</button>
+                <button class="gallery_nav_button" onclick="check('../podklady/Podivice/galerie/5-pribeh-basne')">lidová slovesnost</button>
             </div>
             <div id="gallery">
 

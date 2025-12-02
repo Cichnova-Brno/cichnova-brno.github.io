@@ -61,7 +61,7 @@ export class other{
     <script src="./Chart.min.js"></script>
     <script src="./graph.js"></script>
     <title>${json_obj.name}</title>
-    <style> :root {--eth: var(--${json_obj.phase}</style>
+    <style> :root {--eth: var(--${json_obj.phase.toUpperCase()})}</style>
 </head>
 <body onload="check('../podklady/${json_obj.name}/galerie/1-pred-vystehovanim')">
     <div onclick="goBack()" class="hamburger back"><i class="fa fa-arrow-left"></i></div>
