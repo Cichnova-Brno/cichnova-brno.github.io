@@ -1,0 +1,21 @@
+{
+    "name": "Radslavičky",
+    "paragraph_one": "Radslavičky (též Malé Raclavice), dnes součást Radslavic, leží na úpatí Drahanské vrchoviny jako klidná ves s půdorysem raabizační ulicovky a otevřenou návsí, jejíž tvar ovlivňuje místní potok. Založeny byly roku 1764 jako dominikální osada na vyklučené lesní půdě ve stupňovitém lesním svahu; ke stejnému roku se váží i zdejší pozemkové knihy, církevně náležely k dědické faře. Obyvatelé se tradičně živili zemědělstvím, pracemi v lese a domácím tkalcovstvím. Od 1950 tvoří Radslavičky s Radslavicemi jeden správní celek; dnes společně fungují jako místní část města Vyškova, která si uchovává venkovský ráz a vazby na okolní zemědělskou krajinu. ",
+    "paragraph_two": "Osada spadající pod Radslavice, jejíž vystěhování bylo taktéž zařazeno do etapy Ib (říjen 1941). Specifikem této vesničky je, že pro Radslavičky (a stejně tak i Zelenou Horu) byla zřízena už na podzim 1940 zvláštní četnická stanice v Radslavicích, která průběh odsunu koordinovala. ",
+    "phase": "Ib",
+    "speaker": [""],
+    "district": "Vyškov",
+    "residents": "256",
+    "houses": "53",
+    "families": "64",
+    "l_year": [1869,1880,1890,1900,1910,1921,1930,1950,1961,1970,1980,1991,2001,2011],
+    "l_houses": [54,43,45,46,51,51,44,0,34,31,36,37,37],
+    "l_residents": [229,234,260,236,267,267,231,129,145,111,95,96,85,117],
+    "titles": [""],
+    "before_move": [""],
+    "move": [""],
+    "after_move_return":[""],
+    "present":[""],
+    "stories_poems":[""],
+    "documents":[""]
+}

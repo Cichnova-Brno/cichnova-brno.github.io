@@ -1,7 +1,7 @@
 {
     "name": "Radslavice",
-    "paragraph_one": "Radslavice (též Velké/Hrubé Raclavice) jsou zemědělská obec na úpatí Drahanské vrchoviny v okrese Vyškov, půdorysně návesní ulicovka; jméno je odvozeno od osobního jména Radslav. V pramenech se poprvé objevují roku 1764 jako součást někdejšího vyškovského panství; poštovní a církevní zázemí zajišťovaly Dědice. Obyvatelé se tradičně živili zemědělstvím a pracemi v lesích, roku 1846 je zde doložena myslivna a obecní hostinec. Roku 1950 byly Radslavice sloučeny s Radslavičkami; dnes spolu tvoří klidnou místní část města Vyškova s převážně příměstským venkovským rázem. ",
-    "paragraph_two": "Obec vystěhovaná v etapě Ib. Obec byla vyhrazena pro ubytování rodin zaměstnanců komandatury. Tato role vedla k menšímu poškození během manévrů za doby okupace. V dubnu až květnu 1945 zde Němci rozmístili dělostřelectvo a obec pak utrpěla palbou, což výrazně zhoršilo stav domů, do nichž se lidé vraceli. ",
+    "paragraph_one": "Radslavice (též Velké/Hrubé Raclavice) jsou zemědělská obec na úpatí Drahanské vrchoviny v&nbsp;okrese Vyškov, půdorysně návesní ulicovka; jméno je odvozeno od osobního jména Radslav. V pramenech se poprvé objevují roku 1764 jako součást někdejšího vyškovského panství; poštovní a&nbsp;církevní zázemí zajišťovaly Dědice. Obyvatelé se tradičně živili zemědělstvím a&nbsp;pracemi v&nbsp;lesích, roku 1846 je zde doložena myslivna a&nbsp;obecní hostinec. Roku 1950 byly Radslavice sloučeny s&nbsp;Radslavičkami; dnes spolu tvoří klidnou místní část města Vyškova s&nbsp;převážně příměstským venkovským rázem. ",
+    "paragraph_two": "Obec vystěhovaná v etapě Ib. Obec byla vyhrazena pro ubytování rodin zaměstnanců komandatury. Tato role vedla k&nbsp;menšímu poškození během manévrů za doby okupace. V dubnu až květnu 1945 zde Němci rozmístili dělostřelectvo a&nbsp;obec pak utrpěla palbou, což výrazně zhoršilo stav domů, do nichž se lidé vraceli. ",
     "phase": "Ib",
     "speaker": [""],
     "district": "Vyškov",
@@ -11,10 +11,10 @@
     "l_year": [1869,1880,1890,1900,1910,1921,1930,1950,1961,1970,1980,1991,2001,2011],
     "l_houses": [71,78,84,95,103,111,124,124,156,114,96,119,123,127],
     "l_residents": [453,490,526,602,611,605,598,415,421,383,313,281,293,281],
-    "titles": ["Dobová pohlednice Radslavic z roku 20. let 20. století. Zdroj Muzeum Vyškovska."],
-    "before_move": ["Dobová pohlednice Radslavic z roku 20. let 20. století.Muzeum Vyškovska.", "Pohled na Srní horu u Radslavic. Kresba Josefa Kachlíka z r. 1930. Muzeum Vyškovska.", "Letecký snímek Radslavic z roku 1933.Muzeum Vyškovska. ", "Letecký snímek Radslavic z roku 1929.Muzeum Vyškovska."],
+    "titles": ["Dobová pohlednice Radslavic z&nbsp;roku 20. let 20. století. Zdroj Muzeum Vyškovska."],
+    "before_move": ["Dobová pohlednice Radslavic z&nbsp;roku 20. let 20. století.Muzeum Vyškovska.", "Pohled na Srní horu u&nbsp;Radslavic. Kresba Josefa Kachlíka z&nbsp;r. 1930. Muzeum Vyškovska.", "Letecký snímek Radslavic z&nbsp;roku 1933.Muzeum Vyškovska. ", "Letecký snímek Radslavic z&nbsp;roku 1929.Muzeum Vyškovska."],
     "move": [""],
-    "after_move_return":["Prodejna Jednoty v Radslavicích v roce 1967. Zdroj Muzeum Vyškovska."],
+    "after_move_return":["Prodejna Jednoty v&nbsp;Radslavicích v&nbsp;roce 1967. Zdroj Muzeum Vyškovska."],
     "present":[""],
     "stories_poems":[""],
     "documents":[""]

@@ -1,0 +1,21 @@
+{
+    "name": "Drahany",
+    "paragraph_one": "Horská obec (od r. 2006 městys) Drahany s rozsáhlým katastrem pokrytým z velké části hustými lesy leží v západní části prostějovského okresu. Podle tohoto městečka se nazývá celá oblast. Současně je nejvýše položenou obcí východní části Drahanské vrchoviny. Pramení zde řeka Haná. Od roku 1384 byly Drahany městečkem, později se stávají vsí, aby se roku 1908 opět staly městečkem s farním kostelem sv. Jana Křtitele.",
+    "paragraph_two": "Horská obec (od r. 2006 městys) Drahany s rozsáhlým katastrem pokrytým z velké části hustými lesy leží v západní části prostějovského okresu. Podle tohoto městečka se nazývá celá oblast. Současně je nejvýše položenou obcí východní části Drahanské vrchoviny. Pramení zde řeka Haná. Od roku 1384 byly Drahany městečkem, později se stávají vsí, aby se roku 1908 opět staly městečkem s farním kostelem sv. Jana Křtitele.",
+    "phase": "IIIa",
+    "district": "Prostějov",
+    "speaker": [""],
+    "residents": "1093",
+    "houses": "206",
+    "families": "338",
+    "l_year": [1869, 1880, 1890, 1900, 1910, 1921, 1930, 1950, 1961, 1970, 1980, 1991, 2001, 2011],
+    "l_houses": [106, 123, 131, 140, 148, 158, 177, 198, 181, 173, 168, 190, 192, 188],
+    "l_residents": [904, 947, 1012, 1003, 1001, 1007, 990, 799, 755, 674, 621, 564, 530, 523],
+    "titles": [""],
+    "before_move": ["Drahany – sdružená pohlednice – celkový pohled, pramen řeky Hané, škola a pomník padlých 1. světové válce, 1931. Moravské zemské muzeum", "Sdružená pohlednice Drahan datovaná k r. 1923. Moravské zemské muzeum.", "Okénková pohlednice Drahan z doby před rokem 1914. Hostinec, náves s rybníkem, pramen řeky Hané. Moravské zemské muzeum", "Okénková pohlednice Drahan z doby před rokem 1914. Celkový pohled, hostinec, kostel, pramen řeky Hané. Moravské zemské muzeum.", "Budova měšťanské školy, přední průčelí, 1933. Moravské zemské muzeum.", "Hasičský spolek z Drahan v uniformách. Prostřední v první řadě drží v rukou hasičskou trubku. V levém rohu fotografie je část hasičského vozu se stříkací hadicí, 1879. Muzeum a galerie v Prostějově. "],
+    "move": ["Situační plánek Drahan vytvořený četníky pro potřeby vystěhování"],
+    "after_moving_return":["Poškozené domy v Drahanech. Foto: J. Šefčík, květen 1945. Muzeum a galerie v Prostějově", "Poškozené domy v Drahanech. Foto: J. Šefčík, květen 1945. Muzeum a galerie v Prostějově", "Poškozené domy v Drahanech. Foto: J. Šefčík, květen 1945. Muzeum a galerie v Prostějově", "Poškozené domy v Drahanech. Foto: J. Šefčík, květen 1945", "Poškozené domy v Drahanech. Foto: J. Šefčík, květen 1945", "Poškozené domy v Drahanech. Foto: J. Šefčík, květen 1945", "Poškozené domy v Drahanech. Foto: J. Šefčík, květen 1945", "Nově opravené pohostinství", "Ulice v Drahanech, autobusová zastávka, za ní budova MNV, v popředí budova pohostinství"],
+    "present":[""],
+    "stories_poems":[""],
+    "documents":["Dopis starosty Drahan – rozloučení s obyvateli před vystěhováním"]
+}

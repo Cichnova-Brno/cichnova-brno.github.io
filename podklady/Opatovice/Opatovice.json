@@ -1,7 +1,7 @@
 {
     "name": "Opatovice",
-    "paragraph_one": "Opatovice, dříve samostatná obec, dnes součástí Vyškova. Ves s půdorysem tzv. „ulicovky“ se nachází na pravém břehu Malé Hané. Náležela k dědické farnosti. Nachází se na jižní straně vyškovské střelnice. Dominantou je místní kamenolom a blízká vodní nádrž. Je vyhledávanou lokalitou pro turistiku a další volnočasové aktivity. ",
-    "paragraph_two": "Obec byla vystěhována v první etapě, patřila mezi první vystěhované. Během čtyř a půl let byla zcela zdevastována a zarostla plevelem. Z důvodu těžby kamene byla v době okupace v provozu, nicméně se jednalo o obec, která měla být zcela srovnána se zemí a stát se součástí cílových dopadových ploch.",
+    "paragraph_one": "Opatovice, dříve samostatná obec, dnes součástí Vyškova. Ves s půdorysem tzv. „ulicovky“ se nachází na pravém břehu Malé Hané. Náležela k dědické farnosti. Nachází se na jižní straně vyškovské střelnice. Dominantou je místní kamenolom a&nbsp;blízká vodní nádrž. Je vyhledávanou lokalitou pro turistiku a&nbsp;další volnočasové aktivity. ",
+    "paragraph_two": "Obec byla vystěhována v&nbsp;první etapě, patřila mezi první vystěhované. Během čtyř a&nbsp;půl let byla zcela zdevastována a&nbsp;zarostla plevelem. Z důvodu těžby kamene byla v&nbsp;době okupace v&nbsp;provozu, nicméně se jednalo o&nbsp;obec, která měla být zcela srovnána se zemí a&nbsp;stát se součástí cílových dopadových ploch.",
     "phase": "Ia",
     "speaker": ["Jana Flachsová, rozená Trávníčková", "Marie Zemánková, rozenáTrnavská"],
     "district": "Vyškov",
@@ -12,10 +12,10 @@
     "l_houses": [70,82,90,95,106,110,124,143,114,118,120,136,131,141],
     "l_residents": [565,625,614,601,635,634,603,457,473,472,438,343,335,374],
     "titles": [""],
-    "before_move": ["Okénková pohlednice Opatovic – škola, pomník obětem 1. světové války, celkový pohled. Muzeum Vyškovska. ", "Opatovice před vystěhováním. Celkový pohled na obec. Muzeum Vyškovska.", "Okénková pohlednice Opatovic – škola, pomník obětem 1. světové války, náves, panorama obce. Muzeum Vyškovska. ", "Hrob sovětského vojáka z fronty v Opatovicích, květen 1945. Muzeum Vyškovska. ", "Chata v údolí Hané, 1932. Muzeum Vyškovska.", "Letecký snímek Opatovic, 1933. Muzeum Vyškovska.", "Opatovice, náves. Fotografie z r. 1904. Muzeum Vyškovska.", "Opatovická Haná – splav. 1912. Muzeum Vyškovska."],
+    "before_move": ["Okénková pohlednice Opatovic – škola, pomník obětem 1. světové války, celkový pohled. Muzeum Vyškovska. ", "Opatovice před vystěhováním. Celkový pohled na obec. Muzeum Vyškovska.", "Okénková pohlednice Opatovic – škola, pomník obětem 1. světové války, náves, panorama obce. Muzeum Vyškovska. ", "Hrob sovětského vojáka z&nbsp;fronty v&nbsp;Opatovicích, květen 1945. Muzeum Vyškovska. ", "Chata v&nbsp;údolí Hané, 1932. Muzeum Vyškovska.", "Letecký snímek Opatovic, 1933. Muzeum Vyškovska.", "Opatovice, náves. Fotografie z&nbsp;r. 1904. Muzeum Vyškovska.", "Opatovická Haná – splav. 1912. Muzeum Vyškovska."],
     "move": [""],
     "after_move_return":[""],
     "present":[""],
     "stories_poems":[""],
-    "documents":["Protokol říšské vojenské správy (komandatury) o převzetí obce Opatovice z 21. 5. 1941. "]
+    "documents":["Protokol říšské vojenské správy (komandatury) o&nbsp;převzetí obce Opatovice z&nbsp;21. 5. 1941. "]
 }

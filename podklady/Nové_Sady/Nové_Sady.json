@@ -1,7 +1,7 @@
 {
     "name": "Nové Sady",
-    "paragraph_one": "Nové Sady (též Neustift, v pramenech Neštych/Nebštych, česky někdy Novosady) leží na Drahanské vrchovině při hranici vyškovského a prostějovského okresu v nadmořské výšce kolem 550 m; půdorys tvoří nepravidelný návesní lichoběžník otevřený k západu. Počátky osídlení spadají do 1. poloviny 13. století, první písemná zmínka je z roku 1426; v lánovém rejstříku z roku 1675 se obec uvádí jako Neštych, odvozeno z německého Neustift („nově vysazená ves“). Obyvatelé se tradičně živili zemědělstvím a pracemi v lese, přičemž místní lesní revír dlouhodobě spadal pod vojenskou správu. Dnes mají Nové Sady ráz klidné venkovské obce s úzkým sepětím s okolními lesy a poli; katastr sdílejí s blízkou osadou Březina, která leží asi půl kilometru od mateřské obce.",
-    "paragraph_two": "Etapa IIIa (1. 11. 1943). Spolu s Březinou šly přednostně kvůli „nebezpečné blízkosti směru střelby“. Více viz Březina.",
+    "paragraph_one": "Nové Sady (též Neustift, v&nbsp;pramenech Neštych/Nebštych, česky někdy Novosady) leží na Drahanské vrchovině při hranici vyškovského a&nbsp;prostějovského okresu v&nbsp;nadmořské výšce kolem 550 m; půdorys tvoří nepravidelný návesní lichoběžník otevřený k&nbsp;západu. Počátky osídlení spadají do 1. poloviny 13. století, první písemná zmínka je z&nbsp;roku 1426; v&nbsp;lánovém rejstříku z&nbsp;roku 1675 se obec uvádí jako Neštych, odvozeno z&nbsp;německého Neustift („nově vysazená ves“). Obyvatelé se tradičně živili zemědělstvím a&nbsp;pracemi v&nbsp;lese, přičemž místní lesní revír dlouhodobě spadal pod vojenskou správu. Dnes mají Nové Sady ráz klidné venkovské obce s&nbsp;úzkým sepětím s&nbsp;okolními lesy a&nbsp;poli; katastr sdílejí s&nbsp;blízkou osadou Březina, která leží asi půl kilometru od mateřské obce.",
+    "paragraph_two": "Etapa IIIa (1. 11. 1943). Spolu s&nbsp;Březinou šly přednostně kvůli „nebezpečné blízkosti směru střelby“. Více viz Březina.",
     "phase": "IIIa",
     "district": "Vyškov",
     "speaker": [""],
@@ -12,9 +12,9 @@
     "l_houses": [32, 36, 36, 42, 49, 50, 52, 49, 74, 39, 38, 42, 42, 42 ],
     "l_residents": [218, 215, 252, 289, 298, 292, 256, 145, 154, 141, 124, 89, 78, 55 ],
     "titles": [" Náves Nových Sadů před 2. světovou válkou, rok 1928"],
-    "before_move": [ "Pohlednice z roku 1928. Muzeum Vyškovska", "Náves v roce 1930. Muzeum Vyškovska", "Náves v roce 1934. Muzeum Vyškovska", "Pohlednice z roku 1935" ],
+    "before_move": [ "Pohlednice z&nbsp;roku 1928. Muzeum Vyškovska", "Náves v&nbsp;roce 1930. Muzeum Vyškovska", "Náves v&nbsp;roce 1934. Muzeum Vyškovska", "Pohlednice z&nbsp;roku 1935" ],
     "move": [ "Situační plánek sestavený četníky pro potřeby vystěhování" ],
-    "after_moving_return":[ "Škola v roce 1946", "Jaro 1946 – 1.-5. ročník před školním bytem, kde se učilo" ],
+    "after_moving_return":[ "Škola v&nbsp;roce 1946", "Jaro 1946 – 1.-5. ročník před školním bytem, kde se učilo" ],
     "present":[""],
     "stories_poems":[""],
     "documents":[""]
