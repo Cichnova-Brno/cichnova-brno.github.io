@@ -39,3 +39,10 @@ tr:last-child td:last-child {
 th {
     background-color: var(--eth);
 }
+
+@media screen and (max-width: 1000px) {
+    #table {
+        transform: translate(-1rem);
+    }
+  
+}

@@ -34,7 +34,7 @@ export class other{
             for(let i = 0; i < json_obj.speaker.length; i++){
                 temp += `${json_obj.speaker[i]}<br>`
             }
-            speakers += `<section>${temp}</section>`
+            speakers += `${temp}`
         }else{
             speakers = `<h5>Je nám líto, ale nejsou žádní pamětníci pro tuto vesnici</h5>`
         }
@@ -81,7 +81,7 @@ export class other{
 
     <div id="zoom_curtain">
         <div id="zoom_div_container" class="top_padding">
-            <div onclick="close_popup()" class="hamburger"><i class="fa fa-times"></i></div>
+            <div onclick="close_popup()" class="hamburger" style="display:block"><i class="fa fa-times"></i></div>
       
             <div id="zoom" >
                 <div class="row">
@@ -116,8 +116,10 @@ export class other{
                 print_graph([${json_obj.l_year}], [${json_obj.l_residents}], ${max}, ${step})
             </script>
         </section>
-        <h2>Pamětníci</h2>
-        ${speakers}
+        <section>
+            <h2>Pamětníci</h2>
+            ${speakers}
+        </section>
         <section>
             <h2>Průběh vystěhováni</h2>
             <div>

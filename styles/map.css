@@ -49,6 +49,7 @@
     margin: 1rem;
     display: flex;
     flex-direction: row;
+    overflow: hidden;                /* safety net */
     /* background-color: var(--complementary); */
     border-radius: 15px;
     padding: 1rem;
@@ -64,6 +65,7 @@
     aspect-ratio: 1/1;
     max-width: 50%;
     flex: none;
+    max-height: 75%;
 }
 
 #zoom_names {
@@ -76,6 +78,11 @@
 
 #zoom_names > a > h3 {
     text-align: center;
+}
+
+#zoom_names > a:hover,
+#zoom_names > a:active {
+    text-decoration: underline;
 }
 
 /* #zoom_names > a::after {

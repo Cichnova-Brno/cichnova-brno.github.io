@@ -70,10 +70,11 @@ document.addEventListener('DOMContentLoaded', () => {
             zoom_curtain.classList.add('zoom_active')
             zoom_svg.setAttribute("viewBox", `0 0 ${bbox.width} ${bbox.height}`)
             zoom_svg.setAttribute("preserveAspectRatio", "xMidYMid meet")
-            // zoom_svg.setAttribute("width", 'auto')
-            // zoom_svg.setAttribute("height", '100%')
+            //zoom_svg.setAttribute("width", 'auto')
+            //zoom_svg.setAttribute("height", '100%')
 
             close_btn.classList.remove('hidden')
+            close_btn.style.display = 'block';
             zoom_div.style.display = 'flex'
             document.body.classList.add('zoom_active')
 
@@ -91,6 +92,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     } 
                 }
             }
+
+            let title = document.createElement('h4');
+            let hr = document.createElement('hr');
+            title.textContent = 'Zde vyberte vesnici';
+
+            zoom_names.appendChild(title);
+            zoom_names.appendChild(hr);
+
 
             divide_names.forEach(name => {
                 let link = document.createElement('a')
