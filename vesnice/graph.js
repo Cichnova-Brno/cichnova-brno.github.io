@@ -2,7 +2,7 @@ function print_graph(xvalues, yvalues, max, jump){
 
   window.addEventListener('DOMContentLoaded', () => {
     const ctx = document.getElementById('data').getContext('2d')
-    const barColors = '#d9d9d9'
+    const barColors = '#999999'
     new Chart(ctx, {
       type: "bar",
       data: {
