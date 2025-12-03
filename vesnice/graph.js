@@ -33,6 +33,10 @@ function print_graph(xvalues, yvalues, max, jump){
               stepSize: jump
             }
           }]
+        },
+
+        tooltips: {
+            enabled: false
         }
       }
     })
