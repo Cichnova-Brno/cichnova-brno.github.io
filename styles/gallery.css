@@ -37,12 +37,15 @@
     border: 1px solid black;
     padding: 0.5rem;
     border-radius: 15px;
+    margin: auto;
+    justify-content: center;
 }
 
 .small_image {
     width: 10rem;
     height: 10rem;
     margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
     cursor: pointer;
 }
 
