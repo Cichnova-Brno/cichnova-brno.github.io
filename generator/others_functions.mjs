@@ -53,19 +53,18 @@ export class other{
     <link rel="stylesheet" href="/styles/map.css">
     <link rel="stylesheet" href="/styles/gallery.css">
     <link rel="stylesheet" href="/styles/table.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/styles/graph.css">
+    <link rel="stylesheet" href="/styles/bootstrap/bootstrap-icons.min.css">
     <script src="/script.js"></script>
     <script src="./render_images.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <script src="./Chart.min.js"></script>
     <script src="./graph.js"></script>
     <title>${json_obj.name}</title>
     <style> :root {--eth: var(--${json_obj.phase.toUpperCase()})}</style>
 </head>
 <body onload="check('../podklady/${json_obj.name}/galerie/1-pred-vystehovanim')">
-    <div onclick="goBack()" class="hamburger back"><i class="fa fa-arrow-left"></i></div>
-    <div onclick="menu()" class="hamburger" id="hamb"><i class="fa fa-bars"></i></div>
+    <div onclick="goBack()" class="hamburger back"><i class="bi bi-arrow-left"></i></div>
+    <div onclick="menu()" class="hamburger" id="hamb"><i class="bi bi-list"></i></div>
     <nav id="nav">
         <a href="">O projektu</a>
         <a href="">Pro školy</a>
@@ -81,13 +80,13 @@ export class other{
 
     <div id="zoom_curtain">
         <div id="zoom_div_container" class="top_padding">
-            <div onclick="close_popup()" class="hamburger" style="display:block"><i class="fa fa-times"></i></div>
+            <div onclick="close_popup()" class="hamburger" style="display:block"><i class="bi bi-x"></i></div>
       
             <div id="zoom" >
                 <div class="row">
-                    <div class="arrow left" onclick="prev_image()">&#10094;</div>
+                    <div class="bi bi-caret-left-fill arrow left" onclick="prev_image()"></div>
                     <div id="zoom_image"></div>
-                    <div class="arrow right" onclick="next_image()">&#10095;</div>
+                    <div class="bi bi-caret-right-fill arrow right" onclick="next_image()"></div>
                 </div>
                 <div>
                     <p id="image_desc"></p>

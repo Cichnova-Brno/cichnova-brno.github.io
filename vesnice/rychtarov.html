@@ -8,20 +8,18 @@
     <link rel="stylesheet" href="/styles/map.css">
     <link rel="stylesheet" href="/styles/gallery.css">
     <link rel="stylesheet" href="/styles/table.css">
-    <link rel="stylesheet" href="/styles/fntawsm/css/fontawesome.css">
-    <link rel="stylesheet" href="/styles/fntawsm/css/solid.css">
     <link rel="stylesheet" href="/styles/graph.css">
+    <link rel="stylesheet" href="/styles/bootstrap/bootstrap-icons.min.css">
     <script src="/script.js"></script>
     <script src="./render_images.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <script src="./Chart.min.js"></script>
     <script src="./graph.js"></script>
     <title>Rychtářov</title>
     <style> :root {--eth: var(--IA) }</style>
 </head>
 <body onload="check('/pub/vesnice/rychtarov/1-před-vystěhováním')">
-    <div onclick="goBack()" class="hamburger back"><i class="fa fa-arrow-left"></i></div>
-    <div onclick="menu()" class="hamburger" id="hamb"><i class="fa fa-bars"></i></div>
+    <div onclick="goBack()" class="hamburger back"><i class="bi bi-arrow-left"></i></div>
+    <div onclick="menu()" class="hamburger" id="hamb"><i class="bi bi-list"></i></div>
     <nav id="nav">
         <a href="">O projektu</a>
         <a href="">Pro školy</a>
@@ -36,13 +34,13 @@
 
     <div id="zoom_curtain">
         <div id="zoom_div_container" class="top_padding">
-            <div onclick="close_popup()" class="hamburger"><i class="fa fa-times"></i></div>
+            <div onclick="close_popup()" class="hamburger" style="display:block"><i class="bi bi-x"></i></div>
       
             <div id="zoom" >
                 <div class="row">
-                    <div class="arrow left" onclick="prev_image()">&#10094;</div>
+                    <div class="bi bi-caret-left-fill arrow left" onclick="prev_image()"></div>
                     <div id="zoom_image"></div>
-                    <div class="arrow right" onclick="next_image()">&#10095;</div>
+                    <div class="bi bi-caret-right-fill arrow right" onclick="next_image()"></div>
                 </div>
                 <div>
                     <p id="image_desc">hello how are you I'm fine welp I maybe should style this first thing....</p>
