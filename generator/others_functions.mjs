@@ -36,7 +36,7 @@ export class other{
             }
             speakers += `${temp}`
         }else{
-            speakers = `<h5>Je nám líto, ale nejsou žádní pamětníci pro tuto vesnici</h5>`
+            speakers = `<h5>Pamatujete si tuto událost? Kontaktujte nás.</h5>`
         }
 
         let max = Math.max(...json_obj.l_residents)
