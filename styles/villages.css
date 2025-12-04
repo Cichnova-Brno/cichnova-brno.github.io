@@ -16,13 +16,25 @@ section > div {
 
 section {
     padding: 1rem;
+
+}
+
+section:nth-child(2n) > div{
+    flex-direction: row-reverse;
 }
 
 section .image {
+    display: flex;
+    flex-direction: column;
     padding: 0 0 2rem 2rem;
-    width: 50%;
+    max-width: 50%;
     flex-shrink: 0;
     margin: auto;
+    align-items: center;
+}
+
+section:nth-child(2n) .image{
+    padding: 0 2rem 2rem 0;
 }
 
 .image img {
