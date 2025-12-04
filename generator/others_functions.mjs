@@ -101,8 +101,8 @@ export class other{
             <div>
                 <p>${json_obj.paragraph_one}</p>
                 <div class="image">
-                <img src="../podklady/${json_obj.name}/znak.jpg" alt="the first picture">
-                <h5>${json_obj.name}</h5>
+                <img src="../podklady/${json_obj.name}/znak.jpg" alt="">
+                <h5>Znak obce ${json_obj.name}</h5>
                 </div>
             </div>    
         </section>
@@ -120,7 +120,7 @@ export class other{
             ${speakers}
         </section>
         <section>
-            <h2>Průběh vystěhováni</h2>
+            <h2>Průběh vystěhování</h2>
             <div>
                 <div>
                     <p>${json_obj.paragraph_two}</p>
