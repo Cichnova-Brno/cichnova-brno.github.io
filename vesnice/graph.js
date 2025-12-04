@@ -25,15 +25,36 @@ function print_graph(xvalues, yvalues, max, jump){
         },
 
         scales: {
-          yAxes: [{
-            ticks: {
-              beginAtZero: true,
-              min: 0,
-              max: max,
-              stepSize: jump
-            }
-          }]
-        },
+        xAxes: [{
+          ticks: {
+            fontSize: 16,
+            fontColor: 'black'
+          },
+          gridLines: {
+            drawBorder: true,
+            drawOnChartArea: false,
+            color: 'black',
+            lineWidth: 3
+          }
+        }],
+
+        yAxes: [{
+          ticks: {
+            beginAtZero: true,
+            min: 0,
+            max: max,
+            stepSize: jump,
+            fontSize: 16,
+            fontColor: 'black'
+          },
+          gridLines: {
+            drawBorder: true,
+            drawOnChartArea: false,
+            color: 'black',
+            lineWidth: 3
+          }
+        }]
+      },
 
         tooltips: {
             enabled: false
