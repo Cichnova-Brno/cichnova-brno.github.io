@@ -55,7 +55,7 @@ async function fill_galery(path){
         }else{
             if(count === 1){
                 let error_message = document.createElement('h4')
-                error_message.textContent = 'Je nám líto, ale nepodařilo se načíst obrázky nebo nebyly vytvořeny.'
+                error_message.textContent = 'Zatím nemáme k dispozici žádné fotografie ani dokumenty. Máte-li nějaké ve svém archivu, ozvěte se nám.'
                 gallery.appendChild(error_message)
             }
         }
