@@ -42,7 +42,6 @@ export class other{
         let max = Math.max(...json_obj.l_residents)
         let step = Math.round(max / 5)
 
-
         let html_code = `<!DOCTYPE html>
 <html lang="en">
 <head>
