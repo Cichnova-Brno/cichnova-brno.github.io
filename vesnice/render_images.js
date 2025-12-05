@@ -4,6 +4,7 @@ let zoom_image = null
 let nav_buttons = null
 let active_button = null
 let image_desc = null
+let desc_section = null
 
 let current_index = 0
 
@@ -87,6 +88,27 @@ function find_active_button(){
         event.addEventListener('click', () => {
             active_button.classList.remove('gallery_active_button')
             event.classList.add('gallery_active_button')
+            
+            switch(event.textContent.trim()){
+                case 'předvystěhováním':
+                    desc_section = 'before_move'
+                break
+                case 'stěhování':
+                    desc_section = 'move'
+                break
+                case 'povystěhování/návratu':
+                    desc_section = 'after_move_return'
+                break
+                case 'současnost':
+                    desc_section = 'present'
+                break
+                case 'dokumenty':
+                    desc_section = 'documents'
+                break
+                case 'lidováslovesnost':
+                    desc_section = 'stories_poems'
+                break
+            }
         })
     })
 }
@@ -98,8 +120,8 @@ function close_popup(){
 
 // funkce pro vykresleni dalsich obrazku v popupu
 function show_image(index) {
-    let decs = document.getElementById('image_desc')
-    let data = null
+    decs = document.getElementById('image_desc')
+    let json_data = null
     let title = document.querySelector('title').textContent
     if (index < 0) index = small_images.length - 1
     if (index >= small_images.length) index = 0
@@ -109,12 +131,45 @@ function show_image(index) {
     const new_img = document.createElement('img')
     new_img.src = img_src
     zoom_image.appendChild(new_img)
-    data = fetch(`../podklady/${title}/${title}.json`)
+    /*json_data = fetch(`/podklady/${title}/${title}.json`, {method: 'GET'})
     .then(response => {
         if(!response.ok) console.log(`can not find or open JSON file ${title}`)
-        data = response.json()
-        decs = data.titles[index]
-    })
+        json_data = response.json()
+        decs = json_data.titles[index]
+    })*/
+   fetch(`/podklady/${title}/${title}.json`)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`Cannot find or open JSON file ${title}`)
+    }
+    return response.json()
+  })
+  .then(json_data => {
+    
+    switch(desc_section){
+        case 'before_move':
+            decs.innerHTML = json_data.before_move[index]
+        break
+        case 'move':
+            decs.innerHTML = json_data.move[index]
+        break
+        case 'after_move_return':
+            decs.innerHTML = json_data.after_move_return[index]
+        break
+        case 'present':
+            decs.innerHTML = json_data.present[index]
+        break
+        case 'documents':
+            decs.innerHTML = json_data.documents[index]
+        break
+        case 'stories_poems':
+            decs.innerHTML = json_data.stories_poems[index]
+        break
+    }
+  })
+  .catch(error => {
+    console.error(error)
+  })
 }
 
 // zobrazi dalsi obrazek

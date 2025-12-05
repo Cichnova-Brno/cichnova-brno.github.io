@@ -70,6 +70,7 @@
     --II: #f7f898;
     --IIIA: #f68fa2;
     --IIIB: #e0ccb5;
+    --MIMO: rgb(84, 228, 204);
     display: block;
 }
 
@@ -127,6 +128,7 @@ hr {
 header a {
     color: var(--eth) !important;
     margin: auto;
+    filter: saturate(1000%);
     /*background-color: color-mix(in srgb, var(--complementary), transparent 30%) !important;*/
 }
 
