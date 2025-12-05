@@ -165,6 +165,7 @@ function show_image(index) {
             decs.innerHTML = json_data.stories_poems[index]
         break
     }
+
   })
   .catch(error => {
     console.error(error)
