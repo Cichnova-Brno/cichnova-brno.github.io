@@ -16,7 +16,6 @@ section > div {
 
 section {
     padding: 1rem;
-
 }
 
 section:nth-child(2n) > div{
@@ -56,6 +55,7 @@ h2 {
     section .image {
         width: 100%;
         padding:  2rem;
+        max-width: 100%;
     }
     section > #gallery {
         flex-direction: row;
