@@ -88,8 +88,7 @@ function find_active_button(){
         event.addEventListener('click', () => {
             active_button.classList.remove('gallery_active_button')
             event.classList.add('gallery_active_button')
-            
-            switch(event.textContent.trim()){
+            switch(event.textContent.replace(/\s+/, "")){
                 case 'předvystěhováním':
                     desc_section = 'before_move'
                 break
