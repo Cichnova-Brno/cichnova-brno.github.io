@@ -54,9 +54,8 @@ h2 {
 @media screen and (max-width: 1000px) {
     section .image {
         width: 100%;
-        padding:  2rem;
         max-width: 100%;
-        padding: 0 0 2rem 2rem;
+        padding: 2rem !important;
     }
     section > #gallery {
         flex-direction: row;
