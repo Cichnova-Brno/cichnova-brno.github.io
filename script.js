@@ -78,27 +78,40 @@ document.addEventListener('DOMContentLoaded', () => {
             zoom_div.style.display = 'flex'
             document.body.classList.add('zoom_active')
 
-
             names_of_villages = document.getElementsByClassName(get_class_name_of_region(region.className.baseVal))
             let divide_names = Array.from(names_of_villages).slice(Math.ceil(names_of_villages.length / 2))
 
-            for(let i = 0; i < divide_names.length; i++){
-                for(let k = 0; k < divide_names.length; k++){
-                    let prev = divide_names[i].textContent
-                    if(prev < divide_names[k].textContent){
-                        let temp = divide_names[i].textContent
-                        divide_names[i].textContent = divide_names[k].textContent
-                        divide_names[k].textContent = temp
-                    } 
-                }
-            }
-
-            let title = document.createElement('h4');
+                        let title = document.createElement('h4');
             let hr = document.createElement('hr');
             title.textContent = 'Zde vyberte vesnici';
 
             zoom_names.appendChild(title);
             zoom_names.appendChild(hr);
+
+
+            if(divide_names.length === 0){
+                let empty_element = document.createElement('h3')
+                empty_element.textContent = 'nic'
+                zoom_names.appendChild(empty_element)
+            }else{
+                for(let i = 0; i < divide_names.length; i++){
+                    for(let k = 0; k < divide_names.length; k++){
+                        let prev = divide_names[i].textContent
+                        if(prev < divide_names[k].textContent){
+                            let temp = divide_names[i].textContent
+                            divide_names[i].textContent = divide_names[k].textContent
+                            divide_names[k].textContent = temp
+                        } 
+                    }
+                }
+            }
+
+            // let title = document.createElement('h4');
+            // let hr = document.createElement('hr');
+            // title.textContent = 'Zde vyberte vesnici';
+
+            // zoom_names.appendChild(title);
+            // zoom_names.appendChild(hr);
 
 
             divide_names.forEach(name => {

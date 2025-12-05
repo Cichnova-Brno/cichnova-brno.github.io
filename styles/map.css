@@ -81,7 +81,7 @@
     font-size: 2.5rem;
 }
 
-#zoom_names > a > h3 {
+#zoom_names > a > h3, h3 {
     text-align: center;
 }
 
