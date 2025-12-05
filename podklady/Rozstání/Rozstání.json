@@ -1,0 +1,22 @@
+{
+    "name": "Rozstání",
+    "paragraph_one": "V pramenech se Rozstání poprvé objevuje za vlády Karla IV., kdy ves patřila Ješkovi z&nbsp;Rájce a&nbsp;jeho dvěma bratrům. Od r. 1722 se stala trvale součástí plumlovského panství. Původní farní kostel, datovaný kolem roku 1391, byl stejně jako současný zasvěcen sv. archandělu Michaelovi. Farnost však byla v&nbsp;průběhu pro nízký počet lidí zrušena a&nbsp;přifařena nejprve k&nbsp;Jedovnicím, pak k&nbsp;Určicím a&nbsp;nakonec r. 1688 k&nbsp;Drahanům. Až kolem roku 1781, kdy byl vysvěcen nový koste l, dochází k&nbsp;obnově farnosti. V obci bývaly 2 vodní a 1 větrný mlýn. Obyvatelé se živili rolnictvím a pak krejčovinou, která nahradila upadající tkalcovství.",
+    "paragraph_two": "Tato větší obec byla vystěhována v&nbsp;rámci etapy IIIa. (do 1. 11. 1943). Výrazně zde dominovalo tzv. rabování a&nbsp;vojenské rekvizice hospodářského zvířectva, které probíhaly v&nbsp;říjnu 1943. Z těch se dochovaly fotografie. Dne11. 10. 1943 probíhalo rekvírování hovězího dobytka, následovalo pak další hospodářské zvířectvo. Vše bylo završeno nuceným výkupem zemědělského nářadí a&nbsp;strojů.",
+    "phase": "IIIa",
+    "district": "Prostějov",
+    "speaker": ["Ladislav Kratochvíl", "Marie Susedková, rozená Hrubá"],
+    "residents": "1167",
+    "houses": "247",
+    "families": "369",
+    "l_year": [1869, 1880, 1890, 1900, 1910, 1921, 1930, 1950, 1961, 1970, 1980, 1991, 2001, 2011],
+    "l_houses": [157, 161, 167, 175, 192, 195, 225, 277, 291, 220, 202, 223, 232, 228],
+    "l_residents": [1144, 1072, 1074, 1117, 1101, 1334, 1049, 1089, 925, 830, 720, 624, 565, 541],
+    "titles": [""],
+    "before_move": ["Kolorovaná pohlednice Rozstání z&nbsp;doby kolem r. 1914. Muzeum a&nbsp;galerie v&nbsp;Prostějově, kat.č. Og1858.", "Fotografie Rozstání z&nbsp;r. 1929. Obec Rozstání.", "Sněhová nadílka v&nbsp;Rozstání v&nbsp;zimě 1940/1941. Obec Rozstání.", "Sněhová nadílka v&nbsp;Rozstání v&nbsp;zimě 1940/1941. Obec Rozstání.", "Školní děti v&nbsp;Rozstání o&nbsp;přestávce…zima 1940/1941. Obec Rozstání."],
+    "move": ["Před vystěhováním probíhal nucený výkup zemědělského inventáře. Zde rekvírování hovězího dobytka v&nbsp;Rozstání z&nbsp;11. 10. 1943. Archiv obce.", "Před vystěhováním probíhal nucený výkup zemědělského inventáře. Zde rekvírování hovězího dobytka v&nbsp;Rozstání z&nbsp;11. 10. 1943. Archiv obce."],
+    "after_move_return":["fotografie zničených domů v&nbsp;Rozstání, květen 1945", "fotografie zničených domů v&nbsp;Rozstání, květen 1945"],
+    "present":["pohlednice Rozstání a&nbsp;Baldovce z&nbsp;80. let 20. století", "Fotografie Rozstání - příjezdu do obce, 2024."],
+    "stories_poems":[""],
+    "documents":["seznam domů za okupace úplně zničených , domků k&nbsp;obývání nechosných a&nbsp;vyřazených.", "soupis z&nbsp;r. 1945", "popisek nedostupný"]
+    
+}
