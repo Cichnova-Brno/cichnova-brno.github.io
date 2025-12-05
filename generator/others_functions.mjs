@@ -42,6 +42,17 @@ export class other{
         let max = Math.max(...json_obj.l_residents)
         let step = Math.round(max / 5)
 
+        let znak_image = `
+                <div class="image">
+                
+                <img src="../podklady/${json_obj.name}/znak.jpg" alt="">
+                <h5>Znak obce ${json_obj.name}</h5>
+                </div>
+                `
+        if(!this.check_path(`../podklady/${json_obj.name}/znak.jpg`)){
+            znak_image="";
+        }
+
         let html_code = `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -99,10 +110,7 @@ export class other{
             <h2>Charakteristika obce</h2>
             <div>
                 <p>${json_obj.paragraph_one}</p>
-                <div class="image">
-                <img src="../podklady/${json_obj.name}/znak.jpg" alt="">
-                <h5>Znak obce ${json_obj.name}</h5>
-                </div>
+                ${znak_image}
             </div>    
         </section>
 
