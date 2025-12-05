@@ -72,8 +72,13 @@
     flex: 1;
     padding-left: 1rem;
     overflow-y: auto;
-    font-size: 150%;
-    line-height: 1.3rem;
+    font-size: 2rem;
+    line-height: 1.5rem;
+}
+
+#zoom_names h4 {
+    padding-top: .5rem;
+    font-size: 2.5rem;
 }
 
 #zoom_names > a > h3 {
