@@ -59,7 +59,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const bbox = regionGroup.getBBox()
             const clone = regionGroup.cloneNode(true)
 
-            document.querySelector(".phase_name").textContent = region.getAttribute("name")
+	    if(region.getAttribute("name") === "Vojenský prostor") {
+            document.querySelector(".phase_name").textContent = region.getAttribute("name")}
+		else {
+            document.querySelector(".phase_name").textContent = region.getAttribute("name") + "."}
             document.querySelector(".phase_name").style = "background-color: var(--" + region.getAttribute("name").split(" ")[1].toUpperCase() + ");"
             region.style.pointerEvent = 'none'
             
