@@ -243,6 +243,7 @@ footer > hr {
         right: 2rem;
         top: 2rem
     }
+
     .back {
         right: auto;
         left: 2rem;
@@ -262,7 +263,7 @@ footer > hr {
     }
     section > div {
         display: flex;
-        flex-direction: column;
+        flex-direction: column !important;
     }
     .copy {
         text-align: center;
