@@ -55,7 +55,7 @@ export class other{
     <link rel="stylesheet" href="/styles/graph.css">
     <link rel="stylesheet" href="/styles/bootstrap/bootstrap-icons.min.css">
     <script src="/script.js"></script>
-    <script src="./render_images.js"></script>
+    <script tyle="module" src="./render_images.js"></script>
     <script src="./Chart.min.js"></script>
     <script src="./graph.js"></script>
     <title>${json_obj.name}</title>

@@ -74,7 +74,7 @@ function find_active_image(){
             new_image.src = event.src
             zoom_image.appendChild(new_image)
             zoom_div.style.display = 'flex'
-            image_desc.innerHTML = '';
+            image_desc.textContent = '';
         })
     })
 }
@@ -113,7 +113,7 @@ function show_image(index) {
     .then(response => {
         if(!response.ok) console.log(`can not find or open JSON file ${title}`)
         data = response.json()
-        decs = data.speaker[index]
+        decs = data.titles[index]
     })
 }
 
