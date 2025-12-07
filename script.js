@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if(divide_names.length === 0){
                 let empty_element = document.createElement('h3')
-                empty_element.textContent = 'nic'
+                empty_element.textContent = 'Vojenský prostor neobsahuje žádné vesnice.'
                 zoom_names.appendChild(empty_element)
             }else{
                 for(let i = 0; i < divide_names.length; i++){
