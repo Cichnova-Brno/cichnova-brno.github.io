@@ -147,22 +147,46 @@ function show_image(index) {
     
     switch(desc_section){
         case 'before_move':
-            decs.innerHTML = json_data.before_move[index]
+            if(json_data.before_move[index] == '' || json_data.before_move == undefined){
+                decs.innerHTML = 'Poznáváte tuto fotografii? Napište nám.'
+            }else{
+                decs.innerHTML = json_data.before_move[index]
+            }
         break
         case 'move':
-            decs.innerHTML = json_data.move[index]
+            if(json_data.move[index] == '' || json_data.move == undefined){
+                decs.innerHTML = 'Poznáváte tuto fotografii? Napište nám.'
+            }else{
+                decs.innerHTML = json_data.move[index]
+            }
         break
         case 'after_move_return':
-            decs.innerHTML = json_data.after_move_return[index]
+            if(json_data.after_move_return[index] == '' || json_data.after_move_return == undefined){
+                decs.innerHTML = 'Poznáváte tuto fotografii? Napište nám.'
+            }else{
+                decs.innerHTML = json_data.after_move_return[index]
+            }
         break
         case 'present':
-            decs.innerHTML = json_data.present[index]
+            if(json_data.present[index] == '' || json_data.present == undefined){
+                decs.innerHTML = 'Poznáváte tuto fotografii? Napište nám.'
+            }else{
+                decs.innerHTML = json_data.present[index]
+            }
         break
         case 'documents':
-            decs.innerHTML = json_data.documents[index]
+            if(json_data.documents[index] == '' || json_data.documents == undefined){
+                decs.innerHTML = 'Poznáváte tuto fotografii? Napište nám.'
+            }else{
+                decs.innerHTML = json_data.documents[index]
+            }
         break
         case 'stories_poems':
-            decs.innerHTML = json_data.stories_poems[index]
+            if(json_data.stories_poems[index] == '' || json_data.stories_poems == undefined){
+                decs.innerHTML = 'Poznáváte tuto fotografii? Napište nám.'
+            }else{
+                decs.innerHTML = json_data.stories_poems[index]
+            }
         break
     }
 
