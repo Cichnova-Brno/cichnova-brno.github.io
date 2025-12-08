@@ -93,8 +93,6 @@ document.addEventListener('DOMContentLoaded', () => {
             zoom_names.appendChild(title);
             zoom_names.appendChild(hr);
 
-            console.log(region.getAttribute('name'))
-
 
             switch(region.getAttribute('name')){
                 case 'ETAPA Ia':
