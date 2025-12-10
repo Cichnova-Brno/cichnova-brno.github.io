@@ -202,9 +202,7 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    gap: 1rem;
     padding: 0 5rem;
-    
 }
 
 footer a img {
