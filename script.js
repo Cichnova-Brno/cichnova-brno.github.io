@@ -68,15 +68,16 @@ document.addEventListener('DOMContentLoaded', () => {
             cekani na kliknuti
         ======================*/
 
-        region.addEventListener('click', (event) => {
+    region.addEventListener('click', (event) => {
             const regionGroup = event.target.closest('g')
             const bbox = regionGroup.getBBox()
             const clone = regionGroup.cloneNode(true)
 
 	    if(region.getAttribute("name") === "Vojenský prostor") {
-            document.querySelector(".phase_name").textContent = region.getAttribute("name")}
+            window.open('/vesnice/puvodnivojenskyprostor.html', '_self')
+        }
 		else {
-            document.querySelector(".phase_name").textContent = region.getAttribute("name") + "."}
+            document.querySelector(".phase_name").textContent = region.getAttribute("name") + "."
             document.querySelector(".phase_name").style = "background-color: var(--" + region.getAttribute("name").split(" ")[1].toUpperCase() + ");"
             region.style.pointerEvent = 'none'
             
@@ -159,8 +160,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 link.appendChild(h3)
                 zoom_names.appendChild(link)
             })
+        }
+            
         })
-    
+
+
         close_btn.addEventListener('click', () => {
             zoom_curtain.classList.remove('zoom_active')
             zoom_div.style.display = 'none'

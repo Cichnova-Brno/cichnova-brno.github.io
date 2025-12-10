@@ -53,6 +53,10 @@ export class other{
             znak_image="";
         }
 
+        let graph
+        if(json_obj.l_year[0] === 'Data jsou nedostupná') graph = ''
+        else graph = `print_graph([${json_obj.l_year}], [${json_obj.l_residents}], ${max}, ${step})`
+
         let html_code = `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -119,7 +123,7 @@ export class other{
             <canvas id="data">
             </canvas>
             <script>
-                print_graph([${json_obj.l_year}], [${json_obj.l_residents}], ${max}, ${step})
+                ${graph}
             </script>
         </section>
         <section>
