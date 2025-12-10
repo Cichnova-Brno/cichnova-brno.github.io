@@ -16,7 +16,7 @@ async function check(path){
     // nacti galerii a pokud existuje tak ji napln
     gallery = document.getElementById('gallery')
     // fill_gallery je asynchrini funkce takze se pocka az se ukonci
-    if(gallery) await fill_galery(path)
+    if(gallery) await fill_gallery(path)
 
     // hledani aktivniho tlacitka
     nav_buttons = document.querySelectorAll('.gallery_nav_button')
@@ -33,34 +33,43 @@ async function check(path){
 }
 
 // naplni galerii
-async function fill_galery(path){
+async function fill_gallery(path) {
+    gallery.textContent = '';
 
-    let count = 1
-    let exist = true
+    const MAX_CHECK = 50;
+    const promises = [];
 
-    gallery.textContent = ''
-
-    while (exist) {
-        const image = new Image()
-        image.src = `${path}/${count}.jpg`
-
-        exist = await new Promise(resolve => {
-            image.onload = () => resolve(true)
-            image.onerror = () => resolve(false)
-        })
-
-        if (exist) {
-            image.classList.add('small_image')
-            gallery.appendChild(image)
-            count++
-        }else{
-            if(count === 1){
-                let error_message = document.createElement('h5')
-                error_message.textContent = 'Zatím nemáme k dispozici žádné fotografie ani dokumenty. Máte-li nějaké ve svém archivu, ozvěte se nám.'
-                gallery.appendChild(error_message)
-            }
-        }
+    for (let i = 1; i <= MAX_CHECK; i++) {
+        promises.push(
+            fetch(`${path}/${i}.jpg`, { method: 'HEAD' })
+                .then(r => ({ exists: r.ok, index: i }))
+                .catch(() => ({ exists: false, index: i }))
+        );
     }
+
+    const results = await Promise.allSettled(promises);
+    const existing = results
+        .filter(r => r.status === 'fulfilled' && r.value.exists)
+        .map(r => r.value.index)
+        .sort((a, b) => a - b);
+
+    if (existing.length === 0) {
+        const msg = document.createElement('h5');
+        msg.textContent = 'Zatím nemáme k dispozici žádné fotografie ani dokumenty. Máte-li nějaké ve svém archivu, ozvěte se nám.';
+        gallery.appendChild(msg);
+        return;
+    }
+
+    const fragment = document.createDocumentFragment();
+    for (const i of existing) {
+        const img = new Image();
+        img.loading = 'lazy';
+        img.classList.add('small_image');
+        img.src = `${path}/${i}.jpg`;
+        img.alt = `Obrázek ${i}`;
+        fragment.appendChild(img);
+    }
+    gallery.appendChild(fragment);
 }
 
 // hleda aktivni obrazek
@@ -71,11 +80,9 @@ function find_active_image(){
     images_array.forEach((event) => {
         event.addEventListener('click', () => {
             zoom_curtain.classList.add('zoom_active')
-            let new_image = document.createElement('img')
-            new_image.src = event.src
-            zoom_image.appendChild(new_image)
             zoom_div.style.display = 'flex'
             image_desc.textContent = '';
+            show_image((event.attributes.src.textContent.split('\\').pop().split('/').pop().split('.')[0])-1);
         })
     })
 }
