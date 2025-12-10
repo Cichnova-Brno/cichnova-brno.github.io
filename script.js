@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             let title = document.createElement('h4');
             let hr = document.createElement('hr');
-            title.textContent = 'Zde vyberte vesnici';
+            title.textContent = 'Vyberte obec';
 
             zoom_names.appendChild(title);
             zoom_names.appendChild(hr);
