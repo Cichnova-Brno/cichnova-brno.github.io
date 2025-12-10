@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/villages.css">
+    <link rel="stylesheet" href="/styles/common.css">
+    <link rel="stylesheet" href="/styles/map.css">
+    <link rel="stylesheet" href="/styles/gallery.css">
+    <link rel="stylesheet" href="/styles/table.css">
+    <link rel="stylesheet" href="/styles/graph.css">
+    <link rel="stylesheet" href="/styles/bootstrap/bootstrap-icons.min.css">
+    <script src="/script.js"></script>
+    <script tyle="module" src="./render_images.js"></script>
+    <script src="./Chart.min.js"></script>
+    <script src="./graph.js"></script>
+    <title>Původní vojenský prostor</title>
+    <style> :root {--eth: var(--IB)}</style>
+</head>
+<body onload="check('../podklady/Puvodni_vojensky_prostor/galerie/1-leta-okupace-tup-wischau')">
+    <div onclick="goBack()" class="hamburger back"><i class="bi bi-arrow-left"></i></div>
+    <div onclick="menu()" class="hamburger" id="hamb"><i class="bi bi-list"></i></div>
+    <nav id="nav">
+        <a href="">O projektu</a>
+        <a href="">Pro školy</a>
+        <a href="">Akce</a>
+        <a href="">Film</a>
+    </nav> 
+
+    <header> 
+    <h1>Původní vojenský prostor</h1>
+    <h5></h5>
+    </header>
+
+    <div id="zoom_curtain">
+        <div id="zoom_div_container" class="top_padding">
+            <div onclick="close_popup()" class="hamburger" style="display:block"><i class="bi bi-x"></i></div>
+      
+            <div id="zoom" >
+                <div class="row">
+                    <div class="bi bi-caret-left-fill arrow left" onclick="prev_image()"></div>
+                    <div id="zoom_image"></div>
+                    <div class="bi bi-caret-right-fill arrow right" onclick="next_image()"></div>
+                </div>
+                <div>
+                    <p id="image_desc"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <section>
+            <h2>Vznik vojenského cvičiště</h2>
+            <div>
+                 <p>text</p>
+            </div>    
+        </section>
+        
+        <section>
+            <h2>Výstavba a chod cvičiště za první Republiky</h2>
+            <p>text2</p>
+        </section>
+
+        <section>
+            <h2>Vznik Tüp Wischau</h2>
+            <div>
+                <p>text3</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Budování a chod cvičiště</h2>
+            <p>text4</p>
+        </section>
+
+
+        <section>    
+            <h2>Galerie</h2>
+
+            <div id="gallery_nav_bar">
+                <button class="gallery_active_button gallery_nav_button" onclick="check('../podklady/Vojensky_prostor/galerie/1-leta-okupace-tup-wischau')">Léta okupace</button>
+                <button class="gallery_nav_button" onclick="check('../podklady/Vojensky_prostor/galerie/2-Vznik-a-chod-za-prvni-republiky')">Vznik a chod cvičiště za první Republiky</button>
+            </div>
+            <div id="gallery">
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <hr>
+        <div class="sponsors">
+            <a href="https://www.mzm.cz"><img src="/pub/mzm.jpg" alt="moravske zemske muzeum"></a>
+            <a href="https://barvinek.net"><img src="/pub/barv.png" alt="barvinek"></a>
+            <a href="https://jmk.cz"><img src="/pub/jmk.jpg" alt="jihomoravsky kraj"></a>
+            <a href="https://www.csas.cz"><img src="/pub/cs.png" alt="ceska sporitelna"></a>
+            <a href="https://tribrany.cz"><img src="/pub/tri_brany.jpg" alt="tri brany"></a>
+            <a href="https://via.cz"><img src="/pub/via.jpg" alt="via"></a>
+            <a href="https://cichnovabrno.cz"><img src="/pub/cich.png" alt="cichnova brno"></a>
+        </div>
+        <img src="/pub/backdrop.png" alt="tyden ve filmu" class="wof-bg">
+        <div class="copy">
+            <p>&copy; 2025-2026 Barvínek z.s. a Moravské zemské muzeum. Texty chráněny autorským právem. Fotografie třetích stran použity dle licence; práva náleží autorům.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
