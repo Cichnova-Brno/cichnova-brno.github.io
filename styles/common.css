@@ -65,8 +65,8 @@
     font-weight: 400;
     font-style: normal;
     --complementary: #d9d9d9;
-    --IA: #ffb670;
-    --IB: #cf84e9;
+    --IA: #ff9d40;
+    --IB: #bf9be2;
     --II: #f7f898;
     --IIIA: #f68fa2;
     --IIIB: #e0ccb5;
@@ -126,9 +126,10 @@ hr {
 
 /* HEADER */
 header a {
-    color: var(--eth) !important;
+    color: color-mix(in srgb, var(--eth), black 50%) !important;
     margin: auto;
     filter: saturate(1000%);
+    /*color: lch(from currentColor l calc(c * 0.1) h); */
     /*background-color: color-mix(in srgb, var(--complementary), transparent 30%) !important;*/
 }
 
