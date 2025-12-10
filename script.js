@@ -7,7 +7,8 @@ let zoom_svg;
 let zoom_div; 
 let zoom_curtain; 
 let close_btn;
-let zoom_names; 
+let zoom_names;
+let phase_year
 
 let names_of_villages
 
@@ -46,6 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
     close_btn = document.getElementById('close')    
     zoom_names = document.getElementById('zoom_names')
     zoom_curtain = document.getElementById('zoom_curtain')
+    phase_year = document.getElementById('phase_year')
 
 
     Array.from(regions).forEach(region => {
@@ -84,13 +86,33 @@ document.addEventListener('DOMContentLoaded', () => {
             names_of_villages = document.getElementsByClassName(get_class_name_of_region(region.className.baseVal))
             let divide_names = Array.from(names_of_villages).slice(Math.ceil(names_of_villages.length / 2))
 
-                        let title = document.createElement('h4');
+            let title = document.createElement('h4');
             let hr = document.createElement('hr');
             title.textContent = 'Zde vyberte vesnici';
 
             zoom_names.appendChild(title);
             zoom_names.appendChild(hr);
 
+
+            switch(region.getAttribute('name')){
+                case 'ETAPA Ia':
+                    phase_year.textContent = '1. 4. 1941'
+                break
+                case 'ETAPA Ib':
+                    phase_year.textContent = '1. 11. 1941'
+                break
+                case 'ETAPA II':
+                    phase_year.textContent = '1. 12. 1942'
+                break
+                case 'ETAPA IIIa':
+                    phase_year.textContent = '1. 11. 1943'
+                break
+                case 'ETAPA IIIb':
+                    phase_year.textContent = '1. 5. 1944 / 1. 7. 1944 / 1. 9. 1944'
+                break
+                default:
+                    phase_year.textContent = ''
+            }
 
             if(divide_names.length === 0){
                 let empty_element = document.createElement('h3')
