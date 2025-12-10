@@ -9,6 +9,7 @@ let zoom_curtain;
 let close_btn;
 let zoom_names;
 let phase_year
+let map_vilage_name_click
 
 let names_of_villages
 
@@ -48,6 +49,17 @@ document.addEventListener('DOMContentLoaded', () => {
     zoom_names = document.getElementById('zoom_names')
     zoom_curtain = document.getElementById('zoom_curtain')
     phase_year = document.getElementById('phase_year')
+    map_vilage_name_click = document.querySelectorAll('text')
+
+
+    map_vilage_name_click.forEach((village_text_map) => {
+        village_text_map.addEventListener('click', () => {
+            if(!village_text_map.textContent.includes('Etapa')){
+                window.open('/vesnice/' + slugify(`${village_text_map.textContent}.html`), '_self')
+            }
+        })
+    })
+
 
 
     Array.from(regions).forEach(region => {
