@@ -158,6 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
             close_btn.classList.add('hidden')
             region.style.pointerEvents = 'auto'
             zoom_names.innerHTML = ''
+            location.reload()
         })
 
     })
