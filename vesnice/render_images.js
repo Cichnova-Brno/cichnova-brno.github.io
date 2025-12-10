@@ -55,7 +55,7 @@ async function fill_galery(path){
             count++
         }else{
             if(count === 1){
-                let error_message = document.createElement('h4')
+                let error_message = document.createElement('h5')
                 error_message.textContent = 'Zatím nemáme k dispozici žádné fotografie ani dokumenty. Máte-li nějaké ve svém archivu, ozvěte se nám.'
                 gallery.appendChild(error_message)
             }
