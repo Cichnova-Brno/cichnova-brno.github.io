@@ -83,6 +83,7 @@
 
 #zoom_names > a > h3, h3 {
     text-align: center;
+    cursor: pointer;
 }
 
 #zoom_names > a:hover,
@@ -100,6 +101,10 @@
 #zoom_div_container .hamburger {
     right: 1rem;
     top: 1rem;
+}
+
+svg text {
+    cursor: pointer;
 }
 
 @media screen and (max-width: 1000px) {
