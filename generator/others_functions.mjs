@@ -80,10 +80,7 @@ export class other{
     <div onclick="goBack()" class="hamburger back"><i class="bi bi-arrow-left"></i></div>
     <div onclick="menu()" class="hamburger" id="hamb"><i class="bi bi-list"></i></div>
     <nav id="nav">
-        <a href="">O projektu</a>
-        <a href="">Pro školy</a>
-        <a href="">Akce</a>
-        <a href="">Film</a>
+        <a href="/project.html">O projektu</a>
     </nav> 
 
     <header> 
