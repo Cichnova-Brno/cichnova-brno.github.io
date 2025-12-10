@@ -51,10 +51,9 @@ document.addEventListener('DOMContentLoaded', () => {
     phase_year = document.getElementById('phase_year')
     map_vilage_name_click = document.querySelectorAll('text')
 
-
     map_vilage_name_click.forEach((village_text_map) => {
         village_text_map.addEventListener('click', () => {
-            if(!village_text_map.textContent.includes('Etapa')){
+            if(!village_text_map.textContent.includes('Etapa') && !village_text_map.textContent.includes('Vyberte etapu na mapě')){
                 window.open('/vesnice/' + slugify(`${village_text_map.textContent}.html`), '_self')
             }
         })
