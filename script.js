@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     map_vilage_name_click.forEach((village_text_map) => {
         village_text_map.addEventListener('click', () => {
-            if(!village_text_map.textContent.includes('Etapa')){
+            if(!village_text_map.textContent.includes('Etapa') || !village_text_map.includes('etapu')) {
                 window.open('/vesnice/' + slugify(`${village_text_map.textContent}.html`), '_self')
             }
         })
@@ -98,6 +98,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
             names_of_villages = document.getElementsByClassName(get_class_name_of_region(region.className.baseVal))
             let divide_names = Array.from(names_of_villages).slice(Math.ceil(names_of_villages.length / 2))
+            let names = new Array;
+            for(let i = 0; i < divide_names.length; i++){
+                names.push(divide_names[i].textContent);
+            }
 
             let title = document.createElement('h4');
             let hr = document.createElement('hr');
@@ -132,13 +136,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 empty_element.textContent = 'Vojenský prostor neobsahuje žádné vesnice.'
                 zoom_names.appendChild(empty_element)
             }else{
-                for(let i = 0; i < divide_names.length; i++){
-                    for(let k = 0; k < divide_names.length; k++){
-                        let prev = divide_names[i].textContent
-                        if(prev < divide_names[k].textContent){
-                            let temp = divide_names[i].textContent
-                            divide_names[i].textContent = divide_names[k].textContent
-                            divide_names[k].textContent = temp
+                for(let i = 0; i < names.length; i++){
+                    for(let k = 0; k < names.length; k++){
+                        let prev = names[i]
+                        if(prev < names[k]){
+                            let temp = names[i]
+                            names[i] = names[k]
+                            names[k] = temp
                         } 
                     }
                 }
@@ -152,11 +156,11 @@ document.addEventListener('DOMContentLoaded', () => {
             // zoom_names.appendChild(hr);
 
 
-            divide_names.forEach(name => {
+            names.forEach(name => {
                 let link = document.createElement('a')
                 let h3 = document.createElement('h3')
-                h3.textContent = name.textContent
-                link.href = "/vesnice/" + slugify(`${name.textContent}.html`)
+                h3.textContent = name
+                link.href = "/vesnice/" + slugify(`${name}.html`)
                 link.appendChild(h3)
                 zoom_names.appendChild(link)
             })
@@ -174,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
             close_btn.classList.add('hidden')
             region.style.pointerEvents = 'auto'
             zoom_names.innerHTML = ''
-            location.reload()
+            //location.reload()
         })
 
     })
