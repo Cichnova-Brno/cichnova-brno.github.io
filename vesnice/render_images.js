@@ -90,6 +90,7 @@ function find_active_image(){
 // najdi tlacitko na ktere se kliklo a nastav mu tridu gallery_active_button
 // aby se poznalo z jakeho obdobi jsou obrazky v galerii
 function find_active_button(){
+    desc_section = 'before_move';
     let buttons_array = Array.from(nav_buttons)
     buttons_array.forEach((event) => {
         event.addEventListener('click', () => {
@@ -137,12 +138,7 @@ function show_image(index) {
     const new_img = document.createElement('img')
     new_img.src = img_src
     zoom_image.appendChild(new_img)
-    /*json_data = fetch(`/podklady/${title}/${title}.json`, {method: 'GET'})
-    .then(response => {
-        if(!response.ok) console.log(`can not find or open JSON file ${title}`)
-        json_data = response.json()
-        decs = json_data.titles[index]
-    })*/
+
    fetch(`/podklady/${title}/${title}.json`)
   .then(response => {
     if (!response.ok) {
@@ -151,52 +147,12 @@ function show_image(index) {
     return response.json()
   })
   .then(json_data => {
-    
-    switch(desc_section){
-        case 'before_move':
-            if(json_data.before_move[index] == '' || json_data.before_move == undefined){
-                decs.innerHTML = 'Poznáváte tuto fotografii? Napište nám.'
-            }else{
-                decs.innerHTML = json_data.before_move[index]
-            }
-        break
-        case 'move':
-            if(json_data.move[index] == '' || json_data.move == undefined){
-                decs.innerHTML = 'Poznáváte tuto fotografii? Napište nám.'
-            }else{
-                decs.innerHTML = json_data.move[index]
-            }
-        break
-        case 'after_move_return':
-            if(json_data.after_move_return[index] == '' || json_data.after_move_return == undefined){
-                decs.innerHTML = 'Poznáváte tuto fotografii? Napište nám.'
-            }else{
-                decs.innerHTML = json_data.after_move_return[index]
-            }
-        break
-        case 'present':
-            if(json_data.present[index] == '' || json_data.present == undefined){
-                decs.innerHTML = 'Poznáváte tuto fotografii? Napište nám.'
-            }else{
-                decs.innerHTML = json_data.present[index]
-            }
-        break
-        case 'documents':
-            if(json_data.documents[index] == '' || json_data.documents == undefined){
-                decs.innerHTML = 'Poznáváte tuto fotografii? Napište nám.'
-            }else{
-                decs.innerHTML = json_data.documents[index]
-            }
-        break
-        case 'stories_poems':
-            if(json_data.stories_poems[index] == '' || json_data.stories_poems == undefined){
-                decs.innerHTML = 'Poznáváte tuto fotografii? Napište nám.'
-            }else{
-                decs.innerHTML = json_data.stories_poems[index]
-            }
-        break
-    }
 
+      if(json_data[desc_section][index] == '' || json_data[desc_section][index] == undefined || json_data[desc_section] == undefined) {
+          decs.innerHTML = "Poznáváte tuto fotografii? Napište nám.";
+      } else {
+          decs.innerHTML = json_data[desc_section][index];
+      }
   })
   .catch(error => {
     console.error(error)
