@@ -41,7 +41,8 @@ section:nth-child(2n) .image{
     height: auto;
 }
 
-.image h5 {
+.image h5,
+#image_desc {
     font-weight: normal;
     font-style: italic;
 }

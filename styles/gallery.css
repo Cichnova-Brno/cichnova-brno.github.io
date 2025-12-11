@@ -113,6 +113,9 @@
     transform: translate(3);
 }
 
+
+
+
 @media screen and (max-width: 1000px) {
     .top_padding {
         padding-top: 15%;
@@ -126,6 +129,13 @@
     #zoom_image img {
        width: 100%;
        height: auto;
+   }
+   
+   .arrow.right {
+       margin-right: 0;
+   }
+   .arrow.left {
+       margin-left: 0;
    }
 }
   
