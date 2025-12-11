@@ -84,6 +84,7 @@
 #zoom_names > a > h3, h3 {
     text-align: center;
     cursor: pointer;
+    font-size: 2rem;
 }
 
 #zoom_names > a:hover,
