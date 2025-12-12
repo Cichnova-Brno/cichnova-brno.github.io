@@ -25,6 +25,17 @@ export class other{
         return villages_names
     }
 
+    check_graph(years, residents){
+        if((years.length === 0 || residents.length === 0) || (isNaN(years[0]) || isNaN(residents[0]))) return false
+        for(let i = 0; i < residents.length; i++){
+            if(isNaN(residents[i]) || residents[i] === 0) {
+                years.splice(i, 1)
+                residents.splice(i, 1)
+            }
+        }
+        if(years.length === 0 || residents.length === 0) return false
+        return {y: years, r: residents}
+    }
 
     write_into_html(json_obj){
 
@@ -53,9 +64,17 @@ export class other{
             znak_image="";
         }
 
-        let graph
-        if(json_obj.l_year[0] === 'Data jsou nedostupná') graph = ''
-        else graph = `print_graph([${json_obj.l_year}], [${json_obj.l_residents}], ${max}, ${step})`
+        let graph, canvas
+        let checked_graph = this.check_graph(json_obj.l_year, json_obj.l_residents)
+        if(checked_graph === false){
+            canvas = ''
+            graph = ''
+        }
+        else{
+            canvas = '<h2>Počet obyvatel</h2><canvas id="data"></canvas>'
+            graph = `print_graph([${checked_graph.y}], [${checked_graph.r}], ${max}, ${step})`
+        }
+        
 
         let html_code = `<!DOCTYPE html>
 <html lang="en">
@@ -116,9 +135,7 @@ export class other{
         </section>
 
         <section>    
-            <h2>Počet obyvatel</h2>
-            <canvas id="data">
-            </canvas>
+                ${canvas}
             <script>
                 ${graph}
             </script>
@@ -133,7 +150,7 @@ export class other{
                 <div>
                     <p>${json_obj.paragraph_two}</p>
                     <table id="table">
-                        <tr><th>Obec</th><th>Etapa</th><th>Domů</th><th>Rodin</th><th>Osob</th></tr>
+                        <tr><th>Okres</th><th>Etapa</th><th>Domů</th><th>Rodin</th><th>Osob</th></tr>
                         <tr><td>${json_obj.district}</td><td>${json_obj.phase}.</td><td>${json_obj.houses}</td><td>${json_obj.families}</td><td>${json_obj.residents}</td></tr>
                     </table>
                 </div>
