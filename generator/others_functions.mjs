@@ -134,16 +134,6 @@ export class other{
             </div>    
         </section>
 
-        <section>    
-                ${canvas}
-            <script>
-                ${graph}
-            </script>
-        </section>
-        <section>
-            <h2>Pamětníci</h2>
-            ${speakers}
-        </section>
         <section>
             <h2>Průběh vystěhování</h2>
             <div>
@@ -161,6 +151,17 @@ export class other{
             </div>
         </section>
 
+        <section>
+            <h2>Pamětníci</h2>
+            ${speakers}
+        </section>
+
+        <section>    
+                ${canvas}
+            <script>
+                ${graph}
+            </script>
+        </section>
 
         <section>    
             <h2>Galerie</h2>
