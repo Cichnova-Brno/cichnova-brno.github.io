@@ -4,15 +4,31 @@ let zoom_image = null
 let nav_buttons = null
 let active_button = null
 let image_desc = null
-let desc_section = null
-
+let desc_section = 'before_move'
+let data = null
 let current_index = 0
+let is_loaded = false
+
+
+async function load_data_from_json() {
+    const title = document.querySelector('title').textContent
+
+    const response = await fetch(`/podklady/${title}/${title}.json`)
+    if (!response.ok) {
+        throw new Error(`Cannot find or open JSON file ${title}`)
+    }
+
+    data = await response.json()
+}
+
+
 
 // na body se da onload a zavola se tahle funkce. Do path se ulozi cesta k obrazkum
 // tahle cesta se preda funkci fill_gallery.
 // poznamka (pokud se nacita z aktualniho adresare jako argument se musi nastvit tecka)
 async function check(path){
-
+    if(is_loaded == false) await load_data_from_json()
+    is_loaded = true
     // nacti galerii a pokud existuje tak ji napln
     gallery = document.getElementById('gallery')
     // fill_gallery je asynchrini funkce takze se pocka az se ukonci
@@ -44,7 +60,7 @@ async function fill_gallery(path) {
             fetch(`${path}/${i}.jpg`, { method: 'HEAD' })
                 .then(r => ({ exists: r.ok, index: i }))
                 .catch(() => ({ exists: false, index: i }))
-        );
+        )
     }
 
     const results = await Promise.allSettled(promises);
@@ -54,22 +70,22 @@ async function fill_gallery(path) {
         .sort((a, b) => a - b);
 
     if (existing.length === 0) {
-        const msg = document.createElement('h5');
-        msg.textContent = 'Zatím nemáme k dispozici žádné fotografie ani dokumenty. Máte-li nějaké ve svém archivu, ozvěte se nám.';
-        gallery.appendChild(msg);
-        return;
+        const msg = document.createElement('h5')
+        msg.textContent = 'Zatím nemáme k dispozici žádné fotografie ani dokumenty. Máte-li nějaké ve svém archivu, ozvěte se nám.'
+        gallery.appendChild(msg)
+        return
     }
 
-    const fragment = document.createDocumentFragment();
+    const fragment = document.createDocumentFragment()
     for (const i of existing) {
-        const img = new Image();
-        img.loading = 'lazy';
-        img.classList.add('small_image');
-        img.src = `${path}/${i}.jpg`;
-        img.alt = `Obrázek ${i}`;
-        fragment.appendChild(img);
+        const img = new Image()
+        img.loading = 'lazy'
+        img.classList.add('small_image')
+        img.src = `${path}/${i}.jpg`
+        img.alt = `Obrázek ${i}`
+        fragment.appendChild(img)
     }
-    gallery.appendChild(fragment);
+    gallery.appendChild(fragment)
 }
 
 // hleda aktivni obrazek
@@ -81,8 +97,9 @@ function find_active_image(){
         event.addEventListener('click', () => {
             zoom_curtain.classList.add('zoom_active')
             zoom_div.style.display = 'flex'
-            image_desc.textContent = '';
-            show_image((event.attributes.src.textContent.split('\\').pop().split('/').pop().split('.')[0])-1);
+            image_desc.textContent = ''
+            //show_image((event.attributes.src.textContent.split('\\').pop().split('/').pop().split('.')[0])-1)
+            show_image(images_array.indexOf(event))
         })
     })
 }
@@ -90,7 +107,7 @@ function find_active_image(){
 // najdi tlacitko na ktere se kliklo a nastav mu tridu gallery_active_button
 // aby se poznalo z jakeho obdobi jsou obrazky v galerii
 function find_active_button(){
-    desc_section = 'before_move';
+
     let buttons_array = Array.from(nav_buttons)
     buttons_array.forEach((event) => {
         event.addEventListener('click', () => {
@@ -127,9 +144,8 @@ function close_popup(){
 
 // funkce pro vykresleni dalsich obrazku v popupu
 function show_image(index) {
-    decs = document.getElementById('image_desc')
-    let json_data = null
-    let title = document.querySelector('title').textContent
+    const decs = document.getElementById('image_desc')
+    //let title = document.querySelector('title').textContent
     if (index < 0) index = small_images.length - 1
     if (index >= small_images.length) index = 0
     current_index = index
@@ -139,24 +155,10 @@ function show_image(index) {
     new_img.src = img_src
     zoom_image.appendChild(new_img)
 
-   fetch(`/podklady/${title}/${title}.json`)
-  .then(response => {
-    if (!response.ok) {
-      throw new Error(`Cannot find or open JSON file ${title}`)
-    }
-    return response.json()
-  })
-  .then(json_data => {
 
-      if(json_data[desc_section][index] == '' || json_data[desc_section][index] == undefined || json_data[desc_section] == undefined) {
-          decs.innerHTML = "Poznáváte tuto fotografii? Napište nám.";
-      } else {
-          decs.innerHTML = json_data[desc_section][index];
-      }
-  })
-  .catch(error => {
-    console.error(error)
-  })
+    const section = data?.[desc_section]
+    decs.innerHTML = section?.[index] || "Poznáváte tuto fotografii? Napište nám."
+
 }
 
 // zobrazi dalsi obrazek
