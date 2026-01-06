@@ -92,6 +92,7 @@ export class other{
     <script tyle="module" src="./render_images.js"></script>
     <script src="./Chart.min.js"></script>
     <script src="./graph.js"></script>
+    <script src="../no_internet.js"></script>
     <title>${json_obj.name}</title>
     <style> :root {--eth: var(--${json_obj.phase.toUpperCase()})}</style>
 </head>

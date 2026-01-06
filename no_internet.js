@@ -1,0 +1,1 @@
+if(!navigator.onLine) open('/disconnect.html', '_self')
