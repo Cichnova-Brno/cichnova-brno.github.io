@@ -106,7 +106,7 @@ export class other{
     <header> 
     <h1>${json_obj.name}</h1>
     <h5></h5>
-    <a href="">${json_obj.phase}.  ${json_obj.district}</a>
+    <a href="">${json_obj.phase}.</a>
     </header>
 
     <div id="zoom_curtain">
