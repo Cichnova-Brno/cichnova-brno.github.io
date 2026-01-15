@@ -7,7 +7,7 @@
     bottom: 0;
     /* background-color: color-mix(in srgb, var(--complementary), transparent 20%); */
     background-color: var(--complementary);
-    margin: 3rem 9rem;
+    margin: 1rem 1rem;
     border-radius: 15px;
     /* backdrop-filter: blur(6px); */
     display: flex;
