@@ -8,6 +8,7 @@ let desc_section = 'before_move'
 let data = null
 let current_index = 0
 let is_loaded = false
+let prev_path = "";
 
 
 async function load_data_from_json() {
@@ -27,6 +28,8 @@ async function load_data_from_json() {
 // tahle cesta se preda funkci fill_gallery.
 // poznamka (pokud se nacita z aktualniho adresare jako argument se musi nastvit tecka)
 async function check(path){
+    if(path == prev_path) return;
+    prev_path = path;
     if(is_loaded == false) await load_data_from_json()
     is_loaded = true
     // nacti galerii a pokud existuje tak ji napln
@@ -45,12 +48,13 @@ async function check(path){
     zoom_curtain = document.getElementById('zoom_curtain')
     image_desc = document.getElementById('image_desc')
     if(small_images && zoom_image) find_active_image()
+
     
 }
 
 // naplni galerii
 async function fill_gallery(path) {
-    gallery.textContent = '';
+    gallery.innerHTML = '';
 
     const MAX_CHECK = 50;
     const promises = [];
