@@ -56,7 +56,7 @@ async function check(path){
 async function fill_gallery(path) {
     gallery.innerHTML = '';
 
-    const MAX_CHECK = 50;
+    const MAX_CHECK = 60;
     const promises = [];
 
     for (let i = 1; i <= MAX_CHECK; i++) {
