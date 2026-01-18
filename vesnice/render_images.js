@@ -117,7 +117,14 @@ function find_active_button(){
         event.addEventListener('click', () => {
             active_button.classList.remove('gallery_active_button')
             event.classList.add('gallery_active_button')
+            console.log(event.textContent.replace(/\s+/, ""))
             switch(event.textContent.replace(/\s+/, "")){
+                case 'Vznika chod cvičiště za první Republiky':
+                    desc_section = 'move'
+                break
+                case 'Léta okupace':
+                    desc_section = 'before_move'
+                break
                 case 'předvystěhováním':
                     desc_section = 'before_move'
                 break
