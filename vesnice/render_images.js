@@ -122,7 +122,7 @@ function find_active_button(){
                 case 'Vznika chod cvičiště za první Republiky':
                     desc_section = 'move'
                 break
-                case 'Léta okupace':
+                case 'Létaokupace':
                     desc_section = 'before_move'
                 break
                 case 'předvystěhováním':
