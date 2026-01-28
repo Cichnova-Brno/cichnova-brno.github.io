@@ -28,7 +28,8 @@ class navigationMenu extends HTMLElement {
     this.innerHTML = `
         <nav id="nav">
             <a href="/project.html">Více o projektu</a>
-            <a href="/more.html" class="more">Více o vystěhování</a>
+            <a href="/more.html">O vystěhování</a>
+            <a href="/documentary.html">Dokumentární Film</a>
         </nav> 
     `;
   }
@@ -282,3 +283,13 @@ function slugify(text) {
         .replace(/\s+/g, "_")
         .replace(/[^a-z0-9\.\-]/g, "")
 }
+
+let emailSubsIframe = document.getElementById("email-sub");
+
+emailSubIframe.addEventListener('load', () => {
+  const iframeDocument = editorIframe.contentDocument;
+  const iframeBody = iframeDocument.body;
+ 
+  // Set background color to light blue (#f0f8ff)
+  iframeBody.style.backgroundColor = '#f0f8ff'; 
+});
