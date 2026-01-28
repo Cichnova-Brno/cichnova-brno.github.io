@@ -23,15 +23,14 @@ wtd = 0;
 class navigationMenu extends HTMLElement {
 
   render() { 
-    let date = new Date(this.getAttribute('datetime') || Date.now());
-
+// odedelano jenom jestli bychom to potrebovali nekdy zase pridat <a href="/more.html">O vystěhování</a>
     this.innerHTML = `
         <nav id="nav">
             <a href="/project.html">Více o projektu</a>
-            <a href="/more.html">O vystěhování</a>
             <a href="/documentary.html">Dokumentární Film</a>
             <a href="/books.html">Knihy</a>
             <a href="/exhibition.html">Výstava</a>
+            <a href="/news.html">Aktuality</a>
         </nav> 
     `;
   }
@@ -57,8 +56,6 @@ class navigationMenu extends HTMLElement {
 class customFooter extends HTMLElement {
 
   render() { 
-    let date = new Date(this.getAttribute('datetime') || Date.now());
-
     this.innerHTML = `
         <footer>
             <div class="sponsors">

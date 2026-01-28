@@ -1,0 +1,61 @@
+
+.substack-feed-embed {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+  gap: 1.5rem;
+
+  max-width: 1400px;
+  margin: 0 auto;
+
+  padding: 1rem;
+}
+
+.substack-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  margin-bottom: 2rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+
+.substack-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.substack-thumbnail {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.substack-post {
+  padding: 1.2rem;
+}
+
+.substack-title {
+  margin: 0 0 0.6rem;
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+
+.substack-date {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0 0 0.8rem;
+}
+
+.substack-desc {
+  margin: 0;
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.substack-error, .substack-empty {
+  color: #c00;
+  font-style: italic;
+}
