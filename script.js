@@ -30,6 +30,7 @@ class navigationMenu extends HTMLElement {
             <a href="/project.html">Více o projektu</a>
             <a href="/more.html">O vystěhování</a>
             <a href="/documentary.html">Dokumentární Film</a>
+            <a href="/books.html">Knihy</a>
         </nav> 
     `;
   }
