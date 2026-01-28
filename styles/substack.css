@@ -28,6 +28,7 @@
 
 .substack-thumbnail {
   width: 100%;
+  /*height: 160px;*/
   object-fit: cover;
   display: block;
 }
