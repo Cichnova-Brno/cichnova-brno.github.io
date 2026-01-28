@@ -284,12 +284,3 @@ function slugify(text) {
         .replace(/[^a-z0-9\.\-]/g, "")
 }
 
-let emailSubsIframe = document.getElementById("email-sub");
-
-emailSubIframe.addEventListener('load', () => {
-  const iframeDocument = editorIframe.contentDocument;
-  const iframeBody = iframeDocument.body;
- 
-  // Set background color to light blue (#f0f8ff)
-  iframeBody.style.backgroundColor = '#f0f8ff'; 
-});
