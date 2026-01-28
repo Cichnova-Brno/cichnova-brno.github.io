@@ -15,6 +15,44 @@ let names_of_villages
 
 wtd = 0;
 
+/*=======================================
+ *   Custom nav element, protoze se mi to
+ *   nechce definovat na kazde strance
+ =========================================*/
+
+class navigationMenu extends HTMLElement {
+
+  render() { 
+    let date = new Date(this.getAttribute('datetime') || Date.now());
+
+    this.innerHTML = `
+        <nav id="nav">
+            <a href="/project.html">Více o projektu</a>
+            <a href="/more.html" class="more">Více o vystěhování</a>
+        </nav> 
+    `;
+  }
+
+  connectedCallback() {
+    if (!this.rendered) {
+      this.render();
+      this.rendered = true;
+    }
+  }
+
+  static get observedAttributes() {
+    return [];
+  }
+
+  attributeChangedCallback(name, oldValue, newValue) {
+    this.render();
+  }
+
+}
+
+customElements.define("navigation-menu", navigationMenu);
+
+
 function menu()
 {
     if(wtd===0) {
