@@ -31,6 +31,7 @@ class navigationMenu extends HTMLElement {
             <a href="/more.html">O vystěhování</a>
             <a href="/documentary.html">Dokumentární Film</a>
             <a href="/books.html">Knihy</a>
+            <a href="/exhibition.html">Výstava</a>
         </nav> 
     `;
   }
