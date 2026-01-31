@@ -15,6 +15,89 @@ let names_of_villages
 
 wtd = 0;
 
+/*=======================================
+ *   Custom nav element, protoze se mi to
+ *   nechce definovat na kazde strance
+ =========================================*/
+
+class navigationMenu extends HTMLElement {
+
+  render() { 
+// odedelano jenom jestli bychom to potrebovali nekdy zase pridat <a href="/more.html">O vystěhování</a>
+    this.innerHTML = `
+        <nav id="nav">
+            <a href="/project.html">Více o projektu</a>
+            <a href="/documentary.html">Dokumentární Film</a>
+            <a href="/books.html">Knihy</a>
+            <a href="/exhibition.html">Výstava</a>
+            <a href="/news.html">Aktuality</a>
+        </nav> 
+    `;
+  }
+
+  connectedCallback() {
+    if (!this.rendered) {
+      this.render();
+      this.rendered = true;
+    }
+  }
+
+  static get observedAttributes() {
+    return [];
+  }
+
+  attributeChangedCallback(name, oldValue, newValue) {
+    this.render();
+  }
+
+}
+
+
+class customFooter extends HTMLElement {
+
+  render() { 
+    this.innerHTML = `
+        <footer>
+            <div class="sponsors">
+                <a href="https://www.mzm.cz"><img src="/pub/mzm.jpg" alt="moravske zemske muzeum"></a>
+                <a href="https://barvinek.net"><img src="/pub/barv.png" alt="barvinek"></a>
+                <a href="https://jmk.cz"><img src="/pub/jmk.jpg" alt="jihomoravsky kraj"></a>
+                <a href="https://www.csas.cz"><img src="/pub/cs.png" alt="ceska sporitelna"></a>
+                <a href="https://tribrany.cz"><img src="/pub/tri_brany.jpg" alt="tri brany"></a>
+                <a href="https://via.cz"><img src="/pub/via.jpg" alt="via"></a>
+                <a href="https://mk.gov.cz"><img src="/pub/mk.jpg" alt="via"></a>
+                <a href="https://cichnovabrno.cz"><img src="/pub/cich.png" alt="cichnova brno"></a>
+            </div>
+            <img src="pub/backdrop.png" alt="tyden ve filmu" class="wof-bg">
+            <div class="copy">
+                <p>&copy; 2025-2026 Barvínek z.s. a Moravské zemské muzeum. Texty chráněny autorským právem. Fotografie třetích stran použity dle licence; práva náleží autorům.
+                </p>
+            </div>
+        </footer>
+    `;
+  }
+
+  connectedCallback() {
+    if (!this.rendered) {
+      this.render();
+      this.rendered = true;
+    }
+  }
+
+  static get observedAttributes() {
+    return [];
+  }
+
+  attributeChangedCallback(name, oldValue, newValue) {
+    this.render();
+  }
+
+}
+
+customElements.define("navigation-menu", navigationMenu);
+customElements.define("custom-footer", customFooter);
+
+
 function menu()
 {
     if(wtd===0) {
@@ -199,3 +282,4 @@ function slugify(text) {
         .replace(/\s+/g, "_")
         .replace(/[^a-z0-9\.\-]/g, "")
 }
+

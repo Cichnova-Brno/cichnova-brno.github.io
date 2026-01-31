@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="styles/landing.css">
     <link rel="stylesheet" href="styles/common.css">
     <link rel="stylesheet" href="styles/map.css">
+    <link rel="stylesheet" href="styles/substack.css">
     <link rel="stylesheet" href="styles/bootstrap/bootstrap-icons.min.css">
     <script src="script.js"></script>
     <script src="no_internet.js"></script>
@@ -13,10 +14,9 @@
 </head>
 <body>
     <div onclick="menu()" class="hamburger" id="hamb"><i class="bi bi-list"></i></div>
-    <nav id="nav">
-        <a href="/project.html">O projektu</a>
-        <a href="more.html" class="more">Více o vystěhování</a>
-    </nav> 
+    <!--Custom navigation-menu element defined in script.js-->
+    <navigation-menu></navigation-menu>
+
     <div id="zoom_curtain">
       <div id="zoom_div_container">
           <div class="hamburger" style="display:block" id="close"><i class="bi bi-x"></i></div>
@@ -400,37 +400,31 @@
             <article class="text-besides-the-map">
                 <h1 style="margin-top: 5rem;">Vystěhované Drahansko</h1>
                 <br>
-                <h2 style="font-weight: normal;">Dotykem vyberte vesnice, prohlédněte si dobové fotografie a získejte základní informace o průběhu jejich vystěhování.</h2>
-		<!-- <p>
-V letech 1940–1945 došlo k rozsáhlému vystěhování českých obcí na Drahanské vrchovině. Důvodem bylo rozšíření vojenského cvičiště u&nbsp;Vyškova (TÜP Wischau).  
-                </p>
-                <p>
-Protože se o&nbsp;tématu příliš neví, rozhodli jsme se přiblížit veřejnosti jakým způsobem a&nbsp;které obce byly vystěhovány, co tomu předcházelo, jak jednotlivé evakuace probíhaly a&nbsp;jaký byl poválečný vývoj oblasti. 
-                </p>
-                <p>
-Projekt se opírá o&nbsp;dlouhodobý výzkum historičky Dany Vedry, která se tímto tématem věnuje v rámci své dlouhodobé výzkumné koncepce vědecké organizace Ministerstva kultury ČR.
-                </p>
-                <a href="more.html" class="more">Více</a> -->
+                <p style="font-weight: normal;">V letech 1940–1945 došlo k rozsáhlému vystěhování českých obcí na Drahanské vrchovině.<br>
+Vyberte si konkrétní vesnici, prohlédněte si dobové fotografie a získejte základní informace o průběhu jejich vystěhování. </p>
+                <a href="/more.html" class="more">Více o vystěhování</a>
             </article>
         </section>
         <hr>
+        <section>
+            <!-- Feed embed code -->
+            <div class="substack-feed-embed" data-substack-url="vystehovani.substack.com" data-posts="3"></div>
+        </section>
+        <hr>
+        <section style="display:flex;flex-direction:column;align-items:center;justify-content:center;">
+        <p style="padding:2em;text-align:center;">
+        Chcete být v obraze, vědět vždy o dalších aktivitách k tématu? 
+        Odebírejte náš elektronický občasník – stačí vložit email.
+        <p>
+        <!-- Subscribe embed code -->
+        <div data-supascribe-embed-id="35579010070" style="display: flex;flex-direction: column;justify-content: center;align-items: center;" data-supascribe-subscribe></div>
+        </section>
+        <hr>
     </main>
-    <footer>
-        <div class="sponsors">
-            <a href="https://www.mzm.cz"><img src="/pub/mzm.jpg" alt="moravske zemske muzeum"></a>
-            <a href="https://barvinek.net"><img src="/pub/barv.png" alt="barvinek"></a>
-            <a href="https://jmk.cz"><img src="/pub/jmk.jpg" alt="jihomoravsky kraj"></a>
-            <a href="https://www.csas.cz"><img src="/pub/cs.png" alt="ceska sporitelna"></a>
-            <a href="https://tribrany.cz"><img src="/pub/tri_brany.jpg" alt="tri brany"></a>
-            <a href="https://via.cz"><img src="/pub/via.jpg" alt="via"></a>
-            <a href="https://mk.gov.cz"><img src="/pub/mk.jpg" alt="via"></a>
-            <a href="https://cichnovabrno.cz"><img src="/pub/cich.png" alt="cichnova brno"></a>
-        </div>
-        <img src="pub/backdrop.png" alt="tyden ve filmu" class="wof-bg">
-        <div class="copy">
-            <p>&copy; 2025-2026 Barvínek z.s. a Moravské zemské muzeum. Texty chráněny autorským právem. Fotografie třetích stran použity dle licence; práva náleží autorům.
-            </p>
-        </div>
-    </footer>
+    <!--Custom custom-footer element defined in script.js-->
+    <custom-footer></custom-footer>
+    <!-- Supascribe Script -->
+    <script src="https://js.supascribe.com/v1/loader/ZtR2DP7LCDX4zcY5rtJAWxKCKY22.js" async></script>
+    <script src="/substack.js"></script>
 </body>
 </html>

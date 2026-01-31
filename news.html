@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/villages.css">
+    <link rel="stylesheet" href="/styles/common.css">
+    <link rel="stylesheet" href="/styles/map.css">
+    <link rel="stylesheet" href="/styles/gallery.css">
+    <link rel="stylesheet" href="/styles/table.css">
+    <link rel="stylesheet" href="/styles/graph.css">
+    <link rel="stylesheet" href="/styles/substack.css">
+    <link rel="stylesheet" href="/styles/bootstrap/bootstrap-icons.min.css">
+    <script src="/script.js"></script>
+    <script src="/no_internet.js"></script>
+    <title>Vystěhované Drahansko</title>
+    <style> :root {--eth: var(--IA) }</style>
+</head>
+<body>
+    <div onclick="goBack()" class="hamburger back"><i class="bi bi-arrow-left"></i></div>
+    <div onclick="menu()" class="hamburger" id="hamb"><i class="bi bi-list"></i></div>
+    <!--Custom navigation-menu element defined in script.js-->
+    <navigation-menu></navigation-menu>
+
+    <header>
+    </header>
+
+    <main style="margin-top:5rem">
+        <h1>Aktuality</h1>
+        <section>
+            <div class="substack-feed-embed" data-substack-url="vystehovani.substack.com" data-posts="100000"></div>
+        </section>
+    </main>
+
+    <hr>
+    <!--Custom custom-footer element defined in script.js-->
+    <custom-footer></custom-footer>
+    <script src="/substack.js"></script>
+</body>
+</html>
