@@ -203,4 +203,73 @@ export class other{
             console.log(`File /vesnice/${slugify(json_obj.name)}.html was successfully created\n`)
         }
     }
+
+
+    speakers_page(json_obj){
+
+        let pek_code = null
+
+        for(let j = 0; j < json_obj.length; j++){
+            if((json_obj[j].speaker != "" || json_obj[j].speaker != undefined) && json_obj[j].header != undefined && json_obj[j].speeche != undefined){
+                for(let i = 0; i < json_obj[j].speaker.length; i++){
+                    pek_code += `<section>
+                                <h1>${json_obj[j].header[0]}</h1>`
+                    for(let k = 1; k <= json_obj[j].header.length; k++){
+                        let temp_kmo = k - 1;
+                        pek_code += `<p>${json_obj[j].speeche[temp_kmo]}</p>`
+                        if(json_obj[j].header[k] != undefined) pek_code += `<h3>${json_obj[j].header[k]}</h3>`
+                    }
+                    pek_code += `</section>`
+                }
+            }
+        }
+
+        let html_code = `<!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <link rel="stylesheet" href="/styles/villages.css">
+                <link rel="stylesheet" href="/styles/common.css">
+                <link rel="stylesheet" href="/styles/map.css">
+                <link rel="stylesheet" href="/styles/gallery.css">
+                <link rel="stylesheet" href="/styles/table.css">
+                <link rel="stylesheet" href="/styles/graph.css">
+                <link rel="stylesheet" href="/styles/bootstrap/bootstrap-icons.min.css">
+                <script src="/script.js"></script>
+                <script src="/no_internet.js"></script>
+                <title>Vystěhované Drahansko</title>
+                <style> :root {--eth: var(--IA) }</style>
+            </head>
+            <body>
+                <div onclick="goBack()" class="hamburger back"><i class="bi bi-arrow-left"></i></div>
+                <div onclick="menu()" class="hamburger" id="hamb"><i class="bi bi-list"></i></div>
+                <!--Custom navigation-menu element defined in script.js-->
+                <navigation-menu></navigation-menu>
+
+                <header>
+                </header>
+
+                <main style="margin-top:5rem">
+                    ${pek_code}
+                </main>
+
+                <hr>
+                <!--Custom custom-footer element defined in script.js-->
+                <custom-footer></custom-footer>
+            </body>
+            </html>`
+
+
+        try{
+            fs.writeFileSync(`../speakers.html`, html_code)
+        }catch(err){
+            console.log(err)
+            return null
+        }finally{
+            console.log(`File /speakers.html was successfully created\n`)
+        }
+
+    }
+
 }
