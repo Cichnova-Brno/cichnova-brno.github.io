@@ -30,7 +30,7 @@ class navigationMenu extends HTMLElement {
             <a href="/documentary.html">Dokumentární Film</a>
             <a href="/books.html">Knihy</a>
             <a href="/exhibition.html">Výstava</a>
-            <a href="/news.html">Aktuality</a>
+            <a href="https://vystehovani.substack.com/" target="about:blank"><i class="bi bi-box-arrow-up-right"></i> Aktuality a akce</a>
         </nav> 
     `;
   }
