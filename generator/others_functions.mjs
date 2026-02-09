@@ -220,6 +220,43 @@ export class other{
                         if(json_obj[j].header[k] != undefined) pek_code += `<h3>${json_obj[j].header[k]}</h3>`
                     }
                     pek_code += `</section>`
+
+
+                    if(json_obj[j].header2){
+                        pek_code += `<section>
+                                <h1>${json_obj[j].header2[0]}</h1>`
+                        for(let k = 1; k <= json_obj[j].header2.length; k++){
+                            let temp_kmo = k - 1;
+                            pek_code += `<p>${json_obj[j].speeche2[temp_kmo]}</p>`
+                            if(json_obj[j].header2[k] != undefined) pek_code += `<h3>${json_obj[j].header2[k]}</h3>`
+                        }
+                    }
+                    pek_code += `</section>`
+
+
+                    if(json_obj[j].header3){
+                        pek_code += `<section>
+                                <h1>${json_obj[j].header3[0]}</h1>`
+                        for(let k = 1; k <= json_obj[j].header3.length; k++){
+                            let temp_kmo = k - 1;
+                            pek_code += `<p>${json_obj[j].speeche3[temp_kmo]}</p>`
+                            if(json_obj[j].header3[k] != undefined) pek_code += `<h3>${json_obj[j].header3[k]}</h3>`
+                        }
+                    }
+                    pek_code += `</section>`
+
+
+                                        
+                    if(json_obj[j].header4){
+                        pek_code += `<section>
+                                <h1>${json_obj[j].header4[0]}</h1>`
+                        for(let k = 1; k <= json_obj[j].header4.length; k++){
+                            let temp_kmo = k - 1;
+                            pek_code += `<p>${json_obj[j].speeche4[temp_kmo]}</p>`
+                            if(json_obj[j].header4[k] != undefined) pek_code += `<h3>${json_obj[j].header4[k]}</h3>`
+                        }
+                    }
+                    pek_code += `</section>`
                 }
             }
         }
