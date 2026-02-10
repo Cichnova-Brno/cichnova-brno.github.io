@@ -1,4 +1,5 @@
 import fs from 'node:fs'
+import { json } from 'node:stream/consumers'
 
 export class other{
 
@@ -206,60 +207,39 @@ export class other{
 
 
     speakers_page(json_obj){
+        let pek_code = ''
 
-        let pek_code = null
+        for(let i = 0; i < json_obj.length; i++){
+            let temp_json = json_obj[i]
+            let speaker_count = ''
 
-        for(let j = 0; j < json_obj.length; j++){
-            if((json_obj[j].speaker != "" || json_obj[j].speaker != undefined) && json_obj[j].header != undefined && json_obj[j].speeche != undefined){
-                for(let i = 0; i < json_obj[j].speaker.length; i++){
-                    pek_code += `<section>
-                                <h1>${json_obj[j].header[0]}</h1>`
-                    for(let k = 1; k <= json_obj[j].header.length; k++){
-                        let temp_kmo = k - 1;
-                        pek_code += `<p>${json_obj[j].speeche[temp_kmo]}</p>`
-                        if(json_obj[j].header[k] != undefined) pek_code += `<h3>${json_obj[j].header[k]}</h3>`
+            if(temp_json['speaker'][0] != '' && temp_json['header'] && temp_json['speeche']){
+
+                for(let k = 0; k < 4; k++){
+                    let har = "header"+speaker_count
+                    let par = "speeche"+speaker_count
+
+                    if(temp_json[har]?.[0]??"" != '') pek_code += `<section><h3  style="margin-bottom:2rem">${temp_json[har]?.[0]??""}</h3>`
+
+                    for(let j = 1; j <= temp_json.speaker.length; j++){
+                        if(temp_json[har]?.[j]??"" != '') pek_code += `<h5 style="margin-top:2rem">${temp_json[har]?.[j]??""}</h5>`
+                        if(temp_json[par]?.[j]??"" != '') pek_code += `<p>${temp_json[par]?.[j]??""}</p>`
                     }
-                    pek_code += `</section>`
 
-
-                    if(json_obj[j].header2){
-                        pek_code += `<section>
-                                <h1>${json_obj[j].header2[0]}</h1>`
-                        for(let k = 1; k <= json_obj[j].header2.length; k++){
-                            let temp_kmo = k - 1;
-                            pek_code += `<p>${json_obj[j].speeche2[temp_kmo]}</p>`
-                            if(json_obj[j].header2[k] != undefined) pek_code += `<h3>${json_obj[j].header2[k]}</h3>`
-                        }
+                    if(speaker_count === ''){
+                        speaker_count = 2
+                    }else{
+                        speaker_count++
                     }
-                    pek_code += `</section>`
 
-
-                    if(json_obj[j].header3){
-                        pek_code += `<section>
-                                <h1>${json_obj[j].header3[0]}</h1>`
-                        for(let k = 1; k <= json_obj[j].header3.length; k++){
-                            let temp_kmo = k - 1;
-                            pek_code += `<p>${json_obj[j].speeche3[temp_kmo]}</p>`
-                            if(json_obj[j].header3[k] != undefined) pek_code += `<h3>${json_obj[j].header3[k]}</h3>`
-                        }
-                    }
-                    pek_code += `</section>`
-
-
-                                        
-                    if(json_obj[j].header4){
-                        pek_code += `<section>
-                                <h1>${json_obj[j].header4[0]}</h1>`
-                        for(let k = 1; k <= json_obj[j].header4.length; k++){
-                            let temp_kmo = k - 1;
-                            pek_code += `<p>${json_obj[j].speeche4[temp_kmo]}</p>`
-                            if(json_obj[j].header4[k] != undefined) pek_code += `<h3>${json_obj[j].header4[k]}</h3>`
-                        }
-                    }
                     pek_code += `</section>`
                 }
+
             }
+
+            speaker_count = ''
         }
+            
 
         let html_code = `<!DOCTYPE html>
             <html lang="en">
