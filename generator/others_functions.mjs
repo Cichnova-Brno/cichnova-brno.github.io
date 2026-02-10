@@ -219,10 +219,10 @@ export class other{
                     let har = "header"+speaker_count
                     let par = "speeche"+speaker_count
 
-                    if(temp_json[har]?.[0]??"" != '') pek_code += `<section><h3  style="margin-bottom:2rem">${temp_json[har]?.[0]??""}</h3>`
+                    if(temp_json[har]?.[0]??"" != '') pek_code += `<section><h3  style="margin-bottom:2rem;">${temp_json[har]?.[0]??""}</h3>`
 
                     for(let j = 1; j <= temp_json.speaker.length; j++){
-                        if(temp_json[har]?.[j]??"" != '') pek_code += `<h5 style="margin-top:2rem">${temp_json[har]?.[j]??""}</h5>`
+                        if(temp_json[har]?.[j]??"" != '') pek_code += `<h5 style="margin-top:2rem; font-size: 25px; color: black;">${temp_json[har]?.[j]??""}</h5>`
                         if(temp_json[par]?.[j]??"" != '') pek_code += `<p>${temp_json[par]?.[j]??""}</p>`
                     }
 
