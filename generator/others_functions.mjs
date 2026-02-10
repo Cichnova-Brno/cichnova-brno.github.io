@@ -153,8 +153,8 @@ export class other{
         </section>
 
         <section>
-            <a href="/speakers.html"><h2>Pamětníci</h2></a>
-            <a href="/speakers.html">${speakers}</a>
+            <a style="background: transparent;" href="/speakers.html"><h2>Pamětníci</h2></a>
+            <a style="background: transparent;" href="/speakers.html">${speakers}</a>
         </section>
 
         <section>    
