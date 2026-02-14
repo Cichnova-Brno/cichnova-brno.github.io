@@ -1,0 +1,6 @@
+#generator.jms
+Jedn8 se o skript napsaný v jazyce JavaScript a je spoustěn přes prostředí node js.
+
+Soubor obsahuje import pro soubor other_functions.mjs, který je uložen ve stejném adresáři. Podrobněji je popsán zvlášť.
+
+Je tam jedna funkce main, která vytváří objekt pro třídu other. Tato třída je v souboru other_functions.mjs. Ve funkce main je volaná metoda check_path, která se ptá jestli existuje předdefinovaná cesta ../podklady. Pokud cesta existuje je vrácena hodnota true jinak false. Dále je volaná funkce get_names. Tato funkce vrací seznam všech adresářů v této cestě a ukládá je do pole villages_names. Následuje cyklus for s řídící proměnou i. Cyklus má stejný počet opakovaní jaký má délka pole villages_names. V cyklu je opět funkce check_path, která hledná v cestě soubor s příponou .json a výsledek ukládá do proměné skip. Pokud soubor exstuje provede se podmínka vnořená v cyklu, jinak se tato část přeskočena. V podmínce je metoda read_json_file. Tato metoda přečte konkrétní jsou soubor a vrátí jeho obsah ve formě objektu a uloží do proměné village_text. Hodnota village_text je předána metodě write_into_html. Tato metoda dále spracovává obsah a zapíše do html souboru.
