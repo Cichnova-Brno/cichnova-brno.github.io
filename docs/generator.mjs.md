@@ -1,5 +1,5 @@
 #generator.jms
-Jedn8 se o skript napsaný v jazyce JavaScript a je spoustěn přes prostředí node js.
+Jedná se o skript napsaný v jazyce JavaScript a je spoustěn přes prostředí node js.
 
 Soubor obsahuje import pro soubor other_functions.mjs, který je uložen ve stejném adresáři. Podrobněji je popsán zvlášť.
 
