@@ -1,0 +1,7 @@
+#speaker_gen.mjs
+Skript uložený v adresáři /generator. Je v něm společne se soubory others_functions.mjs a generator.mjs.
+Slouží pro generování statické stránky speakers.html, která je uložená v kořenovém adresáři projektu.
+
+Importuje třídu other ze souboru others_functions.mjs. Obsahuje tři globální proměné path se statickou cestou ../podklady. Dále tam je villages_names, což je prázdné pole, které bude naplněno později ve funkci main. POslední globální proměná village_text je také prázdné pole.
+V synchroní funkce main se do proměné others_fnc ulkádá objekt pro třídu others ze souboru others_functions. Z této třídy se potom volají všechny metody dále obsažené ve funkci main. Podrobněji sou vysvětleny v souboru others_functions.mjs.md. Ve funkci main se volá metoda get_names a výsledek ukládá do pole villages_names. Jsou to stringové názny adresářů v adresáři potklady. Na dvou následujících řádcích se opakuje villages_names.pop()  pro odstranění podledních dvou indexů z pole, protože obsahují  názvy shellových skriptů nbsp.sh a rszznak.sh. Cyklus for s řídící proměnou i má počet opakování rovna délce pole villages_names. V cyklu se volá metoda read_json_file. Tato metoda vrací parsovaný JSON objekt a ukládá je na poslední index v poli village_text pomocí funkce push().
+Po dokončení cyklu se volá metoda speakers_page, do které se předává pole village_text, jako argument. Dále tato metoda spracuje data v vytvoří speakers.html soubor.
