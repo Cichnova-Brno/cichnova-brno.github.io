@@ -1,4 +1,4 @@
-#generator.jms
+# generator.jms
 Jedná se o skript napsaný v jazyce JavaScript a je spoustěn přes prostředí node js.
 
 Soubor obsahuje import pro soubor other_functions.mjs, který je uložen ve stejném adresáři. Podrobněji je popsán zvlášť.
@@ -29,5 +29,51 @@ podklady/
 Složka vesnice musí mít stejný název jako datový .json soubor. Ve složce musí být 1.jpg soubor, který se použije, jako první obrázek na stránce. Taky zde musí být znak.jpg, který se použije, jako znak vesnice hnedka vedle úvodního textu. Dále zde musí být složka galerie, která obsahuje dané podsložky, ať už jsou prázdné nebo ne. V nich je pak dataset obrázků očíslován od 1.jpg do 65.jpg omezení vyplívá z fungování souboru ????.js. Je dobré, aby všechny obrázky měli korespondující popis v .json data souboru.
 
 # Datový soubor .json
-...
 
+Soubory typu JSON ukládají data potřebná ke generování statického obsahu stránek a načítání popisků v galerii u každé vesnice. Jejicj sintaxe:
+
+{
+   name
+   paragraph_one
+   paragraph_two
+   phase
+   district
+   speaker
+   header
+   speeche
+   residents
+   houses
+   families
+   l_year
+   l_houses
+   l_residents
+   titles
+   before_move
+   move
+   after_move_return
+   present
+   stories_poems
+   documents
+}
+
+name - název vesnice, typu string.
+paragraph_one - první odstavec, typu string.
+paragraph_two - druhý odstavec, typu string.
+phase - fáze vystěhování vesnice, string.
+district - okres ve, kterém se vesnice nachází.
+speaker - pole stringů, kde každý index odpovídá jménu jednoho pamětníka.
+header - pole stringů, kde každý index odpovídá jednomu nadpisu.
+speeche - pole stringů, kde každý index odpovídá jednomu textu pamětníka.
+residents - počet obyvatel ve vesnici, celé číslo, ale datového typu string.
+houses - počet domů ve vesnici, celé číslo, ale datového typu string.
+families - počet rodin ve vesnici, celé číslo, ale datového typu string.
+l_year - pole celých čísel, kde každý index odpovídá jednomu roku.
+l_houses - pole celých čísel, kde každý index odpovídá množství domů.
+l_residents - pole celých čísel, kde každý index odpovídá množství obyvatel.
+titles - pole stringu, obsahuje popisky k fotkám na stránce.
+before_move - pole stringu, kde každý index odpovídá jednomu popisku v galerii pro obrázky z "před vystěhováním".
+move - pole stringu, kde každý index odpovídá jednomu popisku v galerii pro obrázky z "průběh stěhování".
+after_move_return - pole stringu, kde každý index odpovídá jednomu popisku v galerii pro obrázky z "po návratu".
+present - pole stringu, kde každý index odpovídá jednomu popisku v galerii pro obrázky ze "současnost".
+stories_poems - pole stringu, kde každý index odpovídá jednomu popisku v galerii pro obrázky z "básně".
+documents - pole stringu, kde každý index odpovídá jednomu popisku v galerii pro obrázky z "dokumenty".
