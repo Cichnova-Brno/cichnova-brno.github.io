@@ -44,7 +44,7 @@ export class other{
         if(!(json_obj.speaker.length === 0) && !(json_obj.speaker[0] === '')){
             let temp = ''
             for(let i = 0; i < json_obj.speaker.length; i++){
-                temp += `${json_obj.speaker[i]}<br>`
+                temp += `<a style="background: transparent;" href="/speakers.html#${json_obj.speaker[i].replace(/ /g, '_')}">${json_obj.speaker[i]}</a><br>`
             }
             speakers += `${temp}`
         }else{
@@ -154,7 +154,7 @@ export class other{
 
         <section>
             <a style="background: transparent;" href="/speakers.html"><h2>Pamětníci</h2></a>
-            <a style="background: transparent;" href="/speakers.html">${speakers}</a>
+            ${speakers}
         </section>
 
         <section>    
@@ -219,7 +219,13 @@ export class other{
                     let har = "header"+speaker_count
                     let par = "speeche"+speaker_count
 
-                    if(temp_json[har]?.[0]??"" != '') pek_code += `<section><h3 id="${temp_json[har]?.[0]??''}" style="margin-bottom:2rem;">${temp_json[har]?.[0]??""}</h3>`
+
+
+                    if(temp_json[har]?.[0]??"" != ''){
+                        let id = temp_json[har]?.[0].split(": ")
+                        id[1] = id[1].replace(/ /g, '_')
+                         pek_code += `<section><h3 id="${id[1]}" style="margin-bottom:2rem;">${temp_json[har]?.[0]??""}</h3>`
+                    }
 
                     for(let j = 1; j <= 50; j++){
                         if(temp_json[har]?.[j]??"" != '') pek_code += `<h5 style="margin-top:2rem; font-size: 25px; color: black;">${temp_json[har]?.[j]??""}</h5>`
