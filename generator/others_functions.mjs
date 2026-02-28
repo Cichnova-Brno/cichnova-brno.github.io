@@ -215,7 +215,7 @@ export class other{
 
             if(temp_json['speaker'][0] != '' && temp_json['header'] && temp_json['speeche']){
 
-                for(let k = 0; k < 4; k++){
+                for(let k = 0; k < 10; k++){
                     let har = "header"+speaker_count
                     let par = "speeche"+speaker_count
 
@@ -224,12 +224,17 @@ export class other{
                     if(temp_json[har]?.[0]??"" != ''){
                         let id = temp_json[har]?.[0].split(": ")
                         id[1] = id[1].replace(/ /g, '_')
-                         pek_code += `<section><h3 id="${id[1]}" style="margin-bottom:2rem;">${temp_json[har]?.[0]??""}</h3>`
+                         if(temp_json.link){
+                            if(temp_json.link[k] != '#') pek_code += `<section><h3 id="${id[1]}" style="margin-bottom:2rem;"><a href="${temp_json.link[k]}">${temp_json[har]?.[0]??""}</a></h3>\n`
+                            else pek_code += `<section><h3 id="${id[1]}" style="margin-bottom:2rem;">${temp_json[har]?.[0]??""}</h3>\n`
+                        }else{
+                            pek_code += `<section><h3 id="${id[1]}" style="margin-bottom:2rem;">${temp_json[har]?.[0]??""}</h3>\n`
+                        }
                     }
 
                     for(let j = 1; j <= 50; j++){
-                        if(temp_json[har]?.[j]??"" != '') pek_code += `<h5 style="margin-top:2rem; font-size: 25px; color: black;">${temp_json[har]?.[j]??""}</h5>`
-                        if(temp_json[par]?.[j]??"" != '') pek_code += `<p>${temp_json[par]?.[j]??""}</p>`
+                        if(temp_json[har]?.[j]??"" != '') pek_code += `<h5 style="margin-top:2rem; font-size: 25px; color: black;">${temp_json[har]?.[j]??""}</h5>\n`
+                        if(temp_json[par]?.[j]??"" != '') pek_code += `<p>${temp_json[par]?.[j]??""}</p>\n`
                     }
 
                     if(speaker_count === ''){
@@ -238,7 +243,7 @@ export class other{
                         speaker_count++
                     }
 
-                    pek_code += `</section>`
+                    pek_code += `</section>\n`
                 }
 
             }
