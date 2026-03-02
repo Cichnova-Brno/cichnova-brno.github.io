@@ -31,6 +31,7 @@ class navigationMenu extends HTMLElement {
             <a href="/books.html">Knihy</a>
             <a href="/exhibition.html">Výstava</a>
             <a href="https://vystehovani.substack.com/" target="about:blank"><i class="bi bi-box-arrow-up-right"></i> Aktuality a akce</a>
+            <a href="https://proskoly.vystehovanedrahansko.eu/" target="about:blank"><i class="bi bi-box-arrow-up-right"></i> Materiály pro školy</a>
         </nav> 
     `;
   }
