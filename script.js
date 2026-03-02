@@ -27,7 +27,7 @@ class navigationMenu extends HTMLElement {
     this.innerHTML = `
         <nav id="nav">
             <a href="/project.html">Více o projektu</a>
-            <a href="/documentary.html">Dokumentární Film</a>
+            <a href="/documentary.html">Dokumentární film</a>
             <a href="/books.html">Knihy</a>
             <a href="/exhibition.html">Výstava</a>
             <a href="https://vystehovani.substack.com/" target="about:blank"><i class="bi bi-box-arrow-up-right"></i> Aktuality a akce</a>
