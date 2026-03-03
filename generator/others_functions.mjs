@@ -225,7 +225,7 @@ export class other{
                         let id = temp_json[har]?.[0].split(": ")
                         id[1] = id[1].replace(/ /g, '_')
                          if(temp_json.link){
-                            if(temp_json.link[k] != '#') pek_code += `<section><h3 id="${id[1]}" style="margin-bottom:2rem;"><a href="${temp_json.link[k]}">${temp_json[har]?.[0]??""}</a></h3>\n`
+                            if(temp_json.link[k] != '#') pek_code += `<section><h3 id="${id[1]}" style="margin-bottom:2rem;">${temp_json[har]?.[0]??""}</h3>\n <video style="hight: 5rem; width: 6rem; display: block; margin-left: auto; margin-right: auto;" src="${temp_json.link[k]}"></video>`
                             else pek_code += `<section><h3 id="${id[1]}" style="margin-bottom:2rem;">${temp_json[har]?.[0]??""}</h3>\n`
                         }else{
                             pek_code += `<section><h3 id="${id[1]}" style="margin-bottom:2rem;">${temp_json[har]?.[0]??""}</h3>\n`
