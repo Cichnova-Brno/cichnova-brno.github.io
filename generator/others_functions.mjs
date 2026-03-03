@@ -225,14 +225,14 @@ export class other{
                         let id = temp_json[har]?.[0].split(": ")
                         id[1] = id[1].replace(/ /g, '_')
                          if(temp_json.link){
-                            if(temp_json.link[k] != '#') pek_code += `<section><h3 id="${id[1]}" style="margin-bottom:2rem;">${temp_json[har]?.[0]??""}</h3>\n <video style="hight: 5rem; width: 6rem; display: block; margin-left: auto; margin-right: auto;" src="${temp_json.link[k]}"></video>`
+                            if(temp_json.link[k] != '#') pek_code += `<section><h3 id="${id[1]}" style="margin-bottom:2rem;">${temp_json[har]?.[0]??""}</h3>\n ${temp_json.link[k]}`
                             else pek_code += `<section><h3 id="${id[1]}" style="margin-bottom:2rem;">${temp_json[har]?.[0]??""}</h3>\n`
                         }else{
                             pek_code += `<section><h3 id="${id[1]}" style="margin-bottom:2rem;">${temp_json[har]?.[0]??""}</h3>\n`
                         }
                     }
 
-                    for(let j = 1; j <= 50; j++){
+                    for(let j = 0; j <= 50; j++){
                         if(temp_json[har]?.[j]??"" != '') pek_code += `<h5 style="margin-top:2rem; font-size: 25px; color: black;">${temp_json[har]?.[j]??""}</h5>\n`
                         if(temp_json[par]?.[j]??"" != '') pek_code += `<p>${temp_json[par]?.[j]??""}</p>\n`
                     }
@@ -267,7 +267,10 @@ export class other{
                 <script src="/script.js"></script>
                 <script src="/no_internet.js"></script>
                 <title>Vystěhované Drahansko</title>
-                <style> :root {--eth: var(--IA) }</style>
+                <style>
+                    :root {--eth: var(--IA) }
+                    iframe{display: block; margin-left: auto; margin-right: auto;}
+                </style>
             </head>
             <body>
                 <div onclick="goBack()" class="hamburger back"><i class="bi bi-arrow-left"></i></div>
