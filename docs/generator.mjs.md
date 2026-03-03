@@ -39,6 +39,7 @@ Soubory typu JSON ukládají data potřebná ke generování statického obsahu 
    phase
    district
    speaker
+   link
    header
    speeche
    residents
@@ -63,6 +64,7 @@ phase - fáze vystěhování vesnice, string.
 district - okres ve, kterém se vesnice nachází.
 speaker - pole stringů, kde každý index odpovídá jménu jednoho pamětníka.
 header - pole stringů, kde každý index odpovídá jednomu nadpisu.
+link - je to pole stringu, kde každý index je iframe k videu, ktere jsou na stance speakers.html
 speeche - pole stringů, kde každý index odpovídá jednomu textu pamětníka.
 residents - počet obyvatel ve vesnici, celé číslo, ale datového typu string.
 houses - počet domů ve vesnici, celé číslo, ale datového typu string.
