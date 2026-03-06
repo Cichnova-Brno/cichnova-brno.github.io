@@ -3,3 +3,52 @@ Projekt Donuceni odejít byl vytvořen žáky 3. a 4. ročníku Střední školy
 Všechny texty jsou chráněny autorským právem a obrázky třetích stran jsou užity dle licence. Veškerá práva náleží autorům.
 
 Technická dokumentace je blíže popsaná ve složce docs.
+
+Pokud je potřeba něco změnit na stránkách v galerii nebo fotky z obcí/znaky obcí vše se musí provádět v dané složce vesnice. Všechny podklady k vesnicím jsou ve složce podklady a tam jsou další složky, které se jmenují podle vesnic.
+
+podklady
+|_ vesnice
+    |_ galerie
+    |     |_ 1-pred-vystehovanim
+    |     |_ 2-stehovani
+    |     |_ 3-po-vystehovani-navratu
+    |     |_ 4-soucasnot
+    |     |_ 5-pribehy-basne
+    |     |_ 6-dokumenty
+    |
+    |_ 1.jpg
+    |_ vesnice.docx
+    |_ vesnice.json
+    |_ popisky.xlsx
+    |_ znak.jpg
+
+
+všechny obrázky se mění podle toho kam patří. Pokud se jedná o galeii je třeba zařadit obrázek do dané složky ve složce galerie. Složk v galerii je celkem šest, ale v některých obcích jich je méně, protože není více fotek. Fotky se jmenují podle čísel. To znamená, že brázek přidaný do složky musí být přejmenovám na číslo a ve formátu jpg.
+
+Je li potřeba zmenit fotografii nebo znak obce, tak ty josu přímo v složce vesnice. Fotografie se jmenuje 1.jpg a znak se jmenuje znak.jpg. Stejně jako u galerie je potřeba zachovat jméno a formát.
+
+Jestli chcete zmenit texty na stránce musíte přejít zase do konkrétní složky vesnice a změny provést v souboru s příponou .json takže pokud se vesnice jmenuje Lhota, tak soubor je lhota.json. Jsou soubor je rozdělěn do několika částí, ale všechna mají:
+
+name - název vesnic
+paragraph_one - zde je celý první odstavec
+paragraph_two - celý druhý odstavec
+phase - etapa vystěhování
+district - okres, ve kterém se vesnice nachází (Prostějov, Vyškov...)
+speakers - jména pamětníků
+titles - popisek k fotografii
+l_year - roky použité v grafu
+l_houses - počety domů použité v grafu
+l_residents - čísla obyvatel použitá v grafu
+l_residents - počet obyvatel v tabulce
+l_houses - počet domů v tabulce
+families - číslo počtu rodin v tabulce pod druhým odstavcem
+before_move - popisky k obrázkům z části před vystěhováním
+move - popisky k obrázkům stěhování
+after_move_return - popisky k obrázkům po vystěhování návratu
+present - popisky k přítomnosti
+stories_poems - popisky k příběhům
+documents - popisky k dokumentům
+
+Všechny změny textu se provádí v tomto souboru. Popisky obrázků a změny samotných obrázků kromě fotografie a znaku se projeví ihned. jinak je potřeba stránky přegenerovat. Vše je vysvětleno v technické dokukmentaci ve složce docs.
+
+Pokud se změny týkají stránek na kterých nejous vesnice, ale jde o stánky jako je více o projektu, kniky ... je potřeba technická podpora. Všechny tyto změny se provádí v souborech s příponou .html, tedy v samotném kódu stránky.
