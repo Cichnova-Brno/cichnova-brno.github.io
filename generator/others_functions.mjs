@@ -282,6 +282,15 @@ export class other{
                 <title>Vystěhované Drahansko</title>
                 <style>
                     :root {--eth: var(--IA) }
+                    iframe{
+                        display: block;
+                        margin-right: auto;
+                        margin-left: auto;
+                        aspect-ratio:16/9;
+                        width:40%;
+                        height:auto;
+                        border-radius:15px
+                    }
                 </style>
             </head>
             <body>
