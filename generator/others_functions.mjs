@@ -291,6 +291,12 @@ export class other{
                         height:auto;
                         border-radius:15px
                     }
+
+                    @media screen and (max-width:1000px) {
+                        iframe {
+                            width: 100%;
+                        }
+                    }
                 </style>
             </head>
             <body>
