@@ -31,7 +31,6 @@
   /*height: 160px;*/
   object-fit: cover;
   display: block;
-  margin-bottom: 0.5rem;
 }
 
 .substack-post {
@@ -39,7 +38,7 @@
 }
 
 .substack-title {
-  margin: 0 0 0.6rem;
+  margin: 1.5rem 0 1rem 0;
   font-size: 1.25rem;
   line-height: 1.4;
 }
