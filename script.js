@@ -26,10 +26,10 @@ class navigationMenu extends HTMLElement {
 // odedelano jenom jestli bychom to potrebovali nekdy zase pridat <a href="/more.html">O vystěhování</a>
     this.innerHTML = `
         <nav id="nav">
-            <a href="/project.html">Více o projektu</a>
-            <a href="/documentary.html">Dokumentární film</a>
-            <a href="/books.html">Knihy</a>
-            <a href="/exhibition.html">Výstava</a>
+            <a href="/project/">Více o projektu</a>
+            <a href="/documentary/">Dokumentární film</a>
+            <a href="/books/">Knihy</a>
+            <a href="/exhibition/">Výstava</a>
             <a href="https://vystehovani.substack.com/" target="about:blank"><i class="bi bi-box-arrow-up-right"></i> Aktuality a akce</a>
             <a href="https://proskoly.vystehovanedrahansko.eu/" target="about:blank"><i class="bi bi-box-arrow-up-right"></i> Materiály pro školy</a>
         </nav> 
@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
     map_vilage_name_click.forEach((village_text_map) => {
         village_text_map.addEventListener('click', () => {
             if(!village_text_map.textContent.includes('Etapa') && !village_text_map.textContent.includes('Vyberte etapu na mapě')){
-                window.open('/vesnice/' + slugify(`${village_text_map.textContent}.html`), '_self')
+                window.open('/vesnice/' + slugify(`${village_text_map.textContent}/`), '_self')
             }
         })
     })
@@ -157,7 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const clone = regionGroup.cloneNode(true)
 
 	    if(region.getAttribute("name") === "Vojenský prostor") {
-            window.open('/vesnice/puvodnivojenskyprostor.html', '_self')
+            window.open('/vesnice/puvodnivojenskyprostor/', '_self')
         }
 		else {
             document.querySelector(".phase_name").textContent = region.getAttribute("name") + "."
@@ -243,7 +243,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 let link = document.createElement('a')
                 let h3 = document.createElement('h3')
                 h3.textContent = name
-                link.href = "/vesnice/" + slugify(`${name}.html`)
+                link.href = "/vesnice/" + slugify(`${name}/`)
                 link.appendChild(h3)
                 zoom_names.appendChild(link)
             })

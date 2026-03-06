@@ -44,7 +44,7 @@ export class other{
         if(!(json_obj.speaker.length === 0) && !(json_obj.speaker[0] === '')){
             let temp = ''
             for(let i = 0; i < json_obj.speaker.length; i++){
-                temp += `<a style="cursor: pointer; background: none;     text-decoration:underline; font-style: italic;" href="/speakers.html#${json_obj.speaker[i].replace(/ /g, '_')}">${json_obj.speaker[i]}</a><br>`
+                temp += `<a style="cursor: pointer; background: none;     text-decoration:underline; font-style: italic;" href="/speakers/index.html#${json_obj.speaker[i].replace(/ /g, '_')}">${json_obj.speaker[i]}</a><br>`
             }
             speakers += `${temp}`
         }else{
@@ -57,7 +57,7 @@ export class other{
         let znak_image = `
                 <div class="image">
                 
-                <img src="../podklady/${json_obj.name}/znak.jpg" alt="">
+                <img src="/podklady/${json_obj.name}/znak.jpg" alt="">
                 <h5>Znak obce ${json_obj.name}</h5>
                 </div>
                 `
@@ -90,14 +90,14 @@ export class other{
     <link rel="stylesheet" href="/styles/graph.css">
     <link rel="stylesheet" href="/styles/bootstrap/bootstrap-icons.min.css">
     <script src="/script.js"></script>
-    <script tyle="module" src="./render_images.js"></script>
-    <script src="./Chart.min.js"></script>
-    <script src="./graph.js"></script>
+    <script tyle="module" src="../render_images.js"></script>
+    <script src="../Chart.min.js"></script>
+    <script src="../graph.js"></script>
     <script src="/no_internet.js"></script>
     <title>${json_obj.name}</title>
     <style> :root {--eth: var(--${json_obj.phase.toUpperCase()})}</style>
 </head>
-<body onload="check('../podklady/${json_obj.name}/galerie/1-pred-vystehovanim')">
+<body onload="check('/podklady/${json_obj.name}/galerie/1-pred-vystehovanim')">
     <div onclick="goBack()" class="hamburger back"><i class="bi bi-arrow-left"></i></div>
     <div onclick="menu()" class="hamburger" id="hamb"><i class="bi bi-list"></i></div>
     <!--Custom navigation-menu element defined in script.js-->
@@ -146,14 +146,14 @@ export class other{
                     </table>
                 </div>
                 <div class="image">
-                <img src="../podklady/${json_obj.name}/1.jpg" alt="the second picture">
+                <img src="/podklady/${json_obj.name}/1.jpg" alt="the second picture">
                 <h5>${json_obj.titles}</h5>
                 </div>
             </div>
         </section>
 
         <section>
-            <a style="background: transparent;" href="/speakers.html"><h2>Pamětníci</h2></a>
+            <a style="background: transparent;" href="/speakers/index.html"><h2>Pamětníci</h2></a>
             ${speakers}
         </section>
 
@@ -168,12 +168,12 @@ export class other{
             <h2>Galerie</h2>
 
             <div id="gallery_nav_bar">
-                <button class="gallery_active_button gallery_nav_button" onclick="check('../podklady/${json_obj.name}/galerie/1-pred-vystehovanim')">před vystěhováním</button>
-                <button class="gallery_nav_button" onclick="check('../podklady/${json_obj.name}/galerie/2-stehovani')">stěhování</button>
-                <button class="gallery_nav_button" onclick="check('../podklady/${json_obj.name}/galerie/3-po-vystehovani-navratu')">po vystěhování/návratu</button>
-                <button class="gallery_nav_button" onclick="check('../podklady/${json_obj.name}/galerie/4-soucasnost')">současnost</button>
-                <button class="gallery_nav_button" onclick="check('../podklady/${json_obj.name}/galerie/6-dokumenty')">dokumenty</button>
-                <button class="gallery_nav_button" onclick="check('../podklady/${json_obj.name}/galerie/5-pribeh-basne')">lidová slovesnost</button>
+                <button class="gallery_active_button gallery_nav_button" onclick="check('/podklady/${json_obj.name}/galerie/1-pred-vystehovanim')">před vystěhováním</button>
+                <button class="gallery_nav_button" onclick="check('/podklady/${json_obj.name}/galerie/2-stehovani')">stěhování</button>
+                <button class="gallery_nav_button" onclick="check('/podklady/${json_obj.name}/galerie/3-po-vystehovani-navratu')">po vystěhování/návratu</button>
+                <button class="gallery_nav_button" onclick="check('/podklady/${json_obj.name}/galerie/4-soucasnost')">současnost</button>
+                <button class="gallery_nav_button" onclick="check('/podklady/${json_obj.name}/galerie/6-dokumenty')">dokumenty</button>
+                <button class="gallery_nav_button" onclick="check('/podklady/${json_obj.name}/galerie/5-pribeh-basne')">lidová slovesnost</button>
             </div>
             <div id="gallery">
 
@@ -196,12 +196,17 @@ export class other{
         }
 
         try{
-            fs.writeFileSync(`../vesnice/${slugify(json_obj.name)}.html`, html_code)
+            try { 
+                fs.mkdirSync(`../vesnice/${slugify(json_obj.name)}`)
+            } catch (err) {
+                if(err.code!=='EEXIST') throw err;
+            }
+            fs.writeFileSync(`../vesnice/${slugify(json_obj.name)}/index.html`, html_code)
         }catch(err){
             console.log(err)
             return null
         }finally{
-            console.log(`File /vesnice/${slugify(json_obj.name)}.html was successfully created\n`)
+            console.log(`File /vesnice/${slugify(json_obj.name)}/index.html was successfully created\n`)
         }
     }
 
@@ -277,7 +282,6 @@ export class other{
                 <title>Vystěhované Drahansko</title>
                 <style>
                     :root {--eth: var(--IA) }
-                    iframe{display: block; margin-left: auto; margin-right: auto;}
                 </style>
             </head>
             <body>
@@ -301,12 +305,12 @@ export class other{
 
 
         try{
-            fs.writeFileSync(`../speakers.html`, html_code)
+            fs.writeFileSync(`../speakers/index.html`, html_code)
         }catch(err){
             console.log(err)
             return null
         }finally{
-            console.log(`File /speakers.html was successfully created\n`)
+            console.log(`File /speakers/index.html was successfully created\n`)
         }
 
     }
