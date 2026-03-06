@@ -257,8 +257,9 @@ footer > hr {
         flex-direction: column;
     }
     nav {
-        font-size: 150%;
+        font-size: 125%;
         right: 2rem;
+        left: 2rem;
         top: 2rem;
     }
     section > div {
