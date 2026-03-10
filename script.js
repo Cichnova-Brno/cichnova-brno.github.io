@@ -116,7 +116,7 @@ function goBack() {
     if(history.length > 1) {
         history.back();
     } else {
-        window.location.href = '/'; // Replace with your landing page URL
+        window.location.href = 'https://vystehovanedrahansko.eu/'; // Replace with your landing page URL
     }
 }
 
