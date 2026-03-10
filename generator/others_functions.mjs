@@ -44,7 +44,7 @@ export class other{
         if(!(json_obj.speaker.length === 0) && !(json_obj.speaker[0] === '')){
             let temp = ''
             for(let i = 0; i < json_obj.speaker.length; i++){
-                temp += `<a style="cursor: pointer; background: none;     text-decoration:underline; font-style: italic;" href="/speakers/index.html#${json_obj.speaker[i].replace(/ /g, '_')}">${json_obj.speaker[i]}</a><br>`
+                temp += `<a style="cursor: pointer; background: none;     text-decoration:underline; font-style: italic;" href="/speakers/index.html#${json_obj.speaker[i].replace(/ /g, '_')}">${json_obj.speaker[i]}</a>\n`
             }
             speakers += `${temp}`
         }else{
