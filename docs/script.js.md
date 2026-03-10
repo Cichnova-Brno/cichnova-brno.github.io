@@ -78,7 +78,9 @@ Pokud je wtd rovno 1:
 Funkce goBack() slouží k návratu na předchozí stránku.
 
 Pokud historie prohlížeče obsahuje více než jeden záznam, použije se history.back().
-Pokud ne, uživatel je přesměrován na hlavní stránku '/'.
+Pokud ne, uživatel je přesměrován na hlavní stránku 'https://vystehovanedrahansko.eu/'.
+
+POZOR!!! jestli se někdy bude měnit doména stránky, tak se to bude muset změnit i tady.
 
 
 # DOMContentLoaded
@@ -97,7 +99,7 @@ Každému je přidán event listener na kliknutí.
 
 Pokud text neobsahuje řetězce „Etapa“ nebo „Vyberte etapu na mapě“, otevře se stránka konkrétní vesnice:
 
-/vesnice/<slug>.html
+/vesnice/<slug>/index.html
 
 K vytvoření správného názvu souboru se použije funkce slugify.
 
@@ -111,7 +113,7 @@ Po kliknutí:
 1. Zjistí se bounding box (bbox) daného SVG prvku.
 2. Vytvoří se jeho klon.
 3. Pokud má region atribut name = "Vojenský prostor", otevře se stránka:
-   /vesnice/puvodnivojenskyprostor.html
+   /vesnice/puvodnivojenskyprostor/index.html
 4. Jinak:
 
    * nastaví se název etapy do elementu .phase_name,
