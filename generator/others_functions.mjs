@@ -90,9 +90,9 @@ export class other{
     <link rel="stylesheet" href="/styles/graph.css">
     <link rel="stylesheet" href="/styles/bootstrap/bootstrap-icons.min.css">
     <script src="/script.js"></script>
-    <script tyle="module" src="../render_images.js"></script>
-    <script src="../Chart.min.js"></script>
-    <script src="../graph.js"></script>
+    <script tyle="module" src="/vesnice/render_images.js"></script>
+    <script src="/vesnice/Chart.min.js"></script>
+    <script src="/vesnice/graph.js"></script>
     <script src="/no_internet.js"></script>
     <title>${json_obj.name}</title>
     <style> :root {--eth: var(--${json_obj.phase.toUpperCase()})}</style>
