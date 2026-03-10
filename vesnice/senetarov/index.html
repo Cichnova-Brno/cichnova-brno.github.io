@@ -1,114 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/villages.css">
-    <link rel="stylesheet" href="/styles/common.css">
-    <link rel="stylesheet" href="/styles/map.css">
-    <link rel="stylesheet" href="/styles/gallery.css">
-    <link rel="stylesheet" href="/styles/table.css">
-    <link rel="stylesheet" href="/styles/graph.css">
-    <link rel="stylesheet" href="/styles/bootstrap/bootstrap-icons.min.css">
-    <script src="/script.js"></script>
-    <script tyle="module" src="/vesnice/render_images.js"></script>
-    <script src="/vesnice/Chart.min.js"></script>
-    <script src="/vesnice/graph.js"></script>
-    <script src="/no_internet.js"></script>
-    <title>Senetářov</title>
-    <style> :root {--eth: var(--IIIB)}</style>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="/styles/villages.css">
+ <link rel="stylesheet" href="/styles/common.css">
+ <link rel="stylesheet" href="/styles/map.css">
+ <link rel="stylesheet" href="/styles/gallery.css">
+ <link rel="stylesheet" href="/styles/table.css">
+ <link rel="stylesheet" href="/styles/graph.css">
+ <link rel="stylesheet" href="/styles/bootstrap/bootstrap-icons.min.css">
+ <script src="/script.js"></script>
+ <script tyle="module" src="/vesnice/render_images.js"></script>
+ <script src="/vesnice/Chart.min.js"></script>
+ <script src="/vesnice/graph.js"></script>
+ <script src="/no_internet.js"></script>
+ <title>Senetářov</title>
+ <style> :root {--eth: var(--IIIB)}</style>
 </head>
 <body onload="check('/podklady/Senetářov/galerie/1-pred-vystehovanim')">
-    <div onclick="goBack()" class="hamburger back"><i class="bi bi-arrow-left"></i></div>
-    <div onclick="menu()" class="hamburger" id="hamb"><i class="bi bi-list"></i></div>
-    <!--Custom navigation-menu element defined in script.js-->
-    <navigation-menu></navigation-menu>
+ <div onclick="goBack()" class="hamburger back"><i class="bi bi-arrow-left"></i></div>
+ <div onclick="menu()" class="hamburger" id="hamb"><i class="bi bi-list"></i></div>
+ <!--Custom navigation-menu element defined in script.js-->
+ <navigation-menu></navigation-menu>
 
-    <header> 
-    <h1>Senetářov</h1>
-    <h5></h5>
-    <a href="">IIIb.</a>
-    </header>
+ <header> 
+ <h1>Senetářov</h1>
+ <h5></h5>
+ <a href="">IIIb.</a>
+ </header>
 
-    <div id="zoom_curtain">
-        <div id="zoom_div_container" class="top_padding">
-            <div onclick="close_popup()" class="hamburger" style="display:block"><i class="bi bi-x"></i></div>
-      
-            <div id="zoom" >
-                <div class="row">
-                    <div class="bi bi-caret-left-fill arrow left" onclick="prev_image()"></div>
-                    <div id="zoom_image"></div>
-                    <div class="bi bi-caret-right-fill arrow right" onclick="next_image()"></div>
-                </div>
-                <div>
-                    <p id="image_desc"></p>
-                </div>
-            </div>
-        </div>
-    </div>
+ <div id="zoom_curtain">
+ <div id="zoom_div_container" class="top_padding">
+ <div onclick="close_popup()" class="hamburger" style="display:block"><i class="bi bi-x"></i></div>
+ 
+ <div id="zoom" >
+ <div class="row">
+ <div class="bi bi-caret-left-fill arrow left" onclick="prev_image()"></div>
+ <div id="zoom_image"></div>
+ <div class="bi bi-caret-right-fill arrow right" onclick="next_image()"></div>
+ </div>
+ <div>
+ <p id="image_desc"></p>
+ </div>
+ </div>
+ </div>
+ </div>
 
-    <main>
-        <section>
-            <h2>Charakteristika obce</h2>
-            <div>
-                <p>Od roku 1251 byl Senetářov ve vlastnictví pánů z&nbsp;Ceblovic, Jedovnic a&nbsp;později z&nbsp;Holštejna. Jelikož se jedná o&nbsp;oblast Moravského krasu, kde pro zemědělskou výrobu nepanovaly vhodné podmínky, byla již v&nbsp;19. století značná část obyvatel nucena hledat jiné formy obživy. V Senetářově bylo kromě sítěk na vlasy a&nbsp;síťování záclon rozšířeno zejména perleťářství. To sem přinesl vídeňský podnikatel Alfons Tománek, když zde v&nbsp;osmdesátých letech 19. století založil perleťářskou továrnu na výrobu knoflíků.</p>
-                
-                <div class="image">
-                
-                <img src="/podklady/Senetářov/znak.jpg" alt="">
-                <h5>Znak obce Senetářov</h5>
-                </div>
-                
-            </div>    
-        </section>
+ <main>
+ <section>
+ <h2>Charakteristika obce</h2>
+ <div>
+ <p>Od roku 1251 byl Senetářov ve vlastnictví pánů z&nbsp;Ceblovic, Jedovnic a&nbsp;později z&nbsp;Holštejna. Jelikož se jedná o&nbsp;oblast Moravského krasu, kde pro zemědělskou výrobu nepanovaly vhodné podmínky, byla již v&nbsp;19. století značná část obyvatel nucena hledat jiné formy obživy. V Senetářově bylo kromě sítěk na vlasy a&nbsp;síťování záclon rozšířeno zejména perleťářství. To sem přinesl vídeňský podnikatel Alfons Tománek, když zde v&nbsp;osmdesátých letech 19. století založil perleťářskou továrnu na výrobu knoflíků.</p>
+ 
+ <div class="image">
+ 
+ <img src="/podklady/Senetářov/znak.jpg" alt="">
+ <h5>Znak obce Senetářov</h5>
+ </div>
+ 
+ </div> 
+ </section>
 
-        <section>
-            <h2>Průběh vystěhování</h2>
-            <div>
-                <div>
-                    <p>Malebná obec ležící bezprostředně pod vrchem Kojál na rozhraní tří okresů – boskovického, prostějovského a&nbsp;vyškovského, měla být evakuována v&nbsp;druhé části etapy IIIb, tedy do 30. června 1944. Ve zdejší obci stála kaple sv. Josefa, která byla vystavěna v&nbsp;roce 1855. Při oslavě patrona kaple, tedy 19. března 1942, si místní občané v&nbsp;čele s&nbsp;tehdejším jedovnickým kooperátorem a&nbsp;senetářovským rodákem P. Josefem Zouharem slíbili, že jestli ke stěhování vůbec nedojde, popřípadě když se lidé budou moci vrátit domů, postaví ve vesnici novou kapli, či opraví stávající. Slib sice nebyl zapsán, ale byl slavnostně pronesen před sochou patrona obce a&nbsp;potvrzen společným sv. přijímáním celé obce. Závazek byl v&nbsp;dalších letech zopakován. Vždy na svátek sv. Josefa se Senetářovští sešli a&nbsp;zopakovali si svůj slib. V roce 1944, kdy již bylo stěhování na spadnutí, byl tento příslib dokonce sepsán, vytisknut a&nbsp;předán každému občanovi při jeho odchodu z&nbsp;obce. Po válce se místní činili a&nbsp;dělali vše proto, aby dosáhli svého slibu. Museli počkat dlouhých 25 let po válce, kdy byl postaven a&nbsp;slavnostně vysvěcen kostel sv. Josefa, jenž se dodnes řadí mezi unikátní sakrální stavby kraje.</p>
-                    <table id="table">
-                        <tr><th>Okres</th><th>Etapa</th><th>Domů</th><th>Rodin</th><th>Osob</th></tr>
-                        <tr><td>Boskovice</td><td>IIIb.</td><td>59</td><td>65</td><td>204</td></tr>
-                    </table>
-                </div>
-                <div class="image">
-                <img src="/podklady/Senetářov/1.jpg" alt="the second picture">
-                <h5>Škola v Senetářově vybudovaná r. 1912. Pohlednice z 20. let 20. stol. Moravské zemské muzeum.</h5>
-                </div>
-            </div>
-        </section>
+ <section>
+ <h2>Průběh vystěhování</h2>
+ <div>
+ <div>
+ <p>Malebná obec ležící bezprostředně pod vrchem Kojál na rozhraní tří okresů – boskovického, prostějovského a&nbsp;vyškovského, měla být evakuována v&nbsp;druhé části etapy IIIb, tedy do 30. června 1944. Ve zdejší obci stála kaple sv. Josefa, která byla vystavěna v&nbsp;roce 1855. Při oslavě patrona kaple, tedy 19. března 1942, si místní občané v&nbsp;čele s&nbsp;tehdejším jedovnickým kooperátorem a&nbsp;senetářovským rodákem P. Josefem Zouharem slíbili, že jestli ke stěhování vůbec nedojde, popřípadě když se lidé budou moci vrátit domů, postaví ve vesnici novou kapli, či opraví stávající. Slib sice nebyl zapsán, ale byl slavnostně pronesen před sochou patrona obce a&nbsp;potvrzen společným sv. přijímáním celé obce. Závazek byl v&nbsp;dalších letech zopakován. Vždy na svátek sv. Josefa se Senetářovští sešli a&nbsp;zopakovali si svůj slib. V roce 1944, kdy již bylo stěhování na spadnutí, byl tento příslib dokonce sepsán, vytisknut a&nbsp;předán každému občanovi při jeho odchodu z&nbsp;obce. Po válce se místní činili a&nbsp;dělali vše proto, aby dosáhli svého slibu. Museli počkat dlouhých 25 let po válce, kdy byl postaven a&nbsp;slavnostně vysvěcen kostel sv. Josefa, jenž se dodnes řadí mezi unikátní sakrální stavby kraje.</p>
+ <table id="table">
+ <tr><th>Okres</th><th>Etapa</th><th>Domů</th><th>Rodin</th><th>Osob</th></tr>
+ <tr><td>Boskovice</td><td>IIIb.</td><td>59</td><td>65</td><td>204</td></tr>
+ </table>
+ </div>
+ <div class="image">
+ <img src="/podklady/Senetářov/1.jpg" alt="the second picture">
+ <h5>Škola v Senetářově vybudovaná r. 1912. Pohlednice z 20. let 20. stol. Moravské zemské muzeum.</h5>
+ </div>
+ </div>
+ </section>
 
-        <section>
-            <a style="background: transparent;" href="/speakers/index.html"><h2>Pamětníci</h2></a>
-            <a style="cursor: pointer; background: none;     text-decoration:underline; font-style: italic;" href="/speakers/index.html#Ludmila_Zouharová,_rozené_Zouharová">Ludmila Zouharová, rozené Zouharová</a><br>
-        </section>
+ <section>
+ <a style="background: transparent;" href="/speakers/index.html"><h2>Pamětníci</h2></a>
+ <a style="cursor: pointer; background: none; text-decoration:underline; font-style: italic;" href="/speakers/index.html#Ludmila_Zouharová,_rozené_Zouharová">Ludmila Zouharová, rozené Zouharová</a><br>
+ </section>
 
-        <section>    
-                <h2>Počet obyvatel</h2><canvas id="data"></canvas>
-            <script>
-                print_graph([1869,1880,1890,1900,1910,1921,1930,1950,1961,1970,1980], [725,721,747,747,746,711,661,584,617,598,542], 747, 149)
-            </script>
-        </section>
+ <section> 
+ <h2>Počet obyvatel</h2><canvas id="data"></canvas>
+ <script>
+ print_graph([1869,1880,1890,1900,1910,1921,1930,1950,1961,1970,1980], [725,721,747,747,746,711,661,584,617,598,542], 747, 149)
+ </script>
+ </section>
 
-        <section>    
-            <h2>Galerie</h2>
+ <section> 
+ <h2>Galerie</h2>
 
-            <div id="gallery_nav_bar">
-                <button class="gallery_active_button gallery_nav_button" onclick="check('/podklady/Senetářov/galerie/1-pred-vystehovanim')">před vystěhováním</button>
-                <button class="gallery_nav_button" onclick="check('/podklady/Senetářov/galerie/2-stehovani')">stěhování</button>
-                <button class="gallery_nav_button" onclick="check('/podklady/Senetářov/galerie/3-po-vystehovani-navratu')">po vystěhování/návratu</button>
-                <button class="gallery_nav_button" onclick="check('/podklady/Senetářov/galerie/4-soucasnost')">současnost</button>
-                <button class="gallery_nav_button" onclick="check('/podklady/Senetářov/galerie/6-dokumenty')">dokumenty</button>
-                <button class="gallery_nav_button" onclick="check('/podklady/Senetářov/galerie/5-pribeh-basne')">lidová slovesnost</button>
-            </div>
-            <div id="gallery">
+ <div id="gallery_nav_bar">
+ <button class="gallery_active_button gallery_nav_button" onclick="check('/podklady/Senetářov/galerie/1-pred-vystehovanim')">před vystěhováním</button>
+ <button class="gallery_nav_button" onclick="check('/podklady/Senetářov/galerie/2-stehovani')">stěhování</button>
+ <button class="gallery_nav_button" onclick="check('/podklady/Senetářov/galerie/3-po-vystehovani-navratu')">po vystěhování/návratu</button>
+ <button class="gallery_nav_button" onclick="check('/podklady/Senetářov/galerie/4-soucasnost')">současnost</button>
+ <button class="gallery_nav_button" onclick="check('/podklady/Senetářov/galerie/6-dokumenty')">dokumenty</button>
+ <button class="gallery_nav_button" onclick="check('/podklady/Senetářov/galerie/5-pribeh-basne')">lidová slovesnost</button>
+ </div>
+ <div id="gallery">
 
-            </div>
-        </section>
-    </main>
+ </div>
+ </section>
+ </main>
 
-    <!--Custom custom-footer element defined in script.js-->
-    <custom-footer></custom-footer>
+ <!--Custom custom-footer element defined in script.js-->
+ <custom-footer></custom-footer>
 </body>
 </html>
