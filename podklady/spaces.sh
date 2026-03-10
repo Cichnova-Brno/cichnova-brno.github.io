@@ -1,3 +1,3 @@
 #!/bin/bash
 
-find . -name "*.html" -type f -exec sed -i -E 's/ {2,}/ /g' {} +
+find . -type f -iname "*.html" -exec perl -CS -i -pe 's/\p{Zs}/ /g; s/ {2,}/ /g' {} +
