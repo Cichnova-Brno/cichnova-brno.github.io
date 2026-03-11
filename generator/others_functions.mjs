@@ -44,7 +44,10 @@ export class other{
         if(!(json_obj.speaker.length === 0) && !(json_obj.speaker[0] === '')){
             let temp = ''
             for(let i = 0; i < json_obj.speaker.length; i++){
-                temp += `<a style="cursor: pointer; background: none;     text-decoration:underline; font-style: italic;" href="/speakers/index.html#${json_obj.speaker[i].replace(/ /g, '_')}">${json_obj.speaker[i]}</a>`
+                if(json_obj.speaker[i]=="Zdenka Göbelová, rozená Klevetová"||json_obj.speaker[i]=="Zdeňka Růžičková, rozená Růžičková"||json_obj.speaker[i]=="Oldřich a Jiří Pořízkovi"||json_obj.speaker[i]=="Jana Němečková, rozená Chlupová"||json_obj.speaker[i]=="Zdenka Göbelová, rozená Klevetová"||json_obj.speaker[i]=="Věra Pořízková, rozená Nevěřilová"||json_obj.speaker[i]=="Zdeňka Růžičková, rozená Růžičková")
+                    temp += `<a style="cursor: pointer; background: none;     text-decoration:underline; font-style: italic;" href="/speakers/index.html#Rodiny_našich_rodičů_se_přestěhovaly_z_Drahanska_do_Libiny">${json_obj.speaker[i]}</a>`
+
+                else temp += `<a style="cursor: pointer; background: none;     text-decoration:underline; font-style: italic;" href="/speakers/index.html#${json_obj.speaker[i].replace(/ /g, '_')}">${json_obj.speaker[i]}</a>`
             }
             speakers += `${temp}`
         }else{
