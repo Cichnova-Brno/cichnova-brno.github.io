@@ -11,7 +11,7 @@ header {
 section > div {
     display: flex;
     flex-direction: row;
-    text-align: justify;
+    text-align: left;
 }
 
 section {
